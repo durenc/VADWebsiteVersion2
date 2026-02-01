@@ -22,7 +22,7 @@ const VAD_PRODUCT: Product = {
   price: 49.99,
   description: 'Unleash absolute anarchy in your bloodstream. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine Nitrate, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
   flavors: ['Veiny Surge Strawberry', 'Ultimate Pump Punch'],
-  image: 'https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/625076738_122108469411206325_747493529237694407_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OPir3ET2aAkQ7kNvwH5vMJM&_nc_oc=Adm1j2LS5y-ut9VwHcDGj2EhxZ75cF7X6jnpJOrycz5vqBq-ivyiCe7aeI5z6sRr69hwonwvyqAm0bn4yriYj9cC&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=WrWEfagDdEoRkYSn_cnbkg&oh=00_Afv_2dYaYZUgua27Pqd13WyQEu_2OHbBc9oDYax3WmvJMw&oe=69836DB1'
+  image: '/images/VADBlankBackgroundProductImage.jpg'
 };
 
 const FAQ_ITEMS = [
@@ -134,13 +134,13 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-blood-red selection:text-white font-['Inter'] overflow-x-hidden">
-      <div className="fixed inset-0 z-[-1]" style={{ backgroundImage: `url('https://media.istockphoto.com/id/1468889693/photo/vascular-system-veins.jpg?s=612x612&w=0&k=20&c=GyH4LznLxdJDeh6nsiITiKKtKqrd_U3FnXpVe65XBDE=')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', filter: 'brightness(0.9)' }}></div>
+      <div className="fixed inset-0 z-[-1]" style={{ backgroundImage: `url('/images/VeinsBackground.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', filter: 'brightness(0.9)' }}></div>
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-[70] transition-all duration-300 ${isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-blood-red/40 py-2' : 'bg-transparent py-4 md:py-6'}`}>
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           <div className="flex items-center gap-3 md:gap-4 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <div className="relative">
-              <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/608700837_868241375797604_2790770691374060399_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=lQ9Cqs0_HjAQ7kNvwEbg4hO&_nc_oc=Adk0zmiNFyO8sx5vOO3j9_rVw062D8MNZO_S7Wv3P2VKvz5z-TCFyx1jtZp0ghkX5WAR7Tg_0E6UChUzkrS1lZRZ&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=KOuwNGCIIxb5MzXcqhCVQw&oh=00_Afqp2dKV98LBd0-aS3U1gD6w7Ch39N96JGt_Qxk-X1pHOw&oe=697CD236" alt="V.A.D Logo" className="w-10 h-10 md:w-12 md:h-12 transition-all duration-300 shadow-[3px_3px_0px_#fff] md:shadow-[4px_4px_0px_#fff]" />
+              <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-10 h-10 md:w-12 md:h-12 transition-all duration-300 shadow-[3px_3px_0px_#fff] md:shadow-[4px_4px_0px_#fff]" />
             </div>
             <div className="flex flex-col -space-y-1">
               <span className="font-black text-lg md:text-2xl tracking-tighter uppercase italic text-white leading-none">V.A.D. Supplements</span>
@@ -176,7 +176,7 @@ const App: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
           <img 
-            src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/619607794_122107190859206325_2253017409725870649_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sys2nHLDfQIQ7kNvwEn059o&_nc_oc=Adkxp3dlHfk5iVn-L3quxIwwO5rBkVnTyN0V9RyInay8SulOZlfmSqHduVH26ZHwDas&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=zOJskW-GffeAREPaYECHbg&oh=00_AfoAz1fXYv4qYQzNeonpP_pJVeNOCQei5JxwY3DdGEcMcw&oe=697D81C1" 
+            src="/images/VADInGymImage.jpg" 
             alt="Intense Gym" 
             className="w-full h-full object-cover grayscale brightness-[0.1] contrast-150 scale-105"
           />
@@ -231,7 +231,7 @@ const App: React.FC = () => {
              <div className="absolute -inset-3 md:-inset-6 border-2 md:border-4 border-blood-red rotate-3 z-0 transition-transform group-hover:rotate-0" />
              <div className="relative bg-zinc-900 overflow-hidden shadow-[15px_15px_0px_#E31B23] md:shadow-[25px_25px_0px_#E31B23] transform -rotate-1">
                 <img 
-                  src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/619607794_122107190859206325_2253017409725870649_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sys2nHLDfQIQ7kNvwEn059o&_nc_oc=Adkxp3dlHfk5iVn-L3quxIwwO5rBkVnTyN0V9RyInay8SulOZlfmSqHduVH26ZHwDas&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=zOJskW-GffeAREPaYECHbg&oh=00_AfoAz1fXYv4qYQzNeonpP_pJVeNOCQei5JxwY3DdGEcMcw&oe=697D81C1" 
+                  src="/images/VADInGymImage.jpg" 
                   alt="V.A.D. in the trenches" 
                   className="w-full grayscale brightness-75 contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                 />
@@ -267,7 +267,7 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
             <div className="relative group">
               <div className="bg-zinc-900 p-8 md:p-16 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/carbon-fibre.png')] opacity-30"></div>
                 <img src={VAD_PRODUCT.image} alt="VAD Product" className="max-h-[300px] md:max-h-[600px] object-contain drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)] transform group-hover:rotate-6 transition-transform duration-700 relative z-10" />
               </div>
             </div>
@@ -335,7 +335,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center mb-16 md:mb-32 text-center space-y-4 md:space-y-8">
             <div className="flex justify-center mb-4 md:mb-6">
-              <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/608700837_868241375797604_2790770691374060399_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=lQ9Cqs0_HjAQ7kNvwEbg4hO&_nc_oc=Adk0zmiNFyO8sx5vOO3j9_rVw062D8MNZO_S7Wv3P2VKvz5z-TCFyx1jtZp0ghkX5WAR7Tg_0E6UChUzkrS1lZRZ&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=KOuwNGCIIxb5MzXcqhCVQw&oh=00_Afqp2dKV98LBd0-aS3U1gD6w7Ch39N96JGt_Qxk-X1pHOw&oe=697CD236" alt="V.A.D Logo" className="w-[11rem] h-auto object-contain rounded" />
+              <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-[11rem] h-auto object-contain rounded" />
             </div>
             <span className="text-blood-red font-black text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.7em] uppercase">STIM-FREE POTENCY (2 SCOOPS)</span>
             <h2 className="text-5xl sm:text-7xl md:text-[11rem] font-creepster text-white uppercase italic tracking-tighter leading-[0.9] md:leading-none drop-shadow-[10px_10px_0px_rgba(227,27,35,0.3)] md:drop-shadow-[20px_20px_0px_rgba(227,27,35,0.3)]">THE DOSAGE</h2>
@@ -428,7 +428,7 @@ const App: React.FC = () => {
             <div className="space-y-8 md:space-y-12 lg:w-1/2">
               <div className="flex items-center gap-6 md:gap-10">
                 <div className="w-16 h-16 md:w-24 md:h-24 bg-blood-red flex items-center justify-center shadow-[5px_5px_0px_#fff] md:shadow-[10px_10px_0px_#fff]">
-                  <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/608700837_868241375797604_2790770691374060399_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=lQ9Cqs0_HjAQ7kNvwEbg4hO&_nc_oc=Adk0zmiNFyO8sx5vOO3j9_rVw062D8MNZO_S7Wv3P2VKvz5z-TCFyx1jtZp0ghkX5WAR7Tg_0E6UChUzkrS1lZRZ&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=KOuwNGCIIxb5MzXcqhCVQw&oh=00_Afqp2dKV98LBd0-aS3U1gD6w7Ch39N96JGt_Qxk-X1pHOw&oe=697CD236" alt="V.A.D Logo" className="w-full h-full object-contain rounded" />
+                  <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-full h-full object-contain rounded" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-black text-2xl md:text-5xl tracking-tighter uppercase italic text-white leading-none">V.A.D SUPPS</span>
