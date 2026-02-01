@@ -178,7 +178,7 @@ const App: React.FC = () => {
           <img 
             src="/images/VeinsBackground.png" 
             alt="Veins Background" 
-            className="w-full h-full object-cover brightness-[0.65] contrast-125 scale-105"
+            className="w-full h-full object-cover brightness-[0.4] contrast-125 scale-105"
           />
         </div>
 
