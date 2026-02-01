@@ -1,0 +1,12 @@
+name = "vad-supplements"
+# Set compatibility_date to current date; adjust if needed
+compatibility_date = "2026-01-25"
+type = "javascript"
+# Fill your Cloudflare account ID when publishing (or set in CI environment)
+account_id = ""
+workers_dev = false
+
+[site]
+bucket = "./dist"
+# entry-point is optional; uncomment and set if you use a workers subdirectory
+# entry-point = "./workers-site"
