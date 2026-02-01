@@ -174,11 +174,11 @@ const App: React.FC = () => {
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden py-20">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/10 to-transparent z-10" />
           <img 
             src="/images/VADInGymImage.jpg" 
             alt="Intense Gym" 
-            className="w-full h-full object-cover grayscale brightness-[0.1] contrast-150 scale-105"
+            className="w-full h-full object-cover brightness-[0.65] contrast-125 scale-105"
           />
         </div>
 
@@ -233,7 +233,7 @@ const App: React.FC = () => {
                 <img 
                   src="/images/VADInGymImage.jpg" 
                   alt="V.A.D. in the trenches" 
-                  className="w-full grayscale brightness-75 contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                  className="w-full brightness-[0.9] contrast-110 transition-all duration-700 group-hover:scale-110"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-blood-red/90 p-4 md:p-10">
                    <p className="text-white font-black italic uppercase tracking-widest text-lg md:text-3xl">PROVEN IN THE IRON PIT</p>
