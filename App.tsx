@@ -20,7 +20,7 @@ const VAD_PRODUCT: Product = {
   name: 'V.A.D. STIMULANT FREE PREWORKOUT FORMULA',
   tagline: 'GET BIG, GET STRONG, GET VEINY',
   price: 49.99,
-  description: 'Unleash absolute anarchy in your bloodstream. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine Nitrate, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
+  description: 'Unleash absolute anarchy in your bloodstream. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
   flavors: ['Veiny Surge Strawberry', 'Ultimate Pump Punch'],
   image: '/images/VADBlankBackgroundProductImage.jpg'
 };
@@ -46,14 +46,17 @@ const FAQ_ITEMS = [
 
 const SupplementFacts: React.FC = () => (
   <div className="bg-white text-black p-4 md:p-8 font-sans border-2 md:border-4 border-black w-full max-w-2xl mx-auto shadow-[6px_6px_0px_#E31B23] md:shadow-[10px_10px_0px_#E31B23]">
-    <h3 className="text-2xl md:text-4xl font-black border-b-4 md:border-b-8 border-black pb-1 mb-1 leading-none uppercase">Supplement Facts</h3>
+    <h3 className="text-2xl md:text-4xl font-black border-b-4 md:border-b-8 border-black pb-1 mb-1 leading-none uppercase">
+      Supplement Facts
+    </h3>
+
     <div className="flex flex-col md:flex-row justify-between text-[10px] md:text-sm font-bold border-b border-black mb-1 pb-1">
       <div className="flex flex-col">
-        <span>Serving Size: 1 Scoop (10.4 g) / 2 Scoops (20.8 g)</span>
+        <span>Serving Size: 1 Scoop / 2 Scoops</span>
         <span>Servings Per Container: 30 / 15</span>
       </div>
     </div>
-    
+
     <div className="grid grid-cols-12 text-[9px] md:text-xs font-black border-b-2 md:border-b-4 border-black mb-1 py-1 uppercase italic">
       <div className="col-span-6">Amount Per Serving</div>
       <div className="col-span-3 text-center">1 Scoop</div>
@@ -62,15 +65,13 @@ const SupplementFacts: React.FC = () => (
 
     {[
       { name: 'L-Citrulline', s1: '4,000 mg', s2: '8,000 mg', dv: '†' },
-      { name: 'Betaine Anhydrous', s1: '1,500 mg', s2: '3,000 mg', dv: '†' },
+      { name: 'Betaine Anhydrous (Trimethylglycine)', s1: '1,500 mg', s2: '3,000 mg', dv: '†' },
       { name: 'Taurine', s1: '1,000 mg', s2: '2,000 mg', dv: '†' },
       { name: 'Glycerol Monostearate', s1: '1,500 mg', s2: '3,000 mg', dv: '†' },
-      { name: 'Agmatine Sulfate', s1: '500 mg', s2: '1,000 mg', dv: '†' },
-      { name: 'Betaine Nitrate', s1: '1,000 mg', s2: '2,000 mg', dv: '†' },
-      { name: 'Vitamin C (as Ascorbic Acid)', s1: '150 mg', s2: '300 mg', dv: '167%/334%' },
-      { name: 'Sodium (as Sodium Chloride)', s1: '200 mg', s2: '400 mg', dv: '9%/18%' },
-      { name: 'Potassium (as Potassium Citrate)', s1: '95 mg', s2: '190 mg', dv: '2%/4%' },
-      { name: 'Magnesium (as Citrate Anhydrous)', s1: '30 mg', s2: '60 mg', dv: '7%/14%' },
+      { name: 'Agmatine Sulfate', s1: '1,000 mg', s2: '2,000 mg', dv: '†' },
+      { name: 'Vitamin C (as Ascorbic Acid)', s1: '150 mg', s2: '300 mg', dv: '167%/333%' },
+      { name: 'Sodium Chloride', s1: '500 mg', s2: '1,000 mg', dv: '†' },
+      { name: 'Potassium Citrate', s1: '250 mg', s2: '500 mg', dv: '†' }
     ].map((item, idx) => (
       <div key={idx} className="grid grid-cols-12 border-b border-black text-[8px] md:text-xs py-1 font-bold items-center">
         <div className="col-span-6">{item.name}</div>
@@ -82,7 +83,7 @@ const SupplementFacts: React.FC = () => (
     <div className="text-[8px] md:text-[10px] py-1 border-b border-black font-bold italic">
       † Daily Value (DV) not established. Percent Daily Values are based on a 2,000 calorie diet.
     </div>
-    
+
     <div className="text-[8px] md:text-[10px] mt-2 font-bold leading-tight">
       <span className="uppercase">Other Ingredients:</span> Natural and artificial flavors, silicon dioxide, sucralose.
     </div>
@@ -342,23 +343,45 @@ const App: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mb-24 md:mb-40">
-             {[
-               { title: "8,000mg L-Citrulline", desc: "Pure Nitric Oxide precursor for massive, skin-tightening fullness. (Max Dose)", icon: <Activity className="text-blood-red w-8 h-8 md:w-11 md:h-11" /> },
-               { title: "3,000mg Glycerol", desc: "Monostearate goodness to hyper-hydrate your muscle fibers for peak volume.", icon: <Droplets className="text-blood-red w-8 h-8 md:w-11 md:h-11" /> },
-               { title: "2,000mg Betaine Nitrate", desc: "Explosive vasodilation through the nitrate pathway for long-lasting pumps.", icon: <ZapOff className="text-blood-red w-8 h-8 md:w-11 md:h-11" /> },
-               { title: "1,000mg Agmatine Sulfate", desc: "The 'Super Arginine' that keeps the pump alive for hours after training.", icon: <Trophy className="text-blood-red w-8 h-8 md:w-11 md:h-11" /> }
-             ].map((ing, i) => (
-               <div key={i} className="group p-8 md:p-14 bg-zinc-950/90 border border-white/5 hover:border-blood-red transition-all relative overflow-hidden shadow-[10px_10px_0px_rgba(0,0,0,0.6)] md:shadow-[20px_20px_0px_rgba(0,0,0,0.6)]">
-                  <div className="absolute -bottom-6 md:-bottom-10 -right-6 md:-right-10 text-[6rem] md:text-[12rem] font-creepster text-white/[0.04] transform -rotate-12 transition-all group-hover:text-blood-red/[0.1]">{i+1}</div>
-                  <div className="relative z-10 space-y-6 md:space-y-10">
-                    <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blood-red/10 group-hover:border-blood-red/50 transition-all duration-500">
-                      {ing.icon}
-                    </div>
-                    <h4 className="text-2xl md:text-4xl font-black italic uppercase leading-tight md:leading-none">{ing.title}</h4>
-                    <p className="text-slate-500 text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">{ing.desc}</p>
-                  </div>
-               </div>
-             ))}
+{[
+  {
+    title: "8,000mg L-Citrulline",
+    desc: "Nitric oxide precursor for massive, skin-tightening fullness.",
+    icon: <Activity className="text-blood-red w-8 h-8 md:w-11 md:h-11" />
+  },
+  {
+    title: "3,000mg Betaine",
+    desc: "Power + performance support to push harder and stay strong.",
+    icon: <Trophy className="text-blood-red w-8 h-8 md:w-11 md:h-11" />
+  },
+  {
+    title: "3,000mg Glycerol Monostearate",
+    desc: "Pulls water into the muscle for max volume and nasty pumps.",
+    icon: <Droplets className="text-blood-red w-8 h-8 md:w-11 md:h-11" />
+  },
+  {
+    title: "2,000mg Agmatine Sulfate",
+    desc: "Keeps the pump alive and the veins turned on longer.",
+    icon: <ZapOff className="text-blood-red w-8 h-8 md:w-11 md:h-11" />
+  }
+].map((ing, i) => (
+  <div key={i} className="group p-8 md:p-14 bg-zinc-950/90 border border-white/5 hover:border-blood-red transition-all relative overflow-hidden shadow-[10px_10px_0px_rgba(0,0,0,0.6)] md:shadow-[20px_20px_0px_rgba(0,0,0,0.6)]">
+    <div className="absolute -bottom-6 md:-bottom-10 -right-6 md:-right-10 text-[6rem] md:text-[12rem] font-creepster text-white/[0.04] transform -rotate-12 transition-all group-hover:text-blood-red/[0.1]">
+      {i + 1}
+    </div>
+    <div className="relative z-10 space-y-6 md:space-y-10">
+      <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blood-red/10 group-hover:border-blood-red/50 transition-all duration-500">
+        {ing.icon}
+      </div>
+      <h4 className="text-2xl md:text-4xl font-black italic uppercase leading-tight md:leading-none">
+        {ing.title}
+      </h4>
+      <p className="text-slate-500 text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">
+        {ing.desc}
+      </p>
+    </div>
+  </div>
+))}
           </div>
 
           <div id="dosage-facts" className="flex flex-col items-center pt-16 md:pt-32 border-t border-white/10">
