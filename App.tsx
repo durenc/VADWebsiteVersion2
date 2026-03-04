@@ -150,11 +150,12 @@ const App: React.FC = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-8 md:space-x-10">
-            {['Home', 'The Veiny Ah Formula', 'Our Story', 'FAQs', 'Connect'].map((link) => (
+            {['Shop', 'The Veiny Ah Formula', 'Our Story', 'FAQs', 'Connect'].map((link) => (
               <button 
                 key={link} 
                 onClick={() => {
                   //if (link === 'Facts') return scrollToSection('dosage-facts');
+                  if (link === 'Shop') return scrollToSection('product');
                   if (link === 'The Veiny Ah Formula') return scrollToSection('the-veiny-ah-formula');
                   if (link === 'Our Story') return scrollToSection('our-story');
                   if (link === 'FAQs') return scrollToSection('faqs');
