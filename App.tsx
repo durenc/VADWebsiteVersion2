@@ -150,12 +150,12 @@ const App: React.FC = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-8 md:space-x-10">
-            {['Home', 'The Formula', 'Facts', 'Our Story', 'FAQs', 'Connect'].map((link) => (
+            {['Home', 'The Veiny Ah Formula', 'Our Story', 'FAQs', 'Connect'].map((link) => (
               <button 
                 key={link} 
                 onClick={() => {
-                  if (link === 'Facts') return scrollToSection('dosage-facts');
-                  if (link === 'The Formula') return scrollToSection('the-formula');
+                  //if (link === 'Facts') return scrollToSection('dosage-facts');
+                  if (link === 'The Veiny Ah Formula') return scrollToSection('the-veiny-ah-formula');
                   if (link === 'Our Story') return scrollToSection('our-story');
                   if (link === 'FAQs') return scrollToSection('faqs');
                   return scrollToSection(link.toLowerCase().replace(' ', '-'))
@@ -332,7 +332,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Ingredient Breakdown Section */}
-      <section id="the-formula" className="py-24 md:py-48 bg-black/80 relative overflow-hidden">
+      <section id="the-veiny-ah-formula" className="py-24 md:py-48 bg-black/80 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center mb-16 md:mb-32 text-center space-y-4 md:space-y-8">
             <div className="flex justify-center mb-4 md:mb-6">
