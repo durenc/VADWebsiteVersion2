@@ -150,12 +150,12 @@ const App: React.FC = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-8 md:space-x-10">
-            {['Shop', 'The Veiny Ah Formula', 'Our Story', 'FAQs', 'Connect'].map((link) => (
+            {['Get VEINY', 'The Veiny Ah Formula', 'Our Story', 'FAQs', 'Connect'].map((link) => (
               <button 
                 key={link} 
                 onClick={() => {
                   //if (link === 'Facts') return scrollToSection('dosage-facts');
-                  if (link === 'Shop') return scrollToSection('product');
+                  if (link === 'Get VEINY') return scrollToSection('product');
                   if (link === 'The Veiny Ah Formula') return scrollToSection('the-veiny-ah-formula');
                   if (link === 'Our Story') return scrollToSection('our-story');
                   if (link === 'FAQs') return scrollToSection('faqs');
@@ -186,13 +186,15 @@ const App: React.FC = () => {
 
         <div className="container mx-auto px-4 md:px-6 relative z-20 flex flex-col items-center text-center">
           <div className="space-y-4 md:space-y-6 max-w-5xl">
-            <div className="flex flex-col items-center space-y-2 md:space-y-4 mb-4 md:mb-8">
-               <span className="text-blood-red font-black text-sm md:text-3xl tracking-[0.2em] md:tracking-[0.4em] uppercase italic drop-shadow-[0_0_10px_#E31B23] animate-pulse">
-                {VAD_PRODUCT.tagline}
-              </span>
-              <div className="h-0.5 md:h-1 w-24 md:w-48 bg-blood-red shadow-[0_0_15px_#E31B23]"></div>
+            <div className="flex flex-col items-center mb-4 md:mb-8">
+              <div className="h-0.5 md:h-1 w-24 md:w-48 bg-blood-red shadow-[0_0_15px_#E31B23] mb-4 md:mb-6"></div>
             </div>
 
+            <h1 className="inline-block bg-blood-red px-4 md:px-8 py-3 md:py-5 text-4xl sm:text-6xl md:text-8xl lg:text-[8rem] font-creepster leading-[0.95] text-white uppercase shadow-[5px_5px_0px_#fff] md:shadow-[10px_10px_0px_#fff]">
+              GET BIG,<br />
+              GET STRONG,<br />
+              GET VEINY
+            </h1>
             <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-creepster leading-[0.9] md:leading-[0.85] text-white uppercase drop-shadow-[5px_5px_0px_#E31B23] md:drop-shadow-[10px_10px_0px_#E31B23]">
               GET READY TO <br /> <span className="glitch-text text-white block mt-2 md:mt-4 md:inline" data-text="GET VEINY">GET VEINY</span>
             </h1>
@@ -243,8 +245,8 @@ const App: React.FC = () => {
              </div>
           </div>
           <div className="space-y-6 md:space-y-10 order-1 lg:order-2">
-            <h2 className="text-4xl sm:text-6xl md:text-8xl font-creepster text-white uppercase italic leading-[0.9] md:leading-[0.8] tracking-tighter">
-               VASCULARITY <br /> <span className="text-blood-red">DEMANDED.</span>
+            <h2 className="inline-block bg-blood-red px-4 md:px-8 py-3 md:py-5 text-4xl sm:text-6xl md:text-8xl font-creepster text-white uppercase leading-[0.9] md:leading-[0.8] tracking-tighter shadow-[5px_5px_0px_#fff] md:shadow-[8px_8px_0px_#fff]">
+              VASCULARITY <br /> DEMANDED.
             </h2>
             <p className="text-slate-300 text-lg md:text-2xl font-black italic tracking-tight leading-relaxed border-l-4 md:border-l-8 border-blood-red pl-4 md:pl-10">
               WE DON'T DO "CASUAL GYM SESSIONS", BUT IF YOU WANT TO BE BIG, STRONG, AND VEINY, YOU'RE IN THE RIGHT PLACE.
