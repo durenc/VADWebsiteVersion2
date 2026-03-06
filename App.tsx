@@ -334,7 +334,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center mb-16 md:mb-32 text-center space-y-4 md:space-y-8">
             <div className="flex justify-center mb-4 md:mb-6">
-              <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-[11rem] h-auto object-contain rounded" />
+              {/*<img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-[11rem] h-auto object-contain rounded" />*/}
             </div>
             <span className="text-blood-red font-black text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.7em] uppercase">STIM-FREE POTENCY (2 SCOOPS)</span>
             <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
