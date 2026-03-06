@@ -242,7 +242,7 @@ const App: React.FC = () => {
 
       {/* ...marquee slogan removed as requested... */}
 
-      {/* Lifestyle / "Trench" Photo Section */}
+      {/* Lifestyle / "Trench" Photo Section 
       <section className="relative py-24 md:py-48 overflow-hidden bg-black/60 border-b-4 md:border-b-8 border-blood-red">
         <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="relative order-2 lg:order-1 group">
@@ -278,7 +278,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Product & Purchase Section */}
       <section id="product" className="py-16 md:py-32 bg-black/40 relative border-b border-white/10">
@@ -293,9 +293,10 @@ const App: React.FC = () => {
 
             <div className="flex flex-col justify-center space-y-8 md:space-y-12">
               <div className="space-y-4 md:space-y-6">
+                {/*
                 <div className="flex items-center gap-3 md:gap-4 text-blood-red font-black text-[10px] md:text-sm uppercase tracking-[0.3em] md:tracking-[0.5em] italic">
                    <Flame fill="currentColor" className="w-4 h-4 md:w-5 md:h-5" /> FREAK TIER ANARCHY
-                </div>
+                </div> */}
                 <h2 className="text-4xl md:text-8xl font-creepster text-white uppercase leading-[0.9] md:leading-none italic drop-shadow-[4px_4px_0px_#E31B23] md:drop-shadow-[8px_8px_0px_#E31B23]">
                   {VAD_PRODUCT.name}
                 </h2>
@@ -394,7 +395,7 @@ const App: React.FC = () => {
       <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blood-red/10 group-hover:border-blood-red/50 transition-all duration-500">
         {ing.icon}
       </div>
-      <h4 className="text-2xl md:text-4xl font-black italic uppercase leading-tight md:leading-none">
+      <h4 className="text-xl md:text-2xl font-black italic uppercase leading-tight md:leading-none">
         {ing.title}
       </h4>
       <p className="text-white text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">
