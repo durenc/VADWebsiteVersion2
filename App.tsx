@@ -134,9 +134,9 @@ const App: React.FC = () => {
     }
   };
 const merchImages = [
-  '/images/merch-shirt-1.jpg',
-  '/images/merch-shirt-2.jpg',
-  '/images/merch-shirt-3.jpg'
+  '/images/VADShirtCloseFront.jpg',
+  '/images/VADShirtBackClose.jpg',
+  '/images/VADShirtFrontFar.jpg'
 ];
 
 const [currentMerchImage, setCurrentMerchImage] = useState(0);
@@ -434,7 +434,18 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
       <section id="veiny-ah-merch" className="py-24 md:py-48 bg-black/40 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
-            
+            {/* Section Header */}
+                  <div className="flex flex-col items-center mb-16 md:mb-32 text-center">
+                  <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none">
+                 <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none">
+                    VEINY AH MERCH
+                   </span>
+                   <span className="relative text-white z-10">
+                     VEINY AH MERCH
+                  </span>
+               </h2>
+             </div>
+
             {/* Merch Image Carousel */}
             <div className="relative group">
               <div className="bg-zinc-900 p-8 md:p-16 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
@@ -496,7 +507,7 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
               </div>
 
               <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
-                Description text goes here. Replace this with your final merch wording. This area is set up to mirror the product section so you can drop in your preferred copy about the shirt, fit, design, material, or brand message.
+                      We know you’re big and veiny.  We also know that you wear clothes.  That's why you need clothes that show people just how big and veiny you are, whether you’re inside or outside the gym.  Our V.A.D. athlete performance tee signals that you’re big, you’re strong, you’re veiny, and you don’t care who knows it.
               </p>
 
               <div className="pt-4 md:pt-8 space-y-6 md:space-y-10">
