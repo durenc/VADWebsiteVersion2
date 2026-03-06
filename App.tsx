@@ -145,7 +145,7 @@ const App: React.FC = () => {
             </div>
             <div className="flex flex-col -space-y-1">
               <span className="font-black text-lg md:text-2xl tracking-tighter uppercase italic text-white leading-none">V.A.D. Supplements</span>
-              <span className="text-[7px] md:text-[9px] font-black text-white/40 tracking-[0.2em] md:tracking-[0.4em] uppercase">Get Big, Get Strong, Get VEINY</span>
+              <span className="text-[7px] md:text-[9px] font-black text-white tracking-[0.2em] md:tracking-[0.4em] uppercase">Get Big, Get Strong, Get VEINY</span>
             </div>
           </div>
 
@@ -194,7 +194,8 @@ const App: React.FC = () => {
             </div>
 
             <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-creepster leading-[0.9] md:leading-[0.85] text-white uppercase drop-shadow-[5px_5px_0px_#E31B23] md:drop-shadow-[10px_10px_0px_#E31B23]">
-              GET READY TO <br /> <span className="glitch-text text-white block mt-2 md:mt-4 md:inline" data-text="GET VEINY">GET VEINY</span>
+              GET BIG, GET STRONG,<br />
+              <span className="glitch-text text-white block mt-2 md:mt-4 md:inline" data-text="GET VEINY">GET VEINY</span>
             </h1>
 
             <p className="text-white font-black text-xs sm:text-base md:text-xl uppercase italic tracking-tight max-w-2xl mx-auto py-6 md:py-10 border-y border-white/10">
@@ -209,22 +210,17 @@ const App: React.FC = () => {
                 SECURE THE BAG <ArrowRight className="w-[22px] h-[22px] md:w-7 md:h-7" />
               </button>
               <button 
-                onClick={() => scrollToSection('the-formula')}
+                onClick={() => scrollToSection('the-veiny-ah-formula')}
                 className="group relative bg-transparent border-2 md:border-4 border-white text-white px-8 md:px-16 py-4 md:py-8 text-lg md:text-2xl font-black tracking-widest uppercase transition-all flex items-center justify-center hover:bg-white hover:text-black italic"
               >
-                THE SCIENCE
+                VEINY AH FORMULA
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Marquee Slogan */}
-      <div className="bg-blood-red py-4 md:py-6 overflow-hidden whitespace-nowrap border-y-2 md:border-y-4 border-white/30 md:rotate-1 relative z-30 shadow-[0_0_50px_rgba(227,27,35,0.7)]">
-        <div className="inline-block animate-marquee text-white font-black italic text-xl md:text-5xl uppercase tracking-tighter">
-          {Array(10).fill(`${VAD_PRODUCT.tagline} • `).join("")}
-        </div>
-      </div>
+      {/* ...marquee slogan removed as requested... */}
 
       {/* Lifestyle / "Trench" Photo Section */}
       <section className="relative py-24 md:py-48 overflow-hidden bg-black/60 border-b-4 md:border-b-8 border-blood-red">
@@ -243,10 +239,11 @@ const App: React.FC = () => {
              </div>
           </div>
           <div className="space-y-6 md:space-y-10 order-1 lg:order-2">
-            <h2 className="text-4xl sm:text-6xl md:text-8xl font-creepster text-white uppercase italic leading-[0.9] md:leading-[0.8] tracking-tighter">
-               VASCULARITY <br /> <span className="text-blood-red">DEMANDED.</span>
+            <h2 className="relative text-4xl sm:text-6xl md:text-8xl font-creepster uppercase italic leading-[0.9] md:leading-[0.8] tracking-tighter">
+              <span className="absolute left-1 top-1 md:left-2 md:top-2 text-blood-red z-0 select-none pointer-events-none">VASCULARITY<br />DEMANDED.</span>
+              <span className="relative text-white z-10">VASCULARITY<br />DEMANDED.</span>
             </h2>
-            <p className="text-slate-300 text-lg md:text-2xl font-black italic tracking-tight leading-relaxed border-l-4 md:border-l-8 border-blood-red pl-4 md:pl-10">
+            <p className="text-white text-lg md:text-2xl font-black italic tracking-tight leading-relaxed border-l-4 md:border-l-8 border-blood-red pl-4 md:pl-10">
               WE DON'T DO "CASUAL GYM SESSIONS", BUT IF YOU WANT TO BE BIG, STRONG, AND VEINY, YOU'RE IN THE RIGHT PLACE.
             </p>
             <div className="grid grid-cols-2 gap-4 md:gap-8">
@@ -286,7 +283,7 @@ const App: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 md:gap-10">
                  <div className="flex flex-col">
-                   <span className="text-[8px] md:text-[10px] font-black uppercase text-white/40 tracking-[0.4em] md:tracking-[0.6em] mb-1 md:mb-2">YOU CAN'T PUT A PRICE ON A PUMP LIKE THIS, BUT WE TRIED</span>
+                   <span className="text-[8px] md:text-[10px] font-black uppercase text-white tracking-[0.4em] md:tracking-[0.6em] mb-1 md:mb-2">YOU CAN'T PUT A PRICE ON A PUMP LIKE THIS, BUT WE TRIED</span>
                    <span className="text-6xl sm:text-8xl md:text-9xl font-black italic tracking-tighter text-white leading-none">${VAD_PRODUCT.price}</span>
                  </div>
                  <div className="sm:mb-4">
@@ -294,20 +291,20 @@ const App: React.FC = () => {
                  </div>
               </div>
 
-              <p className="text-slate-400 text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
+              <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
                 {VAD_PRODUCT.description}
               </p>
 
               <div className="space-y-8 md:space-y-12">
                 {/*
                 <div>
-                   <h4 className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] md:tracking-[0.6em] text-white/40 mb-4 md:mb-6 flex items-center gap-2 md:gap-4">
+                   <h4 className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] md:tracking-[0.6em] text-white mb-4 md:mb-6 flex items-center gap-2 md:gap-4">
                      CHOOSE YOUR POISON <div className="h-[1px] flex-grow bg-white/10"></div>
                    </h4>
                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                       {VAD_PRODUCT.flavors.map(f => (
                         <button key={f} onClick={() => setSelectedFlavor(f)}
-                          className={`py-4 md:py-6 text-[9px] md:text-[11px] font-black uppercase tracking-widest border-2 transition-all italic shadow-[4px_4px_0px_#000] md:shadow-[6px_6px_0px_#000] ${selectedFlavor === f ? 'bg-blood-red border-blood-red text-white translate-x-1 translate-y-1 shadow-none' : 'border-white/10 text-slate-500 hover:border-white/40 hover:text-white'}`}>
+                          className={`py-4 md:py-6 text-[9px] md:text-[11px] font-black uppercase tracking-widest border-2 transition-all italic shadow-[4px_4px_0px_#000] md:shadow-[6px_6px_0px_#000] ${selectedFlavor === f ? 'bg-blood-red border-blood-red text-white translate-x-1 translate-y-1 shadow-none' : 'border-white/10 text-white hover:border-white/40 hover:text-white'}`}>
                           {f}
                         </button>
                       ))}
@@ -321,7 +318,7 @@ const App: React.FC = () => {
                   </div>
 
                   {/* <div className="flex flex-col items-center gap-4 py-6 md:py-10 border-y border-white/5">
-                    <div className="flex items-center gap-3 text-white/30 font-black italic uppercase tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-sm">
+                    <div className="flex items-center gap-3 text-white font-black italic uppercase tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-sm">
                       POWERED BY <span className="text-white tracking-widest flex items-center gap-1 md:gap-2"><div className="w-4 h-4 md:w-6 md:h-6 border md:border-2 border-white/30 flex items-center justify-center font-black text-[7px] md:text-[10px]">S</div> SQUARE</span>
                     </div>
                   </div> */}
@@ -340,7 +337,10 @@ const App: React.FC = () => {
               <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-[11rem] h-auto object-contain rounded" />
             </div>
             <span className="text-blood-red font-black text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.7em] uppercase">STIM-FREE POTENCY (2 SCOOPS)</span>
-            <h2 className="text-5xl sm:text-7xl md:text-[11rem] font-creepster text-white uppercase italic tracking-tighter leading-[0.9] md:leading-none drop-shadow-[10px_10px_0px_rgba(227,27,35,0.3)] md:drop-shadow-[20px_20px_0px_rgba(227,27,35,0.3)]">THE DOSAGE</h2>
+            <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none">
+              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none">THE DOSAGE</span>
+              <span className="relative text-white z-10">THE DOSAGE</span>
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mb-24 md:mb-40">
@@ -377,7 +377,7 @@ const App: React.FC = () => {
       <h4 className="text-2xl md:text-4xl font-black italic uppercase leading-tight md:leading-none">
         {ing.title}
       </h4>
-      <p className="text-slate-500 text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">
+      <p className="text-white text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">
         {ing.desc}
       </p>
     </div>
@@ -387,8 +387,11 @@ const App: React.FC = () => {
 
           <div id="dosage-facts" className="flex flex-col items-center pt-16 md:pt-32 border-t border-white/10">
             <div className="mb-12 md:mb-24 text-center space-y-4 md:space-y-8">
-               <h3 className="text-3xl sm:text-5xl md:text-9xl font-black uppercase italic tracking-widest text-white leading-[0.9] md:leading-none">CLINICAL <br /> <span className="text-blood-red">TRANSPARENCY</span></h3>
-               <p className="text-slate-500 font-black uppercase tracking-[0.4em] md:tracking-[1em] text-[10px] md:text-sm italic">FULL DUAL-COLUMN DISCLOSURE. ZERO SECRETS.</p>
+               <h3 className="relative text-3xl sm:text-5xl md:text-9xl font-creepster uppercase italic tracking-widest leading-[0.9] md:leading-none">
+                 <span className="absolute left-1 top-1 md:left-4 md:top-4 text-blood-red z-0 select-none pointer-events-none">CLINICAL <br /> TRANSPARENCY</span>
+                 <span className="relative text-white z-10">CLINICAL <br /> TRANSPARENCY</span>
+               </h3>
+               <p className="text-white font-black uppercase tracking-[0.4em] md:tracking-[1em] text-[10px] md:text-sm italic">FULL DUAL-COLUMN DISCLOSURE. ZERO SECRETS.</p>
             </div>
             <div className="w-full max-w-2xl mb-16 md:mb-32">
               <SupplementFacts />
@@ -400,7 +403,10 @@ const App: React.FC = () => {
       <section id="our-story" className="py-24 md:py-48 bg-black/70 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto prose prose-invert text-white font-['Inter']">
-            <h2 className="text-4xl md:text-6xl font-creepster text-white uppercase italic tracking-tighter mb-4">Our Story</h2>
+            <h2 className="relative text-4xl md:text-6xl font-creepster uppercase italic tracking-tighter mb-4">
+              <span className="absolute left-1 top-1 md:left-2 md:top-2 text-blood-red z-0 select-none pointer-events-none">Our Story</span>
+              <span className="relative text-white z-10">Our Story</span>
+            </h2>
             <p className="mb-4">I’ve always loved the gym. The lifts. The grind. The pursuit of getting better every single day.</p>
             <p className="mb-4">But more than anything, I love the pump. There’s nothing like finishing a session, catching your reflection, and seeing veins popping and muscles full.</p>
             <p className="mb-4">I tried countless pre-workouts, but stimulants came with tradeoffs—restricted training times, tolerance buildup, and the need to cycle off just to feel them work again. I wanted something different. A product I could take anytime. Something that supported getting bigger, stronger, and undeniably veiny—without compromise.</p>
@@ -414,8 +420,11 @@ const App: React.FC = () => {
       <section id="faqs" className="py-24 md:py-48 bg-black/40 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center mb-12 text-center">
-            <h2 className="text-4xl md:text-6xl font-creepster text-white uppercase italic tracking-tighter">FAQs</h2>
-            <p className="text-slate-500 font-black uppercase tracking-[0.4em] md:tracking-[1em] text-[10px] md:text-sm italic">Common questions and answers</p>
+            <h2 className="relative text-4xl md:text-6xl font-creepster uppercase italic tracking-tighter">
+              <span className="absolute left-1 top-1 md:left-2 md:top-2 text-blood-red z-0 select-none pointer-events-none">FAQs</span>
+              <span className="relative text-white z-10">FAQs</span>
+            </h2>
+            <p className="text-white font-black uppercase tracking-[0.4em] md:tracking-[1em] text-[10px] md:text-sm italic">Common questions and answers</p>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-4 text-left text-white">
@@ -476,10 +485,10 @@ const App: React.FC = () => {
                <div className="space-y-6 md:space-y-12">
                   <h5 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.4em] md:tracking-[0.6em] text-white">NEWSLETTER</h5>
                   <div className="relative group w-full">
-                    <input type="email" placeholder="YOUR@UNIT.COM" className="w-full bg-zinc-900 border-2 border-white/10 px-6 md:px-8 py-5 md:py-8 text-[11px] md:text-[13px] font-black uppercase tracking-widest focus:outline-none focus:border-blood-red italic placeholder:text-zinc-800 text-white" />
+                    <input type="email" placeholder="YOUR@UNIT.COM" className="w-full bg-zinc-900 border-2 border-white/10 px-6 md:px-8 py-5 md:py-8 text-[11px] md:text-[13px] font-black uppercase tracking-widest focus:outline-none focus:border-blood-red italic placeholder:text-white text-white" />
                     <button className="absolute right-2 top-2 bottom-2 px-6 md:px-10 bg-blood-red text-white font-black italic text-xs md:text-sm hover:bg-white hover:text-black transition-all">JOIN</button>
                   </div>
-                  <div className="mt-4 flex items-center gap-3 text-white/20 font-black italic uppercase tracking-[0.2em] text-[9px] md:text-[10px]">
+                  <div className="mt-4 flex items-center gap-3 text-white font-black italic uppercase tracking-[0.2em] text-[9px] md:text-[10px]">
                     POWERED BY <span className="text-white flex items-center gap-1"><div className="w-3 h-3 md:w-4 md:h-4 border border-white/30 flex items-center justify-center font-black text-[7px] md:text-[8px]">S</div> SQUARE</span>
                   </div>
                </div>
@@ -487,7 +496,7 @@ const App: React.FC = () => {
           </div>
           
           <div className="mt-24 md:mt-48 pt-10 md:pt-16 border-t border-white/5 text-center">
-            <p className="text-[9px] md:text-[12px] font-black uppercase tracking-[0.3em] md:tracking-[0.6em] text-zinc-900 italic">
+            <p className="text-[9px] md:text-[12px] font-black uppercase tracking-[0.3em] md:tracking-[0.6em] text-white italic">
                © 2026 V.A.D. SUPPLEMENTS LLC• GET BIG • GET STRONG• GET VEINY
             </p>
           </div>
