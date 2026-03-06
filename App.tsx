@@ -109,6 +109,7 @@ const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedFlavor, setSelectedFlavor] = useState<Flavor>(VAD_PRODUCT.flavors[0]);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,6 +130,7 @@ const App: React.FC = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
+      setMobileNavOpen(false); // close mobile nav after click
     }
   };
 
@@ -153,7 +155,6 @@ const App: React.FC = () => {
               <button 
                 key={link} 
                 onClick={() => {
-                  //if (link === 'Facts') return scrollToSection('dosage-facts');
                   if (link === 'Get VEINY') return scrollToSection('product');
                   if (link === 'The Veiny Ah Formula') return scrollToSection('the-veiny-ah-formula');
                   if (link === 'Our Story') return scrollToSection('our-story');
@@ -166,10 +167,30 @@ const App: React.FC = () => {
               </button>
             ))}
           </div> 
-          <button className="lg:hidden p-2 text-white bg-white/5 border border-white/10" onClick={() => scrollToSection('connect')} aria-label="Menu">
+          <button className="lg:hidden p-2 text-white bg-white/5 border border-white/10" onClick={() => setMobileNavOpen(v => !v)} aria-label="Menu">
             <Skull size={20} />
           </button>
         </div>
+        {/* Mobile collapsible nav */}
+        {mobileNavOpen && (
+          <div className="flex flex-col items-center gap-2 py-4 bg-black/95 border-t border-blood-red/40 lg:hidden">
+            {['Get VEINY', 'The Veiny Ah Formula', 'Our Story', 'FAQs', 'Connect'].map((link) => (
+              <button 
+                key={link} 
+                onClick={() => {
+                  if (link === 'Get VEINY') return scrollToSection('product');
+                  if (link === 'The Veiny Ah Formula') return scrollToSection('the-veiny-ah-formula');
+                  if (link === 'Our Story') return scrollToSection('our-story');
+                  if (link === 'FAQs') return scrollToSection('faqs');
+                  return scrollToSection(link.toLowerCase().replace(' ', '-'))
+                }}
+                className="w-full text-center text-[14px] font-black tracking-[0.2em] uppercase hover:text-blood-red transition-all italic text-white py-2"
+              >
+                {link}
+              </button>
+            ))}
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
