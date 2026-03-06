@@ -134,9 +134,9 @@ const App: React.FC = () => {
     }
   };
 const merchImages = [
-  '/public/images/VADShirtCloseFront.jpg',
-  '/public/images/VADShirtBackClose.jpg',
-  '/public/images/VADShirtFrontFar.jpg'
+  '/images/VADShirtCloseFront.jpeg',
+  '/images/VADShirtBackClose.jpeg',
+  '/images/VADShirtFrontFar.jpeg'
 ];
 
 const [currentMerchImage, setCurrentMerchImage] = useState(0);
@@ -433,31 +433,25 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
       {/* Merch Section */}
       <section id="veiny-ah-merch" className="py-24 md:py-48 bg-black/40 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
-            {/* Section Header */}
-                  <div className="flex flex-col items-center mb-16 md:mb-32 text-center">
-                  <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none">
-                 <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none">
-                    VEINY AH MERCH
-                   </span>
-                   <span className="relative text-white z-10">
-                     VEINY AH MERCH
-                  </span>
-               </h2>
-             </div>
-
+          {/* Section Header */}
+          <div className="flex flex-col items-center mb-16 md:mb-32 text-center">
+            <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
+              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none w-full">VEINY AH MERCH</span>
+              <span className="relative text-white z-10 w-full">VEINY AH MERCH</span>
+            </h2>
+          </div>
+          {/* Merch Content: Carousel left, details right */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
             {/* Merch Image Carousel */}
-            <div className="relative group">
+            <div className="relative group order-1 lg:order-1">
               <div className="bg-zinc-900 p-8 md:p-16 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/carbon-fibre.png')] opacity-30"></div>
-
                 <div className="relative z-10 w-full flex flex-col items-center">
                   <img
                     src={merchImages[currentMerchImage]}
                     alt="V.A.D. Athlete Shirt"
                     className="max-h-[300px] md:max-h-[600px] object-contain drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)] transition-all duration-500"
                   />
-
                   <div className="flex items-center gap-4 mt-6 flex-wrap justify-center">
                     <button
                       onClick={() =>
@@ -469,7 +463,6 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                     >
                       Prev
                     </button>
-
                     <div className="flex gap-3">
                       {merchImages.map((_, i) => (
                         <button
@@ -482,7 +475,6 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                         />
                       ))}
                     </div>
-
                     <button
                       onClick={() =>
                         setCurrentMerchImage((prev) =>
@@ -497,19 +489,16 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                 </div>
               </div>
             </div>
-
             {/* Merch Details */}
-            <div className="flex flex-col justify-center space-y-8 md:space-y-12">
+            <div className="flex flex-col justify-center space-y-8 md:space-y-12 order-2 lg:order-2">
               <div className="space-y-4 md:space-y-6">
-                <h2 className="text-4xl md:text-8xl font-creepster text-white uppercase leading-[0.9] md:leading-none italic drop-shadow-[4px_4px_0px_#E31B23] md:drop-shadow-[8px_8px_0px_#E31B23]">
+                <h2 className="text-4xl md:text-8xl font-creepster text-white uppercase leading-[0.9] md:leading-none italic drop-shadow-[4px_4px_0px_#E31B23] md:drop-shadow-[8px_8px_0px_#E31B23] text-left lg:text-left">
                   V.A.D. ATHLETE SHIRT
                 </h2>
               </div>
-
               <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
-                      We know you’re big and veiny.  We also know that you wear clothes.  That's why you need clothes that show people just how big and veiny you are, whether you’re inside or outside the gym.  Our V.A.D. athlete performance tee signals that you’re big, you’re strong, you’re veiny, and you don’t care who knows it.
+                We know you’re big and veiny.  We also know that you wear clothes.  That's why you need clothes that show people just how big and veiny you are, whether you’re inside or outside the gym.  Our V.A.D. athlete performance tee signals that you’re big, you’re strong, you’re veiny, and you don’t care who knows it.
               </p>
-
               <div className="pt-4 md:pt-8 space-y-6 md:space-y-10">
                 <div className="relative group flex flex-col items-start">
                   <a
@@ -520,7 +509,6 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                   >
                     BUY NOW
                   </a>
-
                   <div className="mt-4 flex items-center gap-3 text-white font-black italic uppercase tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-sm">
                     POWERED BY
                     <span className="text-white tracking-widest flex items-center gap-1 md:gap-2">
