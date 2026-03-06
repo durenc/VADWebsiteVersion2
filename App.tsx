@@ -459,15 +459,14 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col lg:flex-row justify-between gap-16 md:gap-32 items-start">
             <div className="space-y-8 md:space-y-12 lg:w-1/2">
-              <div className="flex flex-col items-end gap-2 md:gap-4 w-full">
-                <div className="w-16 h-16 md:w-24 md:h-24 bg-blood-red flex items-center justify-center shadow-[5px_5px_0px_#fff] md:shadow-[10px_10px_0px_#fff]">
-                  <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-full h-full object-contain rounded" />
+              <div className="flex items-center gap-3 md:gap-4 group cursor-pointer">
+                <div className="relative">
+                  <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-10 h-10 md:w-12 md:h-12 transition-all duration-300 shadow-[3px_3px_0px_#fff] md:shadow-[4px_4px_0px_#fff]" />
                 </div>
-                <span className="font-black text-2xl md:text-5xl tracking-tighter uppercase italic text-white leading-none text-right">V.A.D. Supplements</span>
-                <h4 className="relative font-creepster text-4xl md:text-7xl uppercase italic tracking-tighter leading-none text-right">
-                  <span className="absolute right-1 top-1 md:right-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">GET BIG<br />GET STRONG<br />GET VEINY</span>
-                  <span className="relative text-white z-10 w-full">GET BIG<br />GET STRONG<br />GET VEINY</span>
-                </h4>
+                <div className="flex flex-col -space-y-1">
+                  <span className="font-black text-lg md:text-2xl tracking-tighter uppercase italic text-white leading-none">V.A.D. Supplements</span>
+                  <span className="text-[7px] md:text-[9px] font-black text-white tracking-[0.2em] md:tracking-[0.4em] uppercase">Get Big, Get Strong, Get VEINY</span>
+                </div>
               </div>
               <div className="flex gap-6 md:gap-10">
                  <a href="https://www.instagram.com/veinyahdihsupps" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
