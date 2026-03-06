@@ -186,15 +186,15 @@ const App: React.FC = () => {
 
         <div className="container mx-auto px-4 md:px-6 relative z-20 flex flex-col items-center text-center">
           <div className="space-y-4 md:space-y-6 max-w-5xl">
-            <div className="flex flex-col items-center space-y-2 md:space-y-4 mb-4 md:mb-8">
+            {/* <div className="flex flex-col items-center space-y-2 md:space-y-4 mb-4 md:mb-8">
                <span className="text-blood-red font-black text-sm md:text-3xl tracking-[0.2em] md:tracking-[0.4em] uppercase italic drop-shadow-[0_0_10px_#E31B23] animate-pulse">
                 {VAD_PRODUCT.tagline}
               </span>
               <div className="h-0.5 md:h-1 w-24 md:w-48 bg-blood-red shadow-[0_0_15px_#E31B23]"></div>
-            </div>
+            </div>*/}
 
-            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-creepster leading-[0.9] md:leading-[0.85] text-white uppercase drop-shadow-[5px_5px_0px_#E31B23] md:drop-shadow-[10px_10px_0px_#E31B23]">
-              GET BIG, GET STRONG,<br />
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-creepster leading-[0.9] md:leading-[0.85] text-white uppercase drop-shadow-[5px_5px_0px_#E31B23] md:drop-shadow-[10px_10px_0px_#E31B23] text-center">
+              GET BIG<br />GET STRONG<br />
               <span className="glitch-text text-white block mt-2 md:mt-4 md:inline" data-text="GET VEINY">GET VEINY</span>
             </h1>
 
@@ -337,9 +337,9 @@ const App: React.FC = () => {
               <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-[11rem] h-auto object-contain rounded" />
             </div>
             <span className="text-blood-red font-black text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.7em] uppercase">STIM-FREE POTENCY (2 SCOOPS)</span>
-            <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none">
-              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none">THE DOSAGE</span>
-              <span className="relative text-white z-10">THE DOSAGE</span>
+            <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
+              <span className="absolute left-1 top-1 md:left-4 md:top-4 text-blood-red z-0 select-none pointer-events-none w-full">THE DOSAGE</span>
+              <span className="relative text-white z-10 w-full">THE DOSAGE</span>
             </h2>
           </div>
 
@@ -387,9 +387,9 @@ const App: React.FC = () => {
 
           <div id="dosage-facts" className="flex flex-col items-center pt-16 md:pt-32 border-t border-white/10">
             <div className="mb-12 md:mb-24 text-center space-y-4 md:space-y-8">
-               <h3 className="relative text-3xl sm:text-5xl md:text-9xl font-creepster uppercase italic tracking-widest leading-[0.9] md:leading-none">
-                 <span className="absolute left-1 top-1 md:left-4 md:top-4 text-blood-red z-0 select-none pointer-events-none">CLINICAL <br /> TRANSPARENCY</span>
-                 <span className="relative text-white z-10">CLINICAL <br /> TRANSPARENCY</span>
+               <h3 className="relative text-3xl sm:text-5xl md:text-9xl font-creepster uppercase italic tracking-widest leading-[0.9] md:leading-none text-center">
+                 <span className="absolute left-1 top-1 md:left-4 md:top-4 text-blood-red z-0 select-none pointer-events-none w-full">CLINICAL <br /> TRANSPARENCY</span>
+                 <span className="relative text-white z-10 w-full">CLINICAL <br /> TRANSPARENCY</span>
                </h3>
                <p className="text-white font-black uppercase tracking-[0.4em] md:tracking-[1em] text-[10px] md:text-sm italic">FULL DUAL-COLUMN DISCLOSURE. ZERO SECRETS.</p>
             </div>
@@ -403,9 +403,9 @@ const App: React.FC = () => {
       <section id="our-story" className="py-24 md:py-48 bg-black/70 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto prose prose-invert text-white font-['Inter']">
-            <h2 className="relative text-4xl md:text-6xl font-creepster uppercase italic tracking-tighter mb-4">
-              <span className="absolute left-1 top-1 md:left-2 md:top-2 text-blood-red z-0 select-none pointer-events-none">Our Story</span>
-              <span className="relative text-white z-10">Our Story</span>
+            <h2 className="relative text-5xl md:text-8xl font-creepster uppercase italic tracking-tighter mb-8 text-center">
+              <span className="absolute left-1 top-1 md:left-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">Our Story</span>
+              <span className="relative text-white z-10 w-full">Our Story</span>
             </h2>
             <p className="mb-4">I’ve always loved the gym. The lifts. The grind. The pursuit of getting better every single day.</p>
             <p className="mb-4">But more than anything, I love the pump. There’s nothing like finishing a session, catching your reflection, and seeing veins popping and muscles full.</p>
@@ -420,9 +420,9 @@ const App: React.FC = () => {
       <section id="faqs" className="py-24 md:py-48 bg-black/40 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center mb-12 text-center">
-            <h2 className="relative text-4xl md:text-6xl font-creepster uppercase italic tracking-tighter">
-              <span className="absolute left-1 top-1 md:left-2 md:top-2 text-blood-red z-0 select-none pointer-events-none">FAQs</span>
-              <span className="relative text-white z-10">FAQs</span>
+            <h2 className="relative text-5xl md:text-8xl font-creepster uppercase italic tracking-tighter text-center mb-8">
+              <span className="absolute left-1 top-1 md:left-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">FAQs</span>
+              <span className="relative text-white z-10 w-full">FAQs</span>
             </h2>
             <p className="text-white font-black uppercase tracking-[0.4em] md:tracking-[1em] text-[10px] md:text-sm italic">Common questions and answers</p>
           </div>
@@ -459,18 +459,16 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col lg:flex-row justify-between gap-16 md:gap-32 items-start">
             <div className="space-y-8 md:space-y-12 lg:w-1/2">
-              <div className="flex items-center gap-6 md:gap-10">
+              <div className="flex flex-col items-end gap-2 md:gap-4 w-full">
                 <div className="w-16 h-16 md:w-24 md:h-24 bg-blood-red flex items-center justify-center shadow-[5px_5px_0px_#fff] md:shadow-[10px_10px_0px_#fff]">
                   <img src="/images/VAD Logo.jpg" alt="V.A.D Logo" className="w-full h-full object-contain rounded" />
                 </div>
-                <div className="flex flex-col">
-                  <span className="font-black text-2xl md:text-5xl tracking-tighter uppercase italic text-white leading-none">V.A.D SUPPS</span>
-                  <span className="text-[8px] md:text-xs font-black text-blood-red tracking-[0.3em] md:tracking-[0.7em] uppercase italic">BUILT FOR FREAKS</span>
-                </div>
+                <span className="font-black text-2xl md:text-5xl tracking-tighter uppercase italic text-white leading-none text-right">V.A.D. Supplements</span>
+                <h4 className="relative font-creepster text-4xl md:text-7xl uppercase italic tracking-tighter leading-none text-right">
+                  <span className="absolute right-1 top-1 md:right-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">GET BIG<br />GET STRONG<br />GET VEINY</span>
+                  <span className="relative text-white z-10 w-full">GET BIG<br />GET STRONG<br />GET VEINY</span>
+                </h4>
               </div>
-              <h4 className="font-creepster text-3xl md:text-6xl text-white uppercase italic tracking-tighter max-w-lg leading-none">
-                {VAD_PRODUCT.tagline}
-              </h4>
               <div className="flex gap-6 md:gap-10">
                  <a href="https://www.instagram.com/veinyahdihsupps" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
                    <Instagram className="w-6 h-6 md:w-9 md:h-9" />
