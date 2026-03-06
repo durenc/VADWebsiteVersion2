@@ -134,9 +134,9 @@ const App: React.FC = () => {
     }
   };
 const merchImages = [
-  '/images/VADShirtCloseFront.jpg',
-  '/images/VADShirtBackClose.jpg',
-  '/images/VADShirtFrontFar.jpg'
+  '/public/images/VADShirtCloseFront.jpg',
+  '/public/images/VADShirtBackClose.jpg',
+  '/public/images/VADShirtFrontFar.jpg'
 ];
 
 const [currentMerchImage, setCurrentMerchImage] = useState(0);
