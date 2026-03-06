@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Instagram, 
@@ -213,7 +212,7 @@ const App: React.FC = () => {
                 onClick={() => scrollToSection('the-veiny-ah-formula')}
                 className="group relative bg-transparent border-2 md:border-4 border-white text-white px-8 md:px-16 py-4 md:py-8 text-lg md:text-2xl font-black tracking-widest uppercase transition-all flex items-center justify-center hover:bg-white hover:text-black italic"
               >
-                VEINY AH FORMULA
+                OUR VEINY AH FORMULA
               </button>
             </div>
           </div>
@@ -287,7 +286,7 @@ const App: React.FC = () => {
                    <span className="text-6xl sm:text-8xl md:text-9xl font-black italic tracking-tighter text-white leading-none">${VAD_PRODUCT.price}</span>
                  </div>
                  <div className="sm:mb-4">
-                   <span className="text-blood-red font-black text-[10px] md:text-sm uppercase tracking-widest bg-blood-red/10 border border-blood-red/30 px-4 md:px-6 py-1 md:py-2 block">30 SERVINGS</span>
+                   <span className="font-black text-[10px] md:text-sm uppercase tracking-widest bg-transparent border-2 border-blood-red text-white px-4 md:px-6 py-1 md:py-2 block">30 SERVINGS</span>
                  </div>
               </div>
 
@@ -402,7 +401,7 @@ const App: React.FC = () => {
       {/* Our Story */}
       <section id="our-story" className="py-24 md:py-48 bg-black/70 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto prose prose-invert text-white font-['Inter']">
+          <div className="max-w-3xl mx-auto prose prose-invert text-white font-['Inter'] text-lg md:text-2xl">
             <h2 className="relative text-5xl md:text-8xl font-creepster uppercase italic tracking-tighter mb-8 text-center">
               <span className="absolute left-1 top-1 md:left-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">Our Story</span>
               <span className="relative text-white z-10 w-full">Our Story</span>
