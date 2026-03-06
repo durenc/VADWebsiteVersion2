@@ -3,7 +3,6 @@ import {
   Instagram, 
   Facebook,
   Skull,
-  Flame,
   ArrowRight,
   Activity,
   Trophy,
@@ -183,12 +182,13 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
         {/* Mobile collapsible nav */}
         {mobileNavOpen && (
           <div className="flex flex-col items-center gap-2 py-4 bg-black/95 border-t border-blood-red/40 lg:hidden">
-            {['Get VEINY', 'The Veiny Ah Formula', 'Our Story', 'FAQs', 'Connect'].map((link) => (
+            {['Get VEINY', 'The Veiny Ah Formula', 'Veiny Ah Merch', 'Our Story', 'FAQs', 'Connect'].map((link) => (
               <button 
                 key={link} 
                 onClick={() => {
                   if (link === 'Get VEINY') return scrollToSection('product');
                   if (link === 'The Veiny Ah Formula') return scrollToSection('the-veiny-ah-formula');
+                  if (link === 'Veiny Ah Merch') return scrollToSection('veiny-ah-merch');
                   if (link === 'Our Story') return scrollToSection('our-story');
                   if (link === 'FAQs') return scrollToSection('faqs');
                   return scrollToSection(link.toLowerCase().replace(' ', '-'))
