@@ -15,7 +15,7 @@ import { Flavor, Product } from './types.ts';
 
 const VAD_PRODUCT: Product = {
   id: 'vad-stim-free-original',
-  name: 'Say Veiny Ah Drink',
+  name: 'VEINY AH DRINK',
   tagline: 'GET BIG, GET STRONG, GET VEINY',
   price: 49.99,
   description: 'Unleash absolute anarchy in your bloodstream. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
@@ -26,15 +26,15 @@ const VAD_PRODUCT: Product = {
 const FAQ_ITEMS = [
   {
     q: 'Why is there no caffeine?',
-    a: `V.A.D is built around three priorities: getting big, getting strong, and getting veiny. While caffeine has its place, it also limits when and how a product can be used. Many people train at night, train after coffee, or want pure pump support without stimulants. By keeping V.A.D caffeine-free, we maximize flexibility. If you want stimulants, you can stack caffeine separately—without compromising the pump.`
+    a: `V.A.D. is built around three priorities: getting big, getting strong, and getting veiny. While caffeine has its place, it also limits when and how a product can be used. Many people train at night, train after coffee, or want pure pump support without stimulants. By keeping V.A.D caffeine-free, we maximize flexibility. If you want stimulants, you can stack caffeine separately—without compromising the pump.`
   },
   {
-    q: 'Can I take V.A.D with other pre-workouts?',
-    a: `Yes. V.A.D is designed to stack cleanly with stimulant-based pre-workouts. If you train early or rely on stimulants, take 1 scoop of V.A.D alongside 1 scoop of your stim pre-workout. Always check both labels to ensure any overlapping ingredients stay within safe daily limits.`
+    q: 'Can I take V.A.D. with other pre-workouts?',
+    a: `Yes. V.A.D. is designed to stack cleanly with stimulant-based pre-workouts. If you train early or rely on stimulants, take 1 scoop of V.A.D alongside 1 scoop of your stim pre-workout. Always check both labels to ensure any overlapping ingredients stay within safe daily limits.`
   },
   {
     q: 'Should I take one scoop or two?', 
-    a: `V.A.D is formulated for flexible dosing. Start with 1 scoop to assess tolerance—this will deliver a strong pump. For maximum fullness and vascularity, 2 scoops can be used. Adjust based on your body weight, training intensity, and pump preference.`
+    a: `V.A.D. is formulated for flexible dosing. Start with 1 scoop to assess tolerance—this will deliver a strong pump. For maximum fullness and vascularity, 2 scoops can be used. Adjust based on your body weight, training intensity, and pump preference.`
   },
   {
     q: 'Why the name “Veiny Ah Dih”?',
@@ -309,7 +309,7 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                 <h2 className="text-4xl md:text-8xl font-creepster text-white uppercase leading-[0.9] md:leading-none italic drop-shadow-[4px_4px_0px_#E31B23] md:drop-shadow-[8px_8px_0px_#E31B23]">
                   {VAD_PRODUCT.name}
                 </h2>
-                <div className="text-lg md:text-3xl font-creepster text-white uppercase italic drop-shadow-[2px_2px_0px_#E31B23] md:drop-shadow-[4px_4px_0px_#E31B23] px-2 inline-block bg-blood-red/80 mt-2" style={{ WebkitTextStroke: '1px #E31B23', borderRadius: '0.25rem' }}>
+                <div className="text-3xl md:text-7xl font-creepster text-white uppercase italic drop-shadow-[2px_2px_0px_#E31B23] md:drop-shadow-[6px_6px_0px_#E31B23] px-2 inline-block bg-blood-red/80 mt-2" style={{ WebkitTextStroke: '1px #E31B23', borderRadius: '0.25rem' }}>
                   V.A.D. Stimulant free preworkout formula
                 </div>
               </div>
