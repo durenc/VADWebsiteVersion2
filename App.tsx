@@ -15,7 +15,7 @@ import { Flavor, Product } from './types.ts';
 
 const VAD_PRODUCT: Product = {
   id: 'vad-stim-free-original',
-  name: 'V.A.D. STIMULANT FREE PREWORKOUT FORMULA',
+  name: 'Say Veiny Ah Drink',
   tagline: 'GET BIG, GET STRONG, GET VEINY',
   price: 49.99,
   description: 'Unleash absolute anarchy in your bloodstream. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
@@ -309,6 +309,9 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                 <h2 className="text-4xl md:text-8xl font-creepster text-white uppercase leading-[0.9] md:leading-none italic drop-shadow-[4px_4px_0px_#E31B23] md:drop-shadow-[8px_8px_0px_#E31B23]">
                   {VAD_PRODUCT.name}
                 </h2>
+                <div className="text-lg md:text-3xl font-creepster text-white uppercase italic drop-shadow-[2px_2px_0px_#E31B23] md:drop-shadow-[4px_4px_0px_#E31B23] px-2 inline-block bg-blood-red/80 mt-2" style={{ WebkitTextStroke: '1px #E31B23', borderRadius: '0.25rem' }}>
+                  V.A.D. Stimulant free preworkout formula
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 md:gap-10">
