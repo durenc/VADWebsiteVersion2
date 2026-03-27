@@ -15,11 +15,11 @@ import { Flavor, Product } from './types.ts';
 
 const VAD_PRODUCT: Product = {
   id: 'vad-stim-free-original',
-  name: 'A VEINY AHH DRINK FOR VEINY AHH DUDES',
+  name: 'THE VEINY AHH DRINK',
   tagline: 'GET BIG, GET STRONG, GET VEINY',
   price: 49.99,
-  description: 'Unleash absolute anarchy in your bloodstream. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
-  flavors: ['Veiny Surge Strawberry', 'Ultimate Pump Punch'],
+  description: 'A veiny ahh drink for veiny ahh dudes. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
+  flavors: ['Bulging Berries'],
   image: '/images/VADBlankBackgroundProductImage.jpg'
 };
 
