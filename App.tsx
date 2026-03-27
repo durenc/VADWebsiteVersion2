@@ -15,7 +15,7 @@ import { Flavor, Product } from './types.ts';
 
 const VAD_PRODUCT: Product = {
   id: 'vad-stim-free-original',
-  name: 'VEINY AH DRINK',
+  name: 'A VEINY AHH DRINK FOR VEINY AHH DUDES',
   tagline: 'GET BIG, GET STRONG, GET VEINY',
   price: 49.99,
   description: 'Unleash absolute anarchy in your bloodstream. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
@@ -37,8 +37,8 @@ const FAQ_ITEMS = [
     a: `V.A.D. is formulated for flexible dosing. Start with 1 scoop to assess tolerance—this will deliver a strong pump. For maximum fullness and vascularity, 2 scoops can be used. Adjust based on your body weight, training intensity, and pump preference.`
   },
   {
-    q: 'Why the name “Veiny Ah Dih”?',
-    a: `The supplement industry takes itself too seriously. We don’t. Training should be intense, effective, and fun. The name Veiny Ah Dih reflects our no-filter, over-the-top approach to pump training and gym culture. It’s bold, it’s ridiculous, and it delivers exactly what it promises.`
+    q: 'Why the name “Veiny Ahh Dih”?',
+    a: `The supplement industry takes itself too seriously. We don’t. Training should be intense, effective, and fun. The name Veiny Ahh Dih reflects our no-filter, over-the-top approach to pump training and gym culture. It’s bold, it’s ridiculous, and it delivers exactly what it promises.`
   }
 ];
 
@@ -158,13 +158,13 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
           </div>
 
           <div className="hidden lg:flex items-center space-x-8 md:space-x-10">
-            {['Get VEINY', 'The Veiny Ah Formula', 'Veiny Ah Merch','Our Story', 'FAQs', 'Connect'].map((link) => (
+            {['Get VEINY', 'The Veiny Ahh Formula', 'Veiny Ahh Merch','Our Story', 'FAQs', 'Connect'].map((link) => (
               <button 
                 key={link} 
                 onClick={() => {
                   if (link === 'Get VEINY') return scrollToSection('product');
-                  if (link === 'The Veiny Ah Formula') return scrollToSection('the-veiny-ah-formula');
-                  if (link === 'Veiny Ah Merch') return scrollToSection('veiny-ah-merch');
+                  if (link === 'The Veiny Ahh Formula') return scrollToSection('the-veiny-Ahh-formula');
+                  if (link === 'Veiny Ahh Merch') return scrollToSection('veiny-Ahh-merch');
                   if (link === 'Our Story') return scrollToSection('our-story');
                   if (link === 'FAQs') return scrollToSection('faqs');
                   return scrollToSection(link.toLowerCase().replace(' ', '-'))
@@ -182,13 +182,13 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
         {/* Mobile collapsible nav */}
         {mobileNavOpen && (
           <div className="flex flex-col items-center gap-2 py-4 bg-black/95 border-t border-blood-red/40 lg:hidden">
-            {['Get VEINY', 'The Veiny Ah Formula', 'Veiny Ah Merch', 'Our Story', 'FAQs', 'Connect'].map((link) => (
+            {['Get VEINY', 'The Veiny Ahh Formula', 'Veiny Ahh Merch', 'Our Story', 'FAQs', 'Connect'].map((link) => (
               <button 
                 key={link} 
                 onClick={() => {
                   if (link === 'Get VEINY') return scrollToSection('product');
-                  if (link === 'The Veiny Ah Formula') return scrollToSection('the-veiny-ah-formula');
-                  if (link === 'Veiny Ah Merch') return scrollToSection('veiny-ah-merch');
+                  if (link === 'The Veiny Ahh Formula') return scrollToSection('the-veiny-Ahh-formula');
+                  if (link === 'Veiny Ahh Merch') return scrollToSection('veiny-Ahh-merch');
                   if (link === 'Our Story') return scrollToSection('our-story');
                   if (link === 'FAQs') return scrollToSection('faqs');
                   return scrollToSection(link.toLowerCase().replace(' ', '-'))
@@ -239,10 +239,10 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                 SECURE THE BAG <ArrowRight className="w-[22px] h-[22px] md:w-7 md:h-7" />
               </button>
               <button 
-                onClick={() => scrollToSection('the-veiny-ah-formula')}
+                onClick={() => scrollToSection('the-veiny-Ahh-formula')}
                 className="group relative bg-transparent border-2 md:border-4 border-white text-white px-8 md:px-16 py-4 md:py-8 text-lg md:text-2xl font-black tracking-widest uppercase transition-all flex items-center justify-center hover:bg-white hover:text-black italic"
               >
-                OUR VEINY AH FORMULA
+                OUR VEINY Ahh FORMULA
               </button>
             </div>
           </div>
@@ -363,7 +363,7 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
       </section>
 
       {/* Ingredient Breakdown Section */}
-      <section id="the-veiny-ah-formula" className="py-24 md:py-48 bg-black/80 relative overflow-hidden">
+      <section id="the-veiny-Ahh-formula" className="py-24 md:py-48 bg-black/80 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center mb-16 md:mb-32 text-center space-y-4 md:space-y-8">
             <div className="flex justify-center mb-4 md:mb-6">
@@ -434,13 +434,13 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
       </section>
 
       {/* Merch Section */}
-      <section id="veiny-ah-merch" className="py-24 md:py-48 bg-black/40 relative border-t border-white/10">
+      <section id="veiny-Ahh-merch" className="py-24 md:py-48 bg-black/40 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">
           {/* Section Header */}
           <div className="flex flex-col items-center mb-16 md:mb-32 text-center">
             <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
-              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none w-full">VEINY AH MERCH</span>
-              <span className="relative text-white z-10 w-full">VEINY AH MERCH</span>
+              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none w-full">VEINY AHH MERCH</span>
+              <span className="relative text-white z-10 w-full">VEINY AHH MERCH</span>
             </h2>
           </div>
           {/* Merch Content: Carousel left, details right */}
@@ -598,10 +598,10 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                 </div>
               </div>
               <div className="flex gap-6 md:gap-10">
-                 <a href="https://www.instagram.com/veinyahdihsupps" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
+                 <a href="https://www.instagram.com/veinyAhhdihsupps" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
                    <Instagram className="w-6 h-6 md:w-9 md:h-9" />
                  </a>
-                 <a href="https://www.facebook.com/VeinyAhDihSupps" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
+                 <a href="https://www.facebook.com/VeinyAhhDihSupps" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
                    <Facebook className="w-6 h-6 md:w-9 md:h-9" />
                  </a>
               </div>
