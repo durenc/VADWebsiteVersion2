@@ -67,9 +67,9 @@ const SupplementFacts: React.FC = () => (
       { name: 'Taurine', s1: '1,000 mg', s2: '2,000 mg', dv: '†' },
       { name: 'Glycerol Monostearate', s1: '1,500 mg', s2: '3,000 mg', dv: '†' },
       { name: 'Agmatine Sulfate', s1: '1,000 mg', s2: '2,000 mg', dv: '†' },
-      { name: 'Vitamin C (as Ascorbic Acid)', s1: '150 mg', s2: '300 mg', dv: '167%/333%' },
-      { name: 'Sodium Chloride', s1: '500 mg', s2: '1,000 mg', dv: '†' },
-      { name: 'Potassium Citrate', s1: '250 mg', s2: '500 mg', dv: '†' }
+      { name: 'Vitamin C (as Ascorbic Acid)', s1: '150 mg', s2: '300 mg', dv: '167%/334%' },
+      { name: 'Sodium Chloride', s1: '500 mg', s2: '1,000 mg', dv: '22%/44%' },
+      { name: 'Potassium Citrate', s1: '250 mg', s2: '500 mg', dv: '5%/10%' }
     ].map((item, idx) => (
       <div key={idx} className="grid grid-cols-12 border-b border-black text-[8px] md:text-xs py-1 font-bold items-center">
         <div className="col-span-6">{item.name}</div>
