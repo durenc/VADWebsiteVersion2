@@ -136,40 +136,35 @@ const getTimeLeft = (endTime: number) => {
 
 const formatTime = (value: number) => String(value).padStart(2, '0');
 
-// Edit Card 1 here
-const itemCardOne = {
-  name: 'V.A.D. Athlete Shirt',
-  price: '$14.99',
-  image: '/images/VADShirtCloseFront.jpeg',
-  alt: 'Front close-up of the V.A.D. Athlete Shirt',
-  description:
-    'Performance-ready V.A.D. merch for lifters trying to get big, strong, and veiny.',
-  link: 'https://square.link/u/smNyHqrI?src=embed'
-};
-
-// Edit Card 2 here
-const itemCardTwo = {
-  name: 'V.A.D. Athlete Shirt',
-  price: '$14.99',
-  image: '/images/VADShirtBackClose.jpeg',
-  alt: 'Back close-up of the V.A.D. Athlete Shirt',
-  description:
-    'The veiniest shirt ever designed.  This is a test to see how the description looks with a different length.  This is only a test.  Fuck you buddy',
-  link: 'https://square.link/u/smNyHqrI?src=embed'
-};
-
-// Edit Card 3 here
-const itemCardThree = {
-  name: 'V.A.D. Athlete Shirt',
-  price: '$14.99',
-  image: '/images/VADShirtFrontFar.jpeg',
-  alt: 'Full front view of the V.A.D. Athlete Shirt',
-  description:
-    'Full shirt preview. Big shirt energy. Strong shirt energy. Veiny shirt energy.',
-  link: 'https://square.link/u/smNyHqrI?src=embed'
-};
-
-const merchItems = [itemCardOne, itemCardTwo, itemCardThree];
+const merchItems = [
+  {
+    name: 'V.A.D. Athlete Shirt',
+    price: '$14.99',
+    image: '/images/VADShirtCloseFront.jpeg',
+    alt: 'Front close-up of the V.A.D. Athlete Shirt',
+    description:
+      'Performance-ready V.A.D. merch for lifters trying to get big, strong, and veiny.',
+    link: 'https://square.link/u/smNyHqrI?src=embed'
+  },
+  {
+    name: 'V.A.D. Athlete Shirt',
+    price: '$14.99',
+    image: '/images/VADShirtBackClose.jpeg',
+    alt: 'Back close-up of the V.A.D. Athlete Shirt',
+    description:
+      'Back-print view of the shirt built for gym rats, pump chasers, and certified veiny ahh dudes.',
+    link: 'https://square.link/u/smNyHqrI?src=embed'
+  },
+  {
+    name: 'V.A.D. Athlete Shirt',
+    price: '$14.99',
+    image: '/images/VADShirtFrontFar.jpeg',
+    alt: 'Full front view of the V.A.D. Athlete Shirt',
+    description:
+      'Full shirt preview. Big shirt energy. Strong shirt energy. Veiny shirt energy.',
+    link: 'https://square.link/u/smNyHqrI?src=embed'
+  }
+];
 
 const VeinyAhhDripPage: React.FC = () => {
   // Edit this date for each new merch drop
