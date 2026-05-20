@@ -213,7 +213,7 @@ const itemShopEndTime = useMemo(() => {
           {/* Page Title */}
           <div className="flex flex-col items-center mb-12 md:mb-20 text-center">
             <h2 className="relative text-5xl sm:text-7xl md:text-[10rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
-              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none w-full">
+              <span className="absolute left-1 top-1 md:left-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">
                 VEINY AHH DRIP
               </span>
               <span className="relative text-white z-10 w-full">
