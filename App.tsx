@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import GetVeinyAndFormulaPage from './pages/GetVeinyAndFormulaPage';
@@ -32,21 +33,26 @@ function ScrollToHash() {
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col selection:bg-blood-red selection:text-white font-['Inter'] overflow-x-hidden">
-        <div className="fixed inset-0 z-[-1]" style={{ backgroundImage: `url('/images/VeinsBackground.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', filter: 'brightness(0.9)' }}></div>
-        <Navbar />
-        <ScrollToHash />
-        <div style={{ paddingTop: '80px' }}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/get-veiny" element={<GetVeinyAndFormulaPage />} />
-            <Route path="/veiny-drip" element={<VeinyAhhDripPage />} />
-            <Route path="/story-faqs" element={<StoryFaqConnectPage />} />
-          </Routes>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen flex flex-col selection:bg-blood-red selection:text-white font-['Inter'] overflow-x-hidden">
+          <div className="fixed inset-0 z-[-1]" style={{ backgroundImage: `url('/images/VeinsBackground.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', filter: 'brightness(0.9)' }}></div>
+          <Navbar />
+          <ScrollToHash />
+          <div style={{ paddingTop: '80px' }}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/formula" element={<GetVeinyAndFormulaPage />} />
+              <Route path="/drip" element={<VeinyAhhDripPage />} />
+              <Route path="/about" element={<StoryFaqConnectPage />} />
+              <Route path="/get-veiny" element={<Navigate to="/formula" replace />} />
+              <Route path="/veiny-drip" element={<Navigate to="/drip" replace />} />
+              <Route path="/story-faqs" element={<Navigate to="/about" replace />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </HelmetProvider>
   );
 };
 

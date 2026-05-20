@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://veinyahdihsupps.com/sitemap.xml

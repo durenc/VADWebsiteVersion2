@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { VAD_PRODUCT } from '../data/productData';
+import PageMeta from '../components/PageMeta';
 
 const SupplementFacts: React.FC = () => (
   <div className="bg-white text-black p-4 md:p-8 font-sans border-2 md:border-4 border-black w-full max-w-2xl mx-auto shadow-[6px_6px_0px_#E31B23] md:shadow-[10px_10px_0px_#E31B23]">
@@ -59,8 +60,15 @@ const GetVeinyAndFormulaPage: React.FC = () => {
   const [selectedFlavor] = useState(VAD_PRODUCT.flavors[0]);
   return (
     <>
+      <PageMeta
+        title="Veiny Ahh Formula | V.A.D. Supplements"
+        description="Explore V.A.D. Supplements' stimulant-free formula for insane pumps, performance, and vascularity. Learn how Get Veiny and Veiny Ahh Formula work together."
+        url="https://veinyahdihsupps.com/formula"
+        image="https://veinyahdihsupps.com/images/VADBlankProduct.jpg"
+      />
+      <h1 className="sr-only">Get Veiny & Veiny Ahh Formula</h1>
       {/* Product & Purchase Section */}
-      <section id="product" className="py-16 md:py-32 bg-black/40 relative border-b border-white/10">
+      <section id="get-veiny" className="py-16 md:py-32 bg-black/40 relative border-b border-white/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
             <div className="relative group">

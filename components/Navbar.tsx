@@ -13,12 +13,12 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Get VEINY', to: '/get-veiny' },
-    { label: 'The Veiny Ahh Formula', to: '/get-veiny#the-veiny-Ahh-formula' },
-    { label: 'Veiny Ahh Drip', to: '/veiny-drip' },
-    { label: 'Our Story', to: '/story-faqs#our-story' },
-    { label: 'FAQs', to: '/story-faqs#faqs' },
-    { label: 'Connect', to: '/story-faqs#connect' }
+    { label: 'Get VEINY', to: '/formula#get-veiny' },
+    { label: 'The Veiny Ahh Formula', to: '/formula#the-veiny-Ahh-formula' },
+    { label: 'Veiny Ahh Drip', to: '/drip' },
+    { label: 'Our Story', to: '/about#our-story' },
+    { label: 'FAQs', to: '/about#faqs' },
+    { label: 'Connect', to: '/about#connect' }
   ];
 
   return (

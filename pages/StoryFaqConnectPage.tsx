@@ -1,11 +1,19 @@
 
 import React, { useState } from 'react';
 import { FAQ_ITEMS } from '../data/productData';
+import PageMeta from '../components/PageMeta';
 
 const StoryFaqConnectPage: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   return (
     <>
+      <PageMeta
+        title="About V.A.D. Supplements | Our Story, FAQs, Connect"
+        description="Learn why V.A.D. Supplements exists, how our stimulant-free vascular formula works, and get answers to FAQs. Connect with the brand built for maximal pumps and veiny gains."
+        url="https://veinyahdihsupps.com/about"
+        image="https://veinyahdihsupps.com/images/VAD Logo.jpg"
+      />
+      <h1 className="sr-only">V.A.D. Supplements story and FAQs</h1>
       {/* Our Story */}
       <section id="our-story" className="py-24 md:py-48 bg-black/70 relative border-t border-white/10">
         <div className="container mx-auto px-4 md:px-6">

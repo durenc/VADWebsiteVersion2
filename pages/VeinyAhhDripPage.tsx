@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import PageMeta from '../components/PageMeta';
 
 const merchImages = [
   '/images/VADShirtCloseFront.jpeg',
@@ -10,7 +11,15 @@ const merchImages = [
 const VeinyAhhDripPage: React.FC = () => {
   const [currentMerchImage, setCurrentMerchImage] = useState(0);
   return (
-    <section id="veiny-Ahh-merch" className="py-24 md:py-48 bg-black/40 relative border-t border-white/10">
+    <>
+      <PageMeta
+        title="Veiny Ahh Drip | V.A.D. Supplements"
+        description="Shop V.A.D. Supplement's signature Veiny Ahh Drip apparel: performance-ready tees built for strength, size, and vascularity."
+        url="https://veinyahdihsupps.com/drip"
+        image="https://veinyahdihsupps.com/images/VADShirtFrontFar.jpeg"
+      />
+      <h1 className="sr-only">Veiny Ahh Drip apparel</h1>
+      <section id="veiny-Ahh-merch" className="py-24 md:py-48 bg-black/40 relative border-t border-white/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center mb-16 md:mb-32 text-center">
           <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
@@ -105,6 +114,7 @@ const VeinyAhhDripPage: React.FC = () => {
         </div>
       </div>
     </section>
+  </>
   );
 };
 
