@@ -9,7 +9,7 @@ const StoryFaqConnectPage: React.FC = () => {
     <>
       <PageMeta
         title="About V.A.D. Supplements | Our Story, FAQs, Connect"
-        description="Learn why V.A.D. Supplements exists, how our stimulant-free vascular formula works, and get answers to FAQs. Connect with the brand built for maximal pumps and veiny gains."
+        description="Learn the story behind V.A.D. Supplements, get answers to common FAQs, and connect with the brand built for stimulant-free pumps and vascularity."
         url="https://veinyahdihsupps.com/about"
         image="https://veinyahdihsupps.com/images/VAD Logo.jpg"
       />
@@ -86,7 +86,7 @@ const StoryFaqConnectPage: React.FC = () => {
                  <a href="https://www.instagram.com/veinyAhhdihsupps" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 md:w-9 md:h-9"><path strokeLinecap="round" strokeLinejoin="round" d="M7.5 2.25h9A5.25 5.25 0 0 1 21.75 7.5v9a5.25 5.25 0 0 1-5.25 5.25h-9A5.25 5.25 0 0 1 2.25 16.5v-9A5.25 5.25 0 0 1 7.5 2.25Zm0 0A5.25 5.25 0 0 0 2.25 7.5v9A5.25 5.25 0 0 0 7.5 21.75h9A5.25 5.25 0 0 0 21.75 16.5v-9A5.25 5.25 0 0 0 16.5 2.25Zm0 0h9M12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm6.75.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" /></svg>
                  </a>
-                 <a href="https://www.facebook.com/VeinyAhhDihSupps" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
+                 <a href="https://www.facebook.com/profile.php?id=61586189751842" target="_blank" rel="noopener noreferrer" className="w-14 h-14 md:w-20 md:h-20 border-2 border-white/10 flex items-center justify-center text-white hover:bg-blood-red hover:text-white transition-all shadow-[6px_6px_0px_#fff] md:shadow-[10px_10px_0px_#fff] active:scale-95">
                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 md:w-9 md:h-9"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75A3.75 3.75 0 0 1 21 10.5v3a3.75 3.75 0 0 1-3.75 3.75h-2.25V21h-3v-3.75H7.5A3.75 3.75 0 0 1 3.75 13.5v-3A3.75 3.75 0 0 1 7.5 6.75h9Zm0 0A3.75 3.75 0 0 0 21 10.5v3a3.75 3.75 0 0 0-3.75 3.75h-2.25V21h-3v-3.75H7.5A3.75 3.75 0 0 0 3.75 13.5v-3A3.75 3.75 0 0 0 7.5 6.75h9Zm0 0V3.75A.75.75 0 0 0 16.5 3h-9a.75.75 0 0 0-.75.75V6.75" /></svg>
                  </a>
               </div>
