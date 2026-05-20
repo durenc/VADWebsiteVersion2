@@ -7,7 +7,7 @@ const HomePage: React.FC = () => (
   <>
     <PageMeta
       title="Get Veiny | V.A.D. Supplements"
-      description="V.A.D. Supplements delivers stimulant-free performance and insane vascularity. Get VEINY with premium formula and athlete gear built for strength and pumps."
+      description="V.A.D. (Veiny Ahh Dih) Supplements delivers stimulant-free performance and insane vascularity. Get VEINY with premium formula and athlete gear built for strength and pumps."
       url="https://veinyahdihsupps.com/"
       image="https://veinyahdihsupps.com/images/VeinsBackground.png"
     />

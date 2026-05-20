@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import PageMeta from '../components/PageMeta';
 
 const merchImages = [
@@ -14,7 +14,7 @@ const VeinyAhhDripPage: React.FC = () => {
     <>
       <PageMeta
         title="Veiny Ahh Drip | V.A.D. Supplements"
-        description="Shop V.A.D. Supplement's signature Veiny Ahh Drip apparel: performance-ready tees built for strength, size, and vascularity."
+        description="Shop Veiny Ahh Drip apparel from V.A.D. Supplements, featuring gym-ready merch built for lifters chasing size, strength, and vascularity."
         url="https://veinyahdihsupps.com/drip"
         image="https://veinyahdihsupps.com/images/VADShirtFrontFar.jpeg"
       />
@@ -28,7 +28,7 @@ const VeinyAhhDripPage: React.FC = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
-          {/* Merch Image Carousel */}
+          {/* Merch Image Carousel }
           <div className="relative group order-1 lg:order-1">
             <div className="bg-zinc-900 p-8 md:p-16 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
               <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/carbon-fibre.png')] opacity-30"></div>
@@ -75,7 +75,7 @@ const VeinyAhhDripPage: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* Merch Details */}
+          {/* Merch Details }
           <div className="flex flex-col justify-center space-y-8 md:space-y-12 order-2 lg:order-2">
             <div className="space-y-4 md:space-y-6">
               <h2 className="text-4xl md:text-8xl font-creepster text-white uppercase leading-[0.9] md:leading-none italic drop-shadow-[4px_4px_0px_#E31B23] md:drop-shadow-[8px_8px_0px_#E31B23] text-left lg:text-left">
@@ -115,6 +115,224 @@ const VeinyAhhDripPage: React.FC = () => {
       </div>
     </section>
   </>
+  );
+};
+
+export default VeinyAhhDripPage;
+ */
+import React, { useEffect, useMemo, useState } from 'react';
+import PageMeta from '../components/PageMeta';
+
+const getTimeLeft = (endTime: number) => {
+  const difference = Math.max(endTime - Date.now(), 0);
+
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((difference / (1000 * 60)) % 60);
+  const seconds = Math.floor((difference / 1000) % 60);
+
+  return { days, hours, minutes, seconds };
+};
+
+const formatTime = (value: number) => String(value).padStart(2, '0');
+
+// Edit Card 1 here
+const itemCardOne = {
+  name: 'V.A.D. Athlete Shirt',
+  price: '$14.99',
+  image: '/images/VADShirtCloseFront.jpeg',
+  alt: 'Front close-up of the V.A.D. Athlete Shirt',
+  description:
+    'Performance-ready V.A.D. merch for lifters trying to get big, strong, and veiny.',
+  link: 'https://square.link/u/smNyHqrI?src=embed'
+};
+
+// Edit Card 2 here
+const itemCardTwo = {
+  name: 'V.A.D. Athlete Shirt',
+  price: '$14.99',
+  image: '/images/VADShirtBackClose.jpeg',
+  alt: 'Back close-up of the V.A.D. Athlete Shirt',
+  description:
+    'Back-print view of the shirt built for gym rats, pump chasers, and certified veiny ahh dudes.',
+  link: 'https://square.link/u/smNyHqrI?src=embed'
+};
+
+// Edit Card 3 here
+const itemCardThree = {
+  name: 'V.A.D. Athlete Shirt',
+  price: '$14.99',
+  image: '/images/VADShirtFrontFar.jpeg',
+  alt: 'Full front view of the V.A.D. Athlete Shirt',
+  description:
+    'Full shirt preview. Big shirt energy. Strong shirt energy. Veiny shirt energy.',
+  link: 'https://square.link/u/smNyHqrI?src=embed'
+};
+
+const merchItems = [itemCardOne, itemCardTwo, itemCardThree];
+
+const VeinyAhhDripPage: React.FC = () => {
+  const itemShopEndTime = useMemo(() => {
+    return Date.now() + 7 * 24 * 60 * 60 * 1000;
+  }, []);
+
+  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(itemShopEndTime));
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setTimeLeft(getTimeLeft(itemShopEndTime));
+    }, 1000);
+
+    return () => window.clearInterval(timer);
+  }, [itemShopEndTime]);
+
+  return (
+    <>
+      <PageMeta
+        title="Veiny Ahh Drip | V.A.D. Supplements"
+        description="Shop V.A.D. Supplements' signature Veiny Ahh Drip apparel: performance-ready gear built for strength, size, and vascularity."
+        url="https://veinyahdihsupps.com/drip"
+        image="https://veinyahdihsupps.com/images/VADShirtFrontFar.jpeg"
+      />
+
+      <h1 className="sr-only">Veiny Ahh Drip</h1>
+
+      <section
+        id="veiny-ahh-drip"
+        className="py-24 md:py-40 bg-black/40 relative border-t border-white/10 overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-[url('/images/carbon-fibre.png')] opacity-20 pointer-events-none" />
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          {/* Page Title */}
+          <div className="flex flex-col items-center mb-12 md:mb-20 text-center">
+            <h2 className="relative text-5xl sm:text-7xl md:text-[10rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
+              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none w-full">
+                VEINY AHH DRIP
+              </span>
+              <span className="relative text-white z-10 w-full">
+                VEINY AHH DRIP
+              </span>
+            </h2>
+
+            <p className="mt-6 max-w-2xl text-white/80 text-base md:text-xl font-black uppercase italic tracking-[0.2em]">
+              Limited-time merch drop
+            </p>
+          </div>
+
+          {/* Timer */}
+          <div className="mb-12 md:mb-20 flex justify-center">
+            <div className="relative bg-zinc-950 border-2 border-white/10 shadow-[0_0_80px_rgba(227,27,35,0.35)] px-6 py-5 md:px-12 md:py-8 overflow-hidden">
+              <div className="absolute inset-0 bg-blood-red/10 skew-x-[-12deg] scale-x-110" />
+
+              <div className="relative z-10 flex flex-col items-center gap-3">
+                <span className="text-white/70 text-xs md:text-sm font-black uppercase italic tracking-[0.35em]">
+                  Available For
+                </span>
+
+                <div className="flex items-center gap-3 md:gap-6 text-white">
+                  <div className="text-center">
+                    <div className="text-3xl md:text-6xl font-black italic leading-none">
+                      {formatTime(timeLeft.days)}
+                    </div>
+                    <div className="text-[9px] md:text-xs font-black uppercase tracking-widest text-white/60">
+                      Days
+                    </div>
+                  </div>
+
+                  <span className="text-3xl md:text-6xl font-black text-blood-red">:</span>
+
+                  <div className="text-center">
+                    <div className="text-3xl md:text-6xl font-black italic leading-none">
+                      {formatTime(timeLeft.hours)}
+                    </div>
+                    <div className="text-[9px] md:text-xs font-black uppercase tracking-widest text-white/60">
+                      Hours
+                    </div>
+                  </div>
+
+                  <span className="text-3xl md:text-6xl font-black text-blood-red">:</span>
+
+                  <div className="text-center">
+                    <div className="text-3xl md:text-6xl font-black italic leading-none">
+                      {formatTime(timeLeft.minutes)}
+                    </div>
+                    <div className="text-[9px] md:text-xs font-black uppercase tracking-widest text-white/60">
+                      Mins
+                    </div>
+                  </div>
+
+                  <span className="text-3xl md:text-6xl font-black text-blood-red">:</span>
+
+                  <div className="text-center">
+                    <div className="text-3xl md:text-6xl font-black italic leading-none">
+                      {formatTime(timeLeft.seconds)}
+                    </div>
+                    <div className="text-[9px] md:text-xs font-black uppercase tracking-widest text-white/60">
+                      Secs
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Item Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10">
+            {merchItems.map((item, index) => (
+              <a
+                key={`${item.name}-${index}`}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Buy ${item.name} for ${item.price}`}
+                className="group relative min-h-[520px] md:min-h-[600px] bg-zinc-900 border-2 border-white/10 overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.18)] transition-all duration-300 hover:-translate-y-3 hover:border-blood-red hover:shadow-[0_0_70px_rgba(227,27,35,0.45)]"
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(227,27,35,0.28),transparent_45%)] opacity-80" />
+                <div className="absolute inset-0 bg-[url('/images/carbon-fibre.png')] opacity-25" />
+
+                {/* Product Image */}
+                <div className="relative z-10 h-full flex items-center justify-center px-6 pb-28 pt-10">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    className="max-h-[360px] md:max-h-[440px] w-full object-contain drop-shadow-[0_0_70px_rgba(227,27,35,0.65)] transition-all duration-500 group-hover:scale-110"
+                  />
+                </div>
+
+                {/* Hover Description */}
+                <div className="absolute inset-0 z-20 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center px-8 text-center">
+                  <p className="text-white text-xl md:text-2xl font-black italic uppercase leading-tight drop-shadow-[3px_3px_0px_#E31B23]">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Angled Bottom Bar */}
+                <div className="absolute bottom-0 left-0 right-0 z-30 bg-black border-t-2 border-white/20 min-h-[105px] px-5 py-5 overflow-hidden">
+                  <div className="absolute inset-0 bg-blood-red/20 skew-x-[-18deg] translate-x-[-18%] scale-x-125" />
+
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-creepster uppercase italic leading-none tracking-wide drop-shadow-[3px_3px_0px_#E31B23]">
+                      {item.name}
+                    </h3>
+
+                    <div className="flex items-end justify-between gap-4 mt-4">
+                      <span className="text-white/60 text-[10px] md:text-xs font-black uppercase italic tracking-[0.25em]">
+                        Click to Buy
+                      </span>
+
+                      <span className="text-white text-3xl md:text-4xl font-black italic leading-none">
+                        {item.price}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
