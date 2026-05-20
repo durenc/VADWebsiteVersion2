@@ -1,5 +1,5 @@
 
-export type Flavor = 'Veiny Surge Strawberry' | 'Ultimate Pump Punch';
+export type Flavor = 'Bulging Berries';
 
 export interface Product {
   id: string;
