@@ -9,15 +9,24 @@ import StoryFaqConnectPage from './pages/StoryFaqConnectPage';
 
 // Scroll to anchor on route change for combined pages
 function ScrollToHash() {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
   React.useEffect(() => {
+    // If there's a hash, scroll to the anchor on the page
     if (hash) {
-      const el = document.getElementById(hash.replace('#', ''));
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      const id = hash.replace('#', '');
+      // small timeout to allow route content to render
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 50);
+      return;
     }
-  }, [hash]);
+
+    // No hash — scroll to top of page on pathname change
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [hash, pathname]);
   return null;
 }
 
