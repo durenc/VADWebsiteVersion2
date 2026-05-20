@@ -172,9 +172,15 @@ const itemCardThree = {
 const merchItems = [itemCardOne, itemCardTwo, itemCardThree];
 
 const VeinyAhhDripPage: React.FC = () => {
-  const itemShopEndTime = useMemo(() => {
-    return Date.now() + 7 * 24 * 60 * 60 * 1000;
-  }, []);
+  // Edit this date for each new merch drop
+// Format: YYYY-MM-DDTHH:MM:SS-05:00
+// -05:00 is Central Time during standard time
+// Use -06:00 during daylight savings if needed, or keep local browser time version below
+const MERCH_DROP_END_DATE = '2026-06-01T11:59:59-05:00';
+
+const itemShopEndTime = useMemo(() => {
+  return new Date(MERCH_DROP_END_DATE).getTime();
+}, []);
 
   const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(itemShopEndTime));
 
