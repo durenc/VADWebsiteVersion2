@@ -20,7 +20,7 @@ const VAD_PRODUCT: Product = {
   price: 49.99,
   description: 'A veiny ahh drink for veiny ahh dudes. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
   flavors: ['Bulging Berries'],
-  image: '/images/VADBlankBackgroundProductImage.jpg'
+  image: '/images/VADBlankProduct.jpg'
 };
 
 const FAQ_ITEMS = [
@@ -158,13 +158,13 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
           </div>
 
           <div className="hidden lg:flex items-center space-x-8 md:space-x-10">
-            {['Get VEINY', 'The Veiny Ahh Formula', 'Veiny Ahh Merch','Our Story', 'FAQs', 'Connect'].map((link) => (
+            {['Get VEINY', 'The Veiny Ahh Formula', 'Veiny Ahh Drip','Our Story', 'FAQs', 'Connect'].map((link) => (
               <button 
                 key={link} 
                 onClick={() => {
                   if (link === 'Get VEINY') return scrollToSection('product');
                   if (link === 'The Veiny Ahh Formula') return scrollToSection('the-veiny-Ahh-formula');
-                  if (link === 'Veiny Ahh Merch') return scrollToSection('veiny-Ahh-merch');
+                  if (link === 'Veiny Ahh Drip') return scrollToSection('veiny-Ahh-merch');
                   if (link === 'Our Story') return scrollToSection('our-story');
                   if (link === 'FAQs') return scrollToSection('faqs');
                   return scrollToSection(link.toLowerCase().replace(' ', '-'))
@@ -182,13 +182,13 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
         {/* Mobile collapsible nav */}
         {mobileNavOpen && (
           <div className="flex flex-col items-center gap-2 py-4 bg-black/95 border-t border-blood-red/40 lg:hidden">
-            {['Get VEINY', 'The Veiny Ahh Formula', 'Veiny Ahh Merch', 'Our Story', 'FAQs', 'Connect'].map((link) => (
+            {['Get VEINY', 'The Veiny Ahh Formula', 'Veiny Ahh Drip', 'Our Story', 'FAQs', 'Connect'].map((link) => (
               <button 
                 key={link} 
                 onClick={() => {
                   if (link === 'Get VEINY') return scrollToSection('product');
                   if (link === 'The Veiny Ahh Formula') return scrollToSection('the-veiny-Ahh-formula');
-                  if (link === 'Veiny Ahh Merch') return scrollToSection('veiny-Ahh-merch');
+                  if (link === 'Veiny Ahh Drip') return scrollToSection('veiny-Ahh-merch');
                   if (link === 'Our Story') return scrollToSection('our-story');
                   if (link === 'FAQs') return scrollToSection('faqs');
                   return scrollToSection(link.toLowerCase().replace(' ', '-'))
@@ -439,8 +439,8 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
           {/* Section Header */}
           <div className="flex flex-col items-center mb-16 md:mb-32 text-center">
             <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
-              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none w-full">VEINY AHH MERCH</span>
-              <span className="relative text-white z-10 w-full">VEINY AHH MERCH</span>
+              <span className="absolute left-2 top-2 md:left-8 md:top-8 text-blood-red z-0 select-none pointer-events-none w-full">VEINY AHH DRIP</span>
+              <span className="relative text-white z-10 w-full">VEINY AHH DRIP</span>
             </h2>
           </div>
           {/* Merch Content: Carousel left, details right */}
@@ -498,6 +498,10 @@ const [currentMerchImage, setCurrentMerchImage] = useState(0);
                 <h2 className="text-4xl md:text-8xl font-creepster text-white uppercase leading-[0.9] md:leading-none italic drop-shadow-[4px_4px_0px_#E31B23] md:drop-shadow-[8px_8px_0px_#E31B23] text-left lg:text-left">
                   V.A.D. ATHLETE SHIRT
                 </h2>
+                <div className="flex flex-col">
+                  <span className="text-[8px] md:text-[10px] font-black uppercase text-white tracking-[0.4em] md:tracking-[0.6em] mb-1 md:mb-2">THE BIGGEST, STRONGEST, AND VEINIEST SHIRT EVER DESIGNED</span>
+                  <span className="text-6xl sm:text-8xl md:text-9xl font-black italic tracking-tighter text-white leading-none">$14.99</span>
+                </div>
               </div>
               <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
                 We know you’re big and veiny.  We also know that you wear clothes.  That's why you need clothes that show people just how big and veiny you are, whether you’re inside or outside the gym.  Our V.A.D. athlete performance tee signals that you’re big, you’re strong, you’re veiny, and you don’t care who knows it.
