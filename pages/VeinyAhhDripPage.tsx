@@ -154,7 +154,7 @@ const itemCardTwo = {
   image: '/images/VADShirtBackClose.jpeg',
   alt: 'Back close-up of the V.A.D. Athlete Shirt',
   description:
-    'Back-print view of the shirt built for gym rats, pump chasers, and certified veiny ahh dudes.',
+    'The veiniest shirt ever designed.  This is a test to see how the description looks with a different length.  This is only a test.  Fuck you buddy',
   link: 'https://square.link/u/smNyHqrI?src=embed'
 };
 
