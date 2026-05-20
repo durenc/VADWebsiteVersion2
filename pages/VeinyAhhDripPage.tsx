@@ -323,6 +323,10 @@ const itemShopEndTime = useMemo(() => {
                     </h3>
 
                     <div className="flex items-end justify-between gap-4 mt-4">
+                      <span className="text-white/60 text-[10px] md:text-2xs font-black uppercase italic tracking-[0.25em]">
+                        Click to Buy
+                      </span>
+                      
 
                       <span className="text-white text-3xl md:text-4xl font-black italic leading-none">
                         {item.price}
