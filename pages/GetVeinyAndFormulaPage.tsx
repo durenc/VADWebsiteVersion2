@@ -62,7 +62,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
     <>
       <PageMeta
         title="Veiny Ahh Formula | V.A.D. Supplements"
-        description="Explore V.A.D. Supplements' stimulant-free formula for insane pumps, performance, and vascularity. Learn how Get Veiny and Veiny Ahh Formula work together."
+        description="Shop V.A.D. Supplements' stimulant-free pump formula built to support pumps, performance, hydration, and vascularity. Get big, strong, and veiny."
         url="https://veinyahdihsupps.com/formula"
         image="https://veinyahdihsupps.com/images/VADBlankProduct.jpg"
       />
@@ -114,7 +114,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
           <div className="flex flex-col items-center mb-16 md:mb-32 text-center space-y-4 md:space-y-8">
             <span className="text-blood-red font-black text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.7em] uppercase">STIM-FREE POTENCY (2 SCOOPS)</span>
             <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
-              <span className="absolute left-1 top-1 md:left-4 md:top-4 text-blood-red z-0 select-none pointer-events-none w-full">THE DOSAGE</span>
+              <span className="absolute left-1 top-1 md:left-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">THE DOSAGE</span>
               <span className="relative text-white z-10 w-full">THE DOSAGE</span>
             </h2>
           </div>
@@ -164,7 +164,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
           <div id="dosage-facts" className="flex flex-col items-center pt-16 md:pt-32 border-t border-white/10">
             <div className="mb-12 md:mb-24 text-center space-y-4 md:space-y-8">
               <h3 className="relative text-3xl sm:text-5xl md:text-9xl font-creepster uppercase italic tracking-widest leading-[0.9] md:leading-none text-center">
-                <span className="absolute left-1 top-1 md:left-4 md:top-4 text-blood-red z-0 select-none pointer-events-none w-full">CLINICAL <br /> TRANSPARENCY</span>
+                <span className="absolute left-1 top-1 md:left-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">CLINICAL <br /> TRANSPARENCY</span>
                 <span className="relative text-white z-10 w-full">CLINICAL <br /> TRANSPARENCY</span>
               </h3>
               <p className="text-white font-black uppercase tracking-[0.4em] md:tracking-[1em] text-[10px] md:text-sm italic">FULL DUAL-COLUMN DISCLOSURE. ZERO SECRETS.</p>
