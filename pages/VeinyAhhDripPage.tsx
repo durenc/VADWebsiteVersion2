@@ -138,31 +138,31 @@ const formatTime = (value: number) => String(value).padStart(2, '0');
 
 const merchItems = [
   {
-    name: 'V.A.D. Athlete Shirt',
-    price: '$14.99',
-    image: '/images/VADShirtCloseFront.jpeg',
-    alt: 'Front close-up of the V.A.D. Athlete Shirt',
+    name: 'V.A.D. Lifitng Club Shirt',
+    price: '$19.99',
+    image: '/images/VADLiftingClubShirt.jpeg',
+    alt: 'Front close-up of the V.A.D. Lifitng Club Shirt',
     description:
-      'Performance-ready V.A.D. merch for lifters trying to get big, strong, and veiny.',
-    link: 'https://square.link/u/smNyHqrI?src=embed'
+      'Let everyone know you are a member of the V.A.D. Lifting Club, the most exclusive and veiny ahh gym crew in the world.  Built for lifters who chase size, strength, and vascularity, this shirt is the ultimate flex on everyone who isnt in the club.',
+    link: 'https://vadsupps.square.site/product/v-a-d-lifting-club-shirt/RNMODGEQYW2A4QFTJFTJ3VHF?cp=true&sa=false&sbp=false&q=false&category_id=FFBOPZA4NKZZT72H7QHFBHR6'
   },
   {
-    name: 'V.A.D. Athlete Shirt',
-    price: '$14.99',
-    image: '/images/VADShirtBackClose.jpeg',
-    alt: 'Back close-up of the V.A.D. Athlete Shirt',
+    name: 'Veiny Ahh Dude Shirt',
+    price: '$19.99',
+    image: '/images/VeinyahhDudeShirt.jpeg',
+    alt: 'Front view of the V.A.D. Veiny Ahh Dude Shirt',
     description:
-      'Back-print view of the shirt built for gym rats, pump chasers, and certified veiny ahh dudes.',
-    link: 'https://square.link/u/smNyHqrI?src=embed'
+      'Built for veiny ahh dudes who want everyone to know that they are big and veiny everywhere that counts',
+    link: 'https://vadsupps.square.site/product/veiny-ahh-dude-shirt/DIHESCYCVM6VHCIZY3NALQR4?cp=true&sa=false&sbp=false&q=false&category_id=FFBOPZA4NKZZT72H7QHFBHR6'
   },
   {
-    name: 'V.A.D. Athlete Shirt',
+    name: 'V.A.D. Performance Snapback',
     price: '$14.99',
-    image: '/images/VADShirtFrontFar.jpeg',
-    alt: 'Full front view of the V.A.D. Athlete Shirt',
+    image: '/images/Comingsoon.jpeg',
+    alt: 'Full front view of the V.A.D. Performance Snapback',
     description:
-      'Full shirt preview. Big shirt energy. Strong shirt energy. Veiny shirt energy.',
-    link: 'https://square.link/u/smNyHqrI?src=embed'
+      'Cover your veiny ahh head with our V.A.D. Performance Snapback, designed to keep you looking big and veiny while you chase gains and veins in and out of the gym',
+    link: 'https://vadsupps.square.site/product/v-a-d-performance-snapback/NSU3RUFCP6DU2VOY5IZB3YSJ?cp=true&sa=true&sbp=false&q=false'
   }
 ];
 
