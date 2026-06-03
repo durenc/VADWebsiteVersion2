@@ -50,12 +50,6 @@ const SupplementFacts: React.FC = () => (
   </div>
 );
 
-const KlaviyoWaitlist: React.FC = () => (
-  <div id="klaviyo-waitlist" className="w-full">
-    <div className="klaviyo-form-YtACB9"></div>
-  </div>
-);
-
 const GetVeinyAndFormulaPage: React.FC = () => {
   const [selectedFlavor] = useState(VAD_PRODUCT.flavors[0]);
   return (
@@ -99,9 +93,14 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                 {VAD_PRODUCT.description}
               </p>
               <div className="pt-4 md:pt-8 space-y-6 md:space-y-10">
-                <div className="relative group">
-                  <KlaviyoWaitlist />
-                </div>
+                <a
+                  href="https://vadsupps.square.site/product/veiny-ahh-drink-stimulant-free-pre-workout-/ST3VK7MTM6Y246OLYUNSD6ER?cp=true&sa=false&sbp=false&q=false&category_id=FFBOPZA4NKZZT72H7QHFBHR6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-blood-red bg-blood-red px-8 py-4 text-base md:text-xl font-black uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white"
+                >
+                  Buy Veiny Ahh Drink
+                </a>
               </div>
             </div>
           </div>
