@@ -138,18 +138,18 @@ const formatTime = (value: number) => String(value).padStart(2, '0');
 
 const merchItems = [
   {
-    name: 'V.A.D. Lifitng Club Shirt',
+    name: 'V.A.D. Lifting Club Shirt',
     price: '$19.99',
-    image: '/images/VADLiftingClubShirt.jpeg',
-    alt: 'Front close-up of the V.A.D. Lifitng Club Shirt',
+    image: '/images/VADLiftingClubShirtBack.jpg',
+    alt: 'Back view of the V.A.D. Lifting Club Shirt',
     description:
-      'Let everyone know you are a member of the V.A.D. Lifting Club, the most exclusive and veiny ahh gym crew in the world.  Built for lifters who chase size, strength, and vascularity, this shirt is the ultimate flex on everyone who isnt in the club.',
+      'Let everyone know you are a member of the V.A.D. Lifting Club, the most exclusive and veiny ahh gym crew in the world.',
     link: 'https://vadsupps.square.site/product/v-a-d-lifting-club-shirt/RNMODGEQYW2A4QFTJFTJ3VHF?cp=true&sa=false&sbp=false&q=false&category_id=FFBOPZA4NKZZT72H7QHFBHR6'
   },
   {
     name: 'Veiny Ahh Dude Shirt',
     price: '$19.99',
-    image: '/images/VeinyahhDudeShirt.jpeg',
+    image: '/images/VeinyAhhDudeShirtFront.jpg',
     alt: 'Front view of the V.A.D. Veiny Ahh Dude Shirt',
     description:
       'Built for veiny ahh dudes who want everyone to know that they are big and veiny everywhere that counts',
@@ -158,10 +158,10 @@ const merchItems = [
   {
     name: 'V.A.D. Performance Snapback',
     price: '$14.99',
-    image: '/images/Comingsoon.jpeg',
+    image: '/images/ComingSoon.jpg',
     alt: 'Full front view of the V.A.D. Performance Snapback',
     description:
-      'Cover your veiny ahh head with our V.A.D. Performance Snapback, designed to keep you looking big and veiny while you chase gains and veins in and out of the gym',
+      'Cover your veiny ahh head with our V.A.D. Performance Snapback, designed to keep you looking big and veiny while you chase gains and veins',
     link: 'https://vadsupps.square.site/product/v-a-d-performance-snapback/NSU3RUFCP6DU2VOY5IZB3YSJ?cp=true&sa=true&sbp=false&q=false'
   }
 ];
