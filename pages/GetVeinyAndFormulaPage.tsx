@@ -1,7 +1,24 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { VAD_PRODUCT } from '../data/productData';
 import PageMeta from '../components/PageMeta';
+
+const getTimeLeft = (endTime: number) => {
+  const difference = Math.max(endTime - Date.now(), 0);
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((difference / (1000 * 60)) % 60);
+  const seconds = Math.floor((difference / 1000) % 60);
+
+  return { days, hours, minutes, seconds };
+};
+
+const formatTime = (value: number) => String(value).padStart(2, '0');
+
+const SALE_ACTIVE = true;
+const SALE_TIMER_ENABLED = true;
+const SALE_PRICE = 44.99;
+const SALE_END_DATE = '2026-06-11T23:59:59-05:00';
 
 const SupplementFacts: React.FC = () => (
   <div className="bg-white text-black p-4 md:p-8 font-sans border-2 md:border-4 border-black w-full max-w-2xl mx-auto shadow-[6px_6px_0px_#E31B23] md:shadow-[10px_10px_0px_#E31B23]">
@@ -52,6 +69,31 @@ const SupplementFacts: React.FC = () => (
 
 const GetVeinyAndFormulaPage: React.FC = () => {
   const [selectedFlavor] = useState(VAD_PRODUCT.flavors[0]);
+  const saleEndTime = useMemo(() => new Date(SALE_END_DATE).getTime(), []);
+  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(saleEndTime));
+
+  useEffect(() => {
+    if (!SALE_ACTIVE || !SALE_TIMER_ENABLED) {
+      return undefined;
+    }
+
+    const timer = window.setInterval(() => {
+      setTimeLeft(getTimeLeft(saleEndTime));
+    }, 1000);
+
+    return () => window.clearInterval(timer);
+  }, [saleEndTime]);
+
+  const formattedOriginalPrice = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format(VAD_PRODUCT.price);
+
+  const formattedSalePrice = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format(SALE_PRICE);
+
   return (
     <>
       <PageMeta
@@ -83,7 +125,26 @@ const GetVeinyAndFormulaPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 md:gap-10">
                 <div className="flex flex-col">
                   <span className="text-[8px] md:text-[10px] font-black uppercase text-white tracking-[0.4em] md:tracking-[0.6em] mb-1 md:mb-2">YOU CAN'T PUT A PRICE ON A PUMP LIKE THIS, BUT WE TRIED</span>
-                  <span className="text-6xl sm:text-8xl md:text-9xl font-black italic tracking-tighter text-white leading-none">${VAD_PRODUCT.price}</span>
+                  {SALE_ACTIVE ? (
+                    <div className="space-y-2">
+                      <div className="text-xl md:text-2xl font-black uppercase text-white/60 line-through tracking-[0.2em]">
+                        {formattedOriginalPrice}
+                      </div>
+                      <div className="text-6xl sm:text-8xl md:text-9xl font-black italic tracking-tighter text-blood-red leading-none">
+                        {formattedSalePrice}
+                      </div>
+                      {SALE_TIMER_ENABLED && (
+                        <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-blood-red bg-white/5 px-4 py-2 text-white text-xs md:text-sm uppercase tracking-[0.25em] font-black">
+                          <span>Sale ends in</span>
+                          <span className="font-bold text-blood-red">{formatTime(timeLeft.days)}d {formatTime(timeLeft.hours)}h {formatTime(timeLeft.minutes)}m {formatTime(timeLeft.seconds)}s</span>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <span className="text-6xl sm:text-8xl md:text-9xl font-black italic tracking-tighter text-white leading-none">
+                      {formattedOriginalPrice}
+                    </span>
+                  )}
                 </div>
                 <div className="sm:mb-4">
                   <span className="font-black text-[10px] md:text-sm uppercase tracking-widest bg-transparent border-2 border-blood-red text-white px-4 md:px-6 py-1 md:py-2 block">30 SERVINGS</span>
