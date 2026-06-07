@@ -158,7 +158,7 @@ const merchItems = [
   {
     name: 'V.A.D. Performance Snapback',
     price: '$14.99',
-    image: '/images/ComingSoon.jpg',
+    image: '/images/SnapBackFront.jpg',
     alt: 'Full front view of the V.A.D. Performance Snapback',
     description:
       'Cover your veiny ahh head with our V.A.D. Performance Snapback, designed to keep you looking big and veiny while you chase gains and veins',
