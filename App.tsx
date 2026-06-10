@@ -41,7 +41,9 @@ const App: React.FC = () => {
           <ScrollToHash />
           <div style={{ paddingTop: '80px' }}>
             <Routes>
-              <Route path="/" element={<HomePage />} />
+              {/* Home route disabled for now. Re-enable by restoring the HomePage route here. */}
+              {/* <Route path="/" element={<HomePage />} /> */}
+              <Route path="/" element={<GetVeinyAndFormulaPage />} />
               <Route path="/formula" element={<GetVeinyAndFormulaPage />} />
               <Route path="/drip" element={<VeinyAhhDripPage />} />
               <Route path="/about" element={<StoryFaqConnectPage />} />
