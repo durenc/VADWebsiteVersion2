@@ -169,7 +169,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
       </section>
 
       {/* Ingredient Breakdown Section */}
-      <section id="the-veiny-Ahh-formula" className="py-24 md:py-48 bg-black/80 relative overflow-hidden">
+      <section id="formula" className="py-24 md:py-48 bg-black/80 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center mb-16 md:mb-32 text-center space-y-4 md:space-y-8">
             <span className="text-blood-red font-black text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.7em] uppercase">STIM-FREE POTENCY (2 SCOOPS)</span>

@@ -34,13 +34,13 @@ const HomePage: React.FC = () => (
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-8 mt-8 md:mt-12">
           <Link 
-            to="/formula#get-veiny"
+            to="/#get-veiny"
             className="group relative bg-blood-red text-white px-8 md:px-16 py-4 md:py-8 text-lg md:text-2xl font-black tracking-widest uppercase transition-all flex items-center justify-center gap-3 md:gap-4 shadow-[8px_8px_0px_#fff] md:shadow-[15px_15px_0px_#fff] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_#fff] md:hover:shadow-[20px_20px_0px_#fff] active:translate-y-2 active:shadow-none"
           >
             SECURE THE BAG
           </Link>
           <Link 
-            to="/formula#the-veiny-Ahh-formula"
+            to="/#formula"
             className="group relative bg-transparent border-2 md:border-4 border-white text-white px-8 md:px-16 py-4 md:py-8 text-lg md:text-2xl font-black tracking-widest uppercase transition-all flex items-center justify-center hover:bg-white hover:text-black italic"
           >
             OUR VEINY Ahh FORMULA

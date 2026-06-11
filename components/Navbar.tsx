@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Skull } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -13,8 +14,8 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Get VEINY', to: '/formula#get-veiny' },
-    { label: 'The Veiny Ahh Formula', to: '/formula#the-veiny-Ahh-formula' },
+    { label: 'Get VEINY', to: '/' },
+    { label: 'The Veiny Ahh Formula', to: '/#formula' },
     { label: 'Veiny Ahh Drip', to: '/drip' },
     { label: 'Our Story', to: '/about#our-story' },
     { label: 'FAQs', to: '/about#faqs' },
@@ -40,7 +41,12 @@ const Navbar: React.FC = () => {
               key={link.label}
               to={link.to}
               className="text-[10px] md:text-[11px] font-black tracking-[0.2em] md:tracking-[0.25em] uppercase hover:text-blood-red transition-all italic text-white"
-              onClick={() => setMobileNavOpen(false)}
+              onClick={() => {
+                setMobileNavOpen(false);
+                if (link.to === '/' && location.pathname === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
             >
               {link.label}
             </Link>
@@ -59,7 +65,12 @@ const Navbar: React.FC = () => {
               key={link.label}
               to={link.to}
               className="w-full text-center text-[14px] font-black tracking-[0.2em] uppercase hover:text-blood-red transition-all italic text-white py-2"
-              onClick={() => setMobileNavOpen(false)}
+              onClick={() => {
+                setMobileNavOpen(false);
+                if (link.to === '/' && location.pathname === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
             >
               {link.label}
             </Link>
