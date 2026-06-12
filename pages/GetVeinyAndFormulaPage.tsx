@@ -78,11 +78,18 @@ const GetVeinyAndFormulaPage: React.FC = () => {
     }
 
     const timer = window.setInterval(() => {
-      setTimeLeft(getTimeLeft(saleEndTime));
+      const nextTimeLeft = getTimeLeft(saleEndTime);
+      setTimeLeft(nextTimeLeft);
+
+      if (nextTimeLeft.days === 0 && nextTimeLeft.hours === 0 && nextTimeLeft.minutes === 0 && nextTimeLeft.seconds === 0) {
+        window.clearInterval(timer);
+      }
     }, 1000);
 
     return () => window.clearInterval(timer);
   }, [saleEndTime]);
+
+  const saleIsActive = SALE_ACTIVE && Date.now() < saleEndTime;
 
   const formattedOriginalPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -125,7 +132,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 md:gap-10">
                 <div className="flex flex-col">
                   <span className="text-[8px] md:text-[10px] font-black uppercase text-white tracking-[0.4em] md:tracking-[0.6em] mb-1 md:mb-2">YOU CAN'T PUT A PRICE ON A PUMP LIKE THIS, BUT WE TRIED</span>
-                  {SALE_ACTIVE ? (
+                  {saleIsActive ? (
                     <div className="space-y-2">
                       <div className="text-xl md:text-2xl font-black uppercase text-white/60 line-through tracking-[0.2em]">
                         {formattedOriginalPrice}
