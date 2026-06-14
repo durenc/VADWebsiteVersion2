@@ -105,7 +105,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
     <>
       <PageMeta
         title="Veiny Ahh Formula | V.A.D. Supplements"
-        description="Shop V.A.D. Supplements' stimulant-free pump formula built to support pumps, performance, hydration, and vascularity. Get big, strong, and veiny."
+        description="Shop Veiny Ahh Dih Supplements' stimulant-free pump formula built to support pumps, performance, hydration, and vascularity. Get big, strong, and veiny."
         url="https://veinyahdihsupps.com/formula"
         image="https://veinyahdihsupps.com/images/VADBlankProduct.jpg"
       />
@@ -126,7 +126,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   {VAD_PRODUCT.name}
                 </h2>
                 <div className="text-3xl md:text-7xl font-creepster text-white uppercase italic drop-shadow-[2px_2px_0px_#E31B23] md:drop-shadow-[6px_6px_0px_#E31B23] px-2 inline-block bg-blood-red/80 mt-2" style={{ WebkitTextStroke: '1px #E31B23', borderRadius: '0.25rem' }}>
-                  V.A.D. Stimulant free preworkout formula
+                  Veiny Ahh Dih Stimulant free preworkout formula
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 md:gap-10">
