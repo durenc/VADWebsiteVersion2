@@ -129,6 +129,13 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   Veiny Ahh Dih Stimulant free preworkout formula
                 </div>
               </div>
+
+              <div className="mt-8 md:mt-12 px-6 md:px-10 py-4 md:py-6 bg-blood-red/20 border-2 border-blood-red">
+                <p className="text-white text-lg md:text-2xl font-black uppercase italic tracking-[0.15em]">
+                  NOW WITH FREE SHIPPING FOR A LIMITED TIME
+                </p>
+              </div>
+
               <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 md:gap-10">
                 <div className="flex flex-col">
                   <span className="text-[8px] md:text-[10px] font-black uppercase text-white tracking-[0.4em] md:tracking-[0.6em] mb-1 md:mb-2">YOU CAN'T PUT A PRICE ON A PUMP LIKE THIS, BUT WE TRIED</span>
