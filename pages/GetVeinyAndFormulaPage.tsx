@@ -167,6 +167,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
               </p>
               <div className="pt-4 md:pt-8 space-y-6 md:space-y-10">
                 <a
+                  id="square-checkout=button"
                   href="https://vadsupps.square.site/product/veiny-ahh-drink-stimulant-free-pre-workout-/ST3VK7MTM6Y246OLYUNSD6ER?cp=true&sa=false&sbp=false&q=false&category_id=FFBOPZA4NKZZT72H7QHFBHR6"
                   target="_blank"
                   rel="noopener noreferrer"
