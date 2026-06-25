@@ -8,12 +8,7 @@ import GetVeinyAndFormulaPage from './pages/GetVeinyAndFormulaPage';
 import VeinyAhhDripPage from './pages/VeinyAhhDripPage';
 import StoryFaqConnectPage from './pages/StoryFaqConnectPage';
 
-declare global {
-  interface Window {
-    dataLayer?: any[];
-    gtag?: (...args: any[]) => void;
-  }
-}
+
 
 // Scroll to anchor on route change for combined pages
 function ScrollToHash() {
@@ -38,19 +33,7 @@ function ScrollToHash() {
   return null;
 }
 
-function RouteChangeTracker() {
-  const { pathname } = useLocation();
 
-  React.useEffect(() => {
-    if (typeof window.gtag === 'function') {
-      window.gtag('config', 'G-6P18BHE20Z', {
-        page_path: pathname,
-      });
-    }
-  }, [pathname]);
-
-  return null;
-}
 
 const App: React.FC = () => {
   return (
@@ -60,7 +43,6 @@ const App: React.FC = () => {
           <div className="fixed inset-0 z-[-1]" style={{ backgroundImage: `url('/images/VeinsBackground.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', filter: 'brightness(0.9)' }}></div>
           <Navbar />
           <ScrollToHash />
-          <RouteChangeTracker />
           <div style={{ paddingTop: '80px' }}>
             <Routes>
               {/* Home route disabled for now. Re-enable by restoring the HomePage route here. */}
