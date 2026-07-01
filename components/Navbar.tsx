@@ -138,13 +138,13 @@ const Navbar: React.FC = () => {
             {!bannerCollapsed ? (
               <div className="overflow-hidden flex-1">
                 <div
-                    className="inline-flex min-w-[200%] items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition-colors duration-300 border-b border-white/15 group-hover:text-blood-red group-hover:border-blood-red"
+                    className="inline-flex min-w-[200%] items-center whitespace-nowrap text-white group-hover:text-blood-red uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition-colors duration-300 border-b border-white/15 group-hover:border-blood-red"
                     style={{
                         animation: `promoTicker ${PROMO_BANNER.scrollDurationMs}ms linear infinite`
                     }}
                   >
-                    <span className="pr-8">{promoTrack}</span>
-                    <span className="pr-8">{promoTrack}</span>
+                    <span className="pr-8 transition-colors duration-300 group-hover:text-blood-red">{promoTrack}</span>
+                    <span className="pr-8 transition-colors duration-300 group-hover:text-blood-red">{promoTrack}</span>
                   </div>
               </div>
             ) : (
