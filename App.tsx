@@ -43,7 +43,7 @@ const App: React.FC = () => {
           <div className="fixed inset-0 z-[-1]" style={{ backgroundImage: `url('/images/VeinsBackground.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', filter: 'brightness(0.9)' }}></div>
           <Navbar />
           <ScrollToHash />
-          <div style={{ paddingTop: '80px' }}>
+          <div style={{ paddingTop: '128px' }}>
             <Routes>
               {/* Home route disabled for now. Re-enable by restoring the HomePage route here. */}
               {/* <Route path="/" element={<HomePage />} /> */}

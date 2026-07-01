@@ -157,11 +157,6 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   <span className="font-black text-[10px] md:text-sm uppercase tracking-widest bg-transparent border-2 border-blood-red text-white px-4 md:px-6 py-1 md:py-2 block">30 SERVINGS</span>
                 </div>
               </div>
-              <div className="mt-4 md:mt-6 px-4 md:px-6 py-2 md:py-3 bg-blood-red/20 border-2 border-blood-red w-fit">
-                <p className="text-white text-sm md:text-lg font-black uppercase italic tracking-[0.15em]">
-                  NOW WITH FREE SHIPPING FOR A LIMITED TIME
-                </p>
-              </div>
               <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
                 {VAD_PRODUCT.description}
               </p>
