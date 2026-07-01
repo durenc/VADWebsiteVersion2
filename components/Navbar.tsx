@@ -136,15 +136,16 @@ const Navbar: React.FC = () => {
         <div className={`container mx-auto px-4 md:px-6 flex flex-col ${bannerCollapsed ? 'py-0.5' : 'py-2'} gap-2`}>
           <div className="flex items-center justify-between">
             {!bannerCollapsed ? (
-              <div className="overflow-hidden flex-1 group">
-                <div className="inline-flex min-w-[200%] items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition duration-300 border-b border-white/15 group-hover:border-blood-red"
-                  style={{
-                    animation: `promoTicker ${PROMO_BANNER.scrollDurationMs}ms linear infinite`
-                  }}
-                >
-                  <span className="pr-8 transition-colors duration-300 group-hover:text-blood-red">{promoTrack}</span>
-                  <span className="pr-8 transition-colors duration-300 group-hover:text-blood-red">{promoTrack}</span>
-                </div>
+              <div className="overflow-hidden flex-1">
+                <div
+                    className="inline-flex min-w-[200%] items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition-colors duration-300 border-b border-white/15 group-hover:text-blood-red group-hover:border-blood-red"
+                    style={{
+                        animation: `promoTicker ${PROMO_BANNER.scrollDurationMs}ms linear infinite`
+                    }}
+                  >
+                    <span className="pr-8">{promoTrack}</span>
+                    <span className="pr-8">{promoTrack}</span>
+                  </div>
               </div>
             ) : (
               <div className="flex-1" />
