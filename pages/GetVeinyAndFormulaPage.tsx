@@ -160,15 +160,23 @@ const GetVeinyAndFormulaPage: React.FC = () => {
               <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
                 {VAD_PRODUCT.description}
               </p>
-              <div className="pt-4 md:pt-8 space-y-6 md:space-y-10">
+              <div className="pt-4 md:pt-8 space-y-6 md:space-y-0 md:flex md:items-center md:gap-6">
                 <a
                   id="square-checkout=button"
                   href="https://vadsupps.square.site/product/veiny-ahh-drink-stimulant-free-pre-workout-/ST3VK7MTM6Y246OLYUNSD6ER?cp=true&sa=false&sbp=false&q=false&category_id=FFBOPZA4NKZZT72H7QHFBHR6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-blood-red bg-blood-red px-8 py-4 text-base md:text-xl font-black uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white"
+                  className="inline-flex w-full items-center justify-center rounded-full border-2 border-blood-red bg-blood-red px-8 py-4 text-base md:text-xl font-black uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white md:w-auto"
                 >
                   Buy Veiny Ahh Drink
+                </a>
+                <a
+                  href="https://vadsupps.square.site/product/veiny-ahh-drink-sample-program/CVWSE54IFNU2OA2WFUC4X4VS?cp=true&sa=true&sbp=false&q=false"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center rounded-full border-2 border-blood-red bg-blood-red px-8 py-4 text-base md:text-xl font-black uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white md:w-auto"
+                >
+                  Try a Sample
                 </a>
               </div>
             </div>
