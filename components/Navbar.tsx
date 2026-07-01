@@ -9,9 +9,10 @@ const PROMO_BANNER = {
   repeatCount: 5,
   secondLineEnabled: false, // set to false to hide the second summary line
   secondLineText: 'SHOP NOW FOR A LIMITED TIME OFFER',
-  buttonEnabled: false, // set to false to hide the CTA button on the second line
-  buttonText: 'Shop Now',
-  buttonHref: '/#formula'
+  buttonEnabled: false, // set to false to hide the CTA button on the optional second line
+  buttonText: 'Shop the Deal Now',
+  buttonHref: 'https://vadsupps.square.site/product/veiny-ahh-drink-stimulant-free-pre-workout-/ST3VK7MTM6Y246OLYUNSD6ER?cp=true&sa=false&sbp=false&q=false&category_id=FFBOPZA4NKZZT72H7QHFBHR6',
+  linkHref: 'https://vadsupps.square.site/product/veiny-ahh-drink-stimulant-free-pre-workout-/ST3VK7MTM6Y246OLYUNSD6ER?cp=true&sa=false&sbp=false&q=false&category_id=FFBOPZA4NKZZT72H7QHFBHR6'
 };
 
 const Navbar: React.FC = () => {
@@ -120,12 +121,23 @@ const Navbar: React.FC = () => {
     </nav>
 
     {PROMO_BANNER.enabled && (
-      <div className={`bg-blood-red border-t border-blood-red/90 transition-all duration-500 overflow-hidden ${bannerCollapsed ? 'h-11' : 'h-auto'}`}>
-        <div className={`container mx-auto px-4 md:px-6 flex flex-col ${bannerCollapsed ? 'py-1' : 'py-2'} gap-2`}>
+      <div
+        role="link"
+        tabIndex={0}
+        onClick={() => window.open(PROMO_BANNER.linkHref, '_blank', 'noopener noreferrer')}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            window.open(PROMO_BANNER.linkHref, '_blank', 'noopener noreferrer');
+          }
+        }}
+        className={`block cursor-pointer bg-blood-red border-t border-blood-red/90 transition-all duration-500 overflow-hidden ${bannerCollapsed ? 'h-9' : 'h-auto'} hover:bg-white hover:text-blood-red focus:outline-none focus:ring-2 focus:ring-white`}
+      >
+        <div className={`container mx-auto px-4 md:px-6 flex flex-col ${bannerCollapsed ? 'py-0.5' : 'py-2'} gap-2`}>
           <div className="flex items-center justify-between">
             {!bannerCollapsed ? (
               <div className="overflow-hidden flex-1">
-                <div className="inline-flex min-w-full items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-base md:text-xl">
+                <div className="inline-flex min-w-full items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition-colors duration-300 hover:text-blood-red">
                   <div
                     className="inline-flex items-center gap-4"
                     style={{
@@ -145,7 +157,10 @@ const Navbar: React.FC = () => {
             )}
             <button
               type="button"
-              onClick={() => setBannerCollapsed((prev) => !prev)}
+              onClick={(event) => {
+                event.stopPropagation();
+                setBannerCollapsed((prev) => !prev);
+              }}
               className="ml-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/10 text-white transition hover:bg-black/20"
               aria-label={bannerCollapsed ? 'Open promo banner' : 'Collapse promo banner'}
             >
