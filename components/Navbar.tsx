@@ -131,25 +131,15 @@ const Navbar: React.FC = () => {
             window.open(PROMO_BANNER.linkHref, '_blank', 'noopener noreferrer');
           }
         }}
-        className={`block cursor-pointer bg-blood-red border-t border-blood-red/90 transition-all duration-500 overflow-hidden ${bannerCollapsed ? 'h-9' : 'h-auto'} hover:bg-white hover:text-blood-red focus:outline-none focus:ring-2 focus:ring-white`}
+        className={`group block cursor-pointer bg-blood-red border-t border-blood-red/90 transition-all duration-500 overflow-hidden ${bannerCollapsed ? 'h-9' : 'h-auto'} hover:bg-white hover:text-blood-red focus:outline-none focus:ring-2 focus:ring-white`}
       >
         <div className={`container mx-auto px-4 md:px-6 flex flex-col ${bannerCollapsed ? 'py-0.5' : 'py-2'} gap-2`}>
           <div className="flex items-center justify-between">
             {!bannerCollapsed ? (
               <div className="overflow-hidden flex-1">
-                <div className="inline-flex min-w-full items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition-colors duration-300 hover:text-blood-red">
-                  <div
-                    className="inline-flex items-center gap-4"
-                    style={{
-                      animationName: 'promoTicker',
-                      animationDuration: `${PROMO_BANNER.scrollDurationMs}ms`,
-                      animationTimingFunction: 'linear',
-                      animationIterationCount: 'infinite'
-                    }}
-                  >
-                    <span className="pr-8">{promoTrack}</span>
-                    <span className="pr-8">{promoTrack}</span>
-                  </div>
+                <div className="inline-flex min-w-full items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition-colors duration-300 group-hover:text-blood-red border-b border-white/15 transition-all duration-300 group-hover:border-blood-red">
+                  <span className="pr-8">{promoTrack}</span>
+                  <span className="pr-8">{promoTrack}</span>
                 </div>
               </div>
             ) : (
