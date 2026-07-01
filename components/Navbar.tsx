@@ -5,6 +5,7 @@ import { Skull, ChevronDown, ChevronUp } from 'lucide-react';
 const PROMO_BANNER = {
   enabled: true, // set to false to disable the top promo banner site-wide
   text: 'NOW WITH FREE SHIPPING FOR A LIMITED TIME',
+  hoverText: 'CLICK TO SHOP THE FREE SHIPPING DEAL',
   scrollDurationMs: 42000,
   repeatCount: 5,
   secondLineEnabled: false, // set to false to hide the second summary line
@@ -136,9 +137,9 @@ const Navbar: React.FC = () => {
         <div className={`container mx-auto px-4 md:px-6 flex flex-col ${bannerCollapsed ? 'py-0.5' : 'py-2'} gap-2`}>
           <div className="flex items-center justify-between">
             {!bannerCollapsed ? (
-              <div className="overflow-hidden flex-1">
+              <div className="relative overflow-hidden flex-1">
                 <div
-                    className="inline-flex min-w-[200%] items-center whitespace-nowrap text-white group-hover:text-blood-red uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition-colors duration-300 border-b border-white/15 group-hover:border-blood-red"
+                    className="inline-flex min-w-[200%] items-center whitespace-nowrap text-white group-hover:text-blood-red uppercase tracking-[0.35em] font-creepster text-base md:text-xl transition-opacity duration-300 opacity-100 group-hover:opacity-0 border-b border-white/15 group-hover:border-blood-red"
                     style={{
                         animation: `promoTicker ${PROMO_BANNER.scrollDurationMs}ms linear infinite`
                     }}
@@ -146,6 +147,11 @@ const Navbar: React.FC = () => {
                     <span className="pr-8 transition-colors duration-300 group-hover:text-blood-red">{promoTrack}</span>
                     <span className="pr-8 transition-colors duration-300 group-hover:text-blood-red">{promoTrack}</span>
                   </div>
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="text-blood-red uppercase tracking-[0.35em] font-creepster text-base md:text-xl text-center">
+                    {PROMO_BANNER.hoverText}
+                  </span>
+                </div>
               </div>
             ) : (
               <div className="flex-1" />
