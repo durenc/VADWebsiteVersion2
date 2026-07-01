@@ -5,11 +5,11 @@ import { Skull, ChevronDown, ChevronUp } from 'lucide-react';
 const PROMO_BANNER = {
   enabled: true, // set to false to disable the top promo banner site-wide
   text: 'NOW WITH FREE SHIPPING FOR A LIMITED TIME',
-  scrollDurationMs: 28000,
-  repeatCount: 4,
-  secondLineEnabled: true, // set to false to hide the second summary line
+  scrollDurationMs: 42000,
+  repeatCount: 5,
+  secondLineEnabled: false, // set to false to hide the second summary line
   secondLineText: 'SHOP NOW FOR A LIMITED TIME OFFER',
-  buttonEnabled: true, // set to false to hide the CTA button on the second line
+  buttonEnabled: false, // set to false to hide the CTA button on the second line
   buttonText: 'Shop Now',
   buttonHref: '/#formula'
 };
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-between">
             {!bannerCollapsed ? (
               <div className="overflow-hidden flex-1">
-                <div className="inline-flex min-w-full items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-sm md:text-base">
+                <div className="inline-flex min-w-full items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-base md:text-xl">
                   <div
                     className="inline-flex items-center gap-4"
                     style={{
