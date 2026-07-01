@@ -6,7 +6,12 @@ const PROMO_BANNER = {
   enabled: true, // set to false to disable the top promo banner site-wide
   text: 'NOW WITH FREE SHIPPING FOR A LIMITED TIME',
   scrollDurationMs: 28000,
-  repeatCount: 4
+  repeatCount: 4,
+  secondLineEnabled: true, // set to false to hide the second summary line
+  secondLineText: 'SHOP NOW FOR A LIMITED TIME OFFER',
+  buttonEnabled: true, // set to false to hide the CTA button on the second line
+  buttonText: 'Shop Now',
+  buttonHref: '/#formula'
 };
 
 const Navbar: React.FC = () => {
@@ -115,38 +120,54 @@ const Navbar: React.FC = () => {
     </nav>
 
     {PROMO_BANNER.enabled && (
-      <div className={`bg-blood-red/95 border-t border-blood-red/80 transition-all duration-500 overflow-hidden ${bannerCollapsed ? 'h-11' : 'h-16 md:h-16'}`}>
-        <div className={`container mx-auto px-4 md:px-6 flex items-center justify-between ${bannerCollapsed ? 'py-1' : 'py-2'}`}>
-          {!bannerCollapsed ? (
-            <div className="overflow-hidden flex-1">
-              <div className="inline-flex min-w-full items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-sm md:text-base">
-                <div
-                  className="inline-flex items-center gap-4"
-                  style={{
-                    animationName: 'promoTicker',
-                    animationDuration: `${PROMO_BANNER.scrollDurationMs}ms`,
-                    animationTimingFunction: 'linear',
-                    animationIterationCount: 'infinite'
-                  }}
-                >
-                  <span className="pr-8">{promoTrack}</span>
-                  <span className="pr-8">{promoTrack}</span>
+      <div className={`bg-blood-red border-t border-blood-red/90 transition-all duration-500 overflow-hidden ${bannerCollapsed ? 'h-11' : 'h-auto'}`}>
+        <div className={`container mx-auto px-4 md:px-6 flex flex-col ${bannerCollapsed ? 'py-1' : 'py-2'} gap-2`}>
+          <div className="flex items-center justify-between">
+            {!bannerCollapsed ? (
+              <div className="overflow-hidden flex-1">
+                <div className="inline-flex min-w-full items-center whitespace-nowrap text-white uppercase tracking-[0.35em] font-creepster text-sm md:text-base">
+                  <div
+                    className="inline-flex items-center gap-4"
+                    style={{
+                      animationName: 'promoTicker',
+                      animationDuration: `${PROMO_BANNER.scrollDurationMs}ms`,
+                      animationTimingFunction: 'linear',
+                      animationIterationCount: 'infinite'
+                    }}
+                  >
+                    <span className="pr-8">{promoTrack}</span>
+                    <span className="pr-8">{promoTrack}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ) : (
-            <div className="flex items-center flex-1">
-              <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/90 font-black">PROMO COLLAPSED</span>
+            ) : (
+              <div className="flex-1" />
+            )}
+            <button
+              type="button"
+              onClick={() => setBannerCollapsed((prev) => !prev)}
+              className="ml-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/10 text-white transition hover:bg-black/20"
+              aria-label={bannerCollapsed ? 'Open promo banner' : 'Collapse promo banner'}
+            >
+              {bannerCollapsed ? <ChevronDown size={18} /> : <ChevronUp size={18} />}
+            </button>
+          </div>
+
+          {!bannerCollapsed && PROMO_BANNER.secondLineEnabled && (
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div className="text-white uppercase tracking-[0.25em] font-black text-[10px] md:text-sm">
+                {PROMO_BANNER.secondLineText}
+              </div>
+              {PROMO_BANNER.buttonEnabled && (
+                <a
+                  href={PROMO_BANNER.buttonHref}
+                  className="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-[10px] md:text-sm font-black uppercase tracking-[0.2em] text-black transition hover:bg-black hover:text-white"
+                >
+                  {PROMO_BANNER.buttonText}
+                </a>
+              )}
             </div>
           )}
-          <button
-            type="button"
-            onClick={() => setBannerCollapsed((prev) => !prev)}
-            className="ml-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/10 text-white transition hover:bg-black/20"
-            aria-label={bannerCollapsed ? 'Open promo banner' : 'Collapse promo banner'}
-          >
-            {bannerCollapsed ? <ChevronDown size={18} /> : <ChevronUp size={18} />}
-          </button>
         </div>
       </div>
     )}
