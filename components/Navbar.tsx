@@ -148,7 +148,7 @@ const Navbar: React.FC = () => {
                     <span className="pr-8 transition-colors duration-300 group-hover:text-blood-red">{promoTrack}</span>
                   </div>
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <span className="text-blood-red uppercase tracking-[0.35em] font-creepster text-base md:text-xl text-center">
+                  <span className="text-blood-red uppercase tracking-[0.35em] font-creepster font-extrabold text-xl md:text-2xl text-center">
                     {PROMO_BANNER.hoverText}
                   </span>
                 </div>
