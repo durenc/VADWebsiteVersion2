@@ -15,6 +15,9 @@ const getTimeLeft = (endTime: number) => {
 
 const formatTime = (value: number) => String(value).padStart(2, '0');
 
+const FEATURABLE_WIDGET_ID = 'featurable-f8fda964-a81a-4e42-ba42-dd6a84e8493f';
+const FEATURABLE_SCRIPT_URL = 'https://cdn.featurable.com/widget/v2/embed.js';
+
 const SALE_ACTIVE = true;
 const SALE_TIMER_ENABLED = true;
 const SALE_PRICE = 44.99;
@@ -88,6 +91,22 @@ const GetVeinyAndFormulaPage: React.FC = () => {
 
     return () => window.clearInterval(timer);
   }, [saleEndTime]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const existingScript = document.querySelector(`script[src="${FEATURABLE_SCRIPT_URL}"]`);
+
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = FEATURABLE_SCRIPT_URL;
+      script.defer = true;
+      script.charset = 'UTF-8';
+      document.body.appendChild(script);
+    }
+  }, []);
 
   const saleIsActive = SALE_ACTIVE && Date.now() < saleEndTime;
 
@@ -180,8 +199,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                 </a>
               </div>
               <div className="mt-6 md:mt-8 w-full max-w-xl">
-                <div id="featurable-f8fda964-a81a-4e42-ba42-dd6a84e8493f" data-featurable-async />
-                <script src="https://cdn.featurable.com/widget/v2/embed.js" defer charSet="UTF-8" />
+                <div id={FEATURABLE_WIDGET_ID} data-featurable-async />
               </div>
             </div>
           </div>
