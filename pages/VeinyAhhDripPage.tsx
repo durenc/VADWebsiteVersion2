@@ -220,6 +220,11 @@ const itemShopEndTime = useMemo(() => {
               Let people know that you're big, strong, and VEINY
             </p>
 
+            <div className="mt-8 md:mt-12 px-6 md:px-10 py-4 md:py-6 bg-blood-red/20 border-2 border-blood-red">
+              <p className="text-white text-lg md:text-2xl font-black uppercase italic tracking-[0.15em]">
+                NOW WITH FREE SHIPPING FOR A LIMITED TIME
+              </p>
+            </div>
           </div>
 
           {/* Timer */}
