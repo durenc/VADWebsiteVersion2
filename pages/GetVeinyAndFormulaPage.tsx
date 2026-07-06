@@ -179,6 +179,10 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   Try a Sample
                 </a>
               </div>
+              <div className="mt-6 md:mt-8 w-full max-w-xl">
+                <div id="featurable-f8fda964-a81a-4e42-ba42-dd6a84e8493f" data-featurable-async />
+                <script src="https://cdn.featurable.com/widget/v2/embed.js" defer charSet="UTF-8" />
+              </div>
             </div>
           </div>
         </div>
