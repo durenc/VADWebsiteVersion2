@@ -309,7 +309,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                 {ingredient.name}
               </h4>
             </div>
-            <span className="text-blood-red text-3xl sm:text-4xl md:text-7xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
+            <span className="text-blood-red text-3xl sm:text-3xl md:text-6xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
               {ingredient.dose}
             </span>
           </div>
