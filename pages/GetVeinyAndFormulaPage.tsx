@@ -315,11 +315,11 @@ const GetVeinyAndFormulaPage: React.FC = () => {
 
         <div className="flex-1">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-2 md:gap-4 mb-4">
-            <div className="relative inline-block max-w-full">
-              <span className="absolute inset-0 z-0 translate-x-[2px] translate-y-[2px] text-blood-red select-none pointer-events-none text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
+            <div className="relative inline-block max-w-full w-full">
+              <span className="absolute inset-0 z-0 translate-x-[2px] translate-y-[2px] text-blood-red select-none pointer-events-none text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-normal break-words">
                 {ingredient.name}
               </span>
-              <h4 className={`relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-nowrap ${ingredient.name === 'Stimulants' || ingredient.name === 'Fillers & Artificial Colors' ? 'line-through' : ''}`}>
+              <h4 className={`relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-normal break-words ${ingredient.name === 'Stimulants' || ingredient.name === 'Fillers & Artificial Colors' ? 'line-through' : ''}`}>
                 {ingredient.name}
               </h4>
             </div>
