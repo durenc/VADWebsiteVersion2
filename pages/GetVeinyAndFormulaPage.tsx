@@ -282,6 +282,20 @@ const GetVeinyAndFormulaPage: React.FC = () => {
     headline: 'Precision Fluid Balance & Cramp Eradication',
     description:
       'Potassium manages fluid inside the cell to work in tandem with sodium and create the electrical gradient required for perfect muscle contractions. This complete electrolyte optimization ensures smooth, powerful reps while eradicating mid-workout cramps.'
+  },
+  {
+    icon: '❌',
+    name: 'Stimulants',
+    dose: '0',
+    headline: 'Zero Stimulants Equals Maximum Flexibility, and Maximum Veins',
+    description: 'V.A.D. is stimulant free, making it perfect for those late night gym sessions.  No stimulants also means we can maxmize the dosage of pump ingredients. (still want caffiene, simply mix a scoop of V.A.D. with your favorite stimu pre workout, giving you the best of both worlds).'
+  },
+  {
+    icon: '❌',
+    name: 'Fillers & Artificial Colors',
+    dose: '0',
+    headline: 'No Fillers, No Artificial Colors',
+    description: 'We included everything you need, and left out the bullshit.  No fillers, no artificial colors, and no proprietary blends.  Just pure, clinical doses to get you big, strong, and veiny'
   }
   ].map((ingredient, index) => (
     <div
@@ -305,7 +319,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
               <span className="absolute inset-0 z-0 translate-x-[2px] translate-y-[2px] text-blood-red select-none pointer-events-none text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
                 {ingredient.name}
               </span>
-              <h4 className="relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-nowrap">
+              <h4 className={`relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-nowrap ${ingredient.name === 'Stimulants' || ingredient.name === 'Fillers & Artificial Colors' ? 'line-through' : ''}`}>
                 {ingredient.name}
               </h4>
             </div>
