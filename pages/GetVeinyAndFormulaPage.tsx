@@ -302,14 +302,14 @@ const GetVeinyAndFormulaPage: React.FC = () => {
         <div className="flex-1">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-2 md:gap-4 mb-4">
             <div className="relative inline-block">
-              <span className="absolute left-1 top-1 md:left-2 md:top-2 text-blood-red z-0 select-none pointer-events-none">
+              <span className="absolute left-[4px] top-[4px] md:left-[6px] md:top-[6px] text-blood-red z-0 select-none pointer-events-none text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none">
                 {ingredient.name}
               </span>
               <h4 className="relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white">
                 {ingredient.name}
               </h4>
             </div>
-            <span className="text-blood-red text-xl md:text-4xl font-black italic uppercase leading-none whitespace-nowrap">
+            <span className="text-blood-red text-xl md:text-4xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
               {ingredient.dose}
             </span>
           </div>
