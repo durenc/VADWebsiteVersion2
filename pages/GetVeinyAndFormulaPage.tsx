@@ -258,7 +258,111 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                 <p className="text-white text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">Keeps the pump alive and the veins turned on longer.</p>
               </div>
             </div>
+          </div> 
+          <div className="space-y-6 md:space-y-8 mb-24 md:mb-40">
+  {[
+    {
+      icon: '💪',
+      name: 'L-Citrulline',
+      dose: '8,000 mg',
+      headline: 'Turn Up Nitric Oxide',
+      description:
+        'L-Citrulline helps support nitric oxide production, which can promote blood flow, muscle fullness, and performance during hard training. This is the main pump driver in the formula.'
+    },
+    {
+      icon: '🏆',
+      name: 'Betaine Anhydrous',
+      dose: '3,000 mg',
+      headline: 'Power Output Support',
+      description:
+        'Betaine supports strength, power, and performance by helping with cellular hydration and methylation. In a pre-workout, it is included to help you push heavier, harder, and longer.'
+    },
+    {
+      icon: '💧',
+      name: 'Taurine',
+      dose: '2,000 mg',
+      headline: 'Hydration + Endurance Support',
+      description:
+        'Taurine helps support hydration, endurance, muscle function, and performance. It pairs well with electrolytes and glycerol to help you stay locked in during high-volume training.'
+    },
+    {
+      icon: '🌊',
+      name: 'Glycerol Monostearate',
+      dose: '3,000 mg',
+      headline: 'Muscle Fullness Amplifier',
+      description:
+        'Glycerol helps support hyperhydration by pulling water into the body and muscles. This can help create a fuller, more pumped look when paired with proper water intake.'
+    },
+    {
+      icon: '🔥',
+      name: 'Agmatine Sulfate',
+      dose: '2,000 mg',
+      headline: 'Keep The Pump Alive',
+      description:
+        'Agmatine is included to support nitric oxide pathways and help extend the pump effect. It stacks with citrulline to make the formula more pump-focused without relying on stimulants.'
+    },
+    {
+      icon: '🛡️',
+      name: 'Vitamin C',
+      dose: '300 mg',
+      headline: 'Recovery + Antioxidant Support',
+      description:
+        'Vitamin C supports antioxidant defense and normal collagen production. In this formula, it helps round out the performance stack while supporting overall training recovery.'
+    },
+    {
+      icon: '🧂',
+      name: 'Sodium Chloride',
+      dose: '1,000 mg',
+      headline: 'The Pump Needs Salt',
+      description:
+        'Sodium is a key electrolyte for hydration, muscle contraction, and fluid balance. It also helps support better pumps by helping your body hold and move water during training.'
+    },
+    {
+      icon: '⚡',
+      name: 'Potassium Citrate',
+      dose: '500 mg',
+      headline: 'Electrolyte Balance',
+      description:
+        'Potassium works alongside sodium to support hydration, muscle contractions, and fluid balance. This helps make the formula more complete than a basic pump-only pre-workout.'
+    }
+  ].map((ingredient, index) => (
+    <div
+      key={ingredient.name}
+      className="group relative overflow-hidden bg-zinc-950/90 border border-white/10 hover:border-blood-red transition-all duration-300 p-6 md:p-10 shadow-[8px_8px_0px_rgba(0,0,0,0.6)] md:shadow-[14px_14px_0px_rgba(0,0,0,0.6)]"
+    >
+      <div className="absolute -right-6 -bottom-10 text-[7rem] md:text-[12rem] font-creepster text-white/[0.03] group-hover:text-blood-red/[0.08] transition-all duration-300">
+        {index + 1}
+      </div>
+
+      <div className="relative z-10 flex flex-col md:flex-row gap-6 md:gap-10">
+        <div className="shrink-0 w-16 h-16 md:w-24 md:h-24 bg-white/5 border border-white/10 flex items-center justify-center text-3xl md:text-5xl group-hover:bg-blood-red/10 group-hover:border-blood-red/50 transition-all duration-300">
+          <span role="img" aria-label={ingredient.name}>
+            {ingredient.icon}
+          </span>
+        </div>
+
+        <div className="flex-1">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-2 md:gap-4 mb-4">
+            <h4 className="text-2xl md:text-5xl font-black italic uppercase leading-none text-white">
+              {ingredient.name}
+            </h4>
+            <span className="text-blood-red text-xl md:text-4xl font-black italic uppercase leading-none whitespace-nowrap">
+              {ingredient.dose}
+            </span>
           </div>
+
+          <p className="text-white text-lg md:text-3xl font-black uppercase italic leading-tight mb-3 md:mb-5">
+            {ingredient.headline}
+          </p>
+
+          <p className="text-white/75 text-sm md:text-lg font-bold leading-relaxed max-w-5xl">
+            {ingredient.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
           <div id="dosage-facts" className="flex flex-col items-center pt-16 md:pt-32 border-t border-white/10">
             <div className="mb-12 md:mb-24 text-center space-y-4 md:space-y-8">
               <h3 className="relative text-3xl sm:text-5xl md:text-9xl font-creepster uppercase italic tracking-widest leading-[0.9] md:leading-none text-center">
