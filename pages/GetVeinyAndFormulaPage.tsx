@@ -207,58 +207,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
       </section>
 
       {/* Ingredient Breakdown Section */}
-      <section id="formula" className="py-24 md:py-48 bg-black/80 relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="flex flex-col items-center mb-16 md:mb-32 text-center space-y-4 md:space-y-8">
-            <span className="text-blood-red font-black text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.7em] uppercase">STIM-FREE POTENCY (2 SCOOPS)</span>
-            <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
-              <span className="absolute left-1 top-1 md:left-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">THE DOSAGE</span>
-              <span className="relative text-white z-10 w-full">THE DOSAGE</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mb-24 md:mb-40">
-            {/* Ingredient cards */}
-            <div className="group p-8 md:p-14 bg-zinc-950/90 border border-white/5 hover:border-blood-red transition-all relative overflow-hidden shadow-[10px_10px_0px_rgba(0,0,0,0.6)] md:shadow-[20px_20px_0px_rgba(0,0,0,0.6)]">
-              <div className="absolute -bottom-6 md:-bottom-10 -right-6 md:-right-10 text-[6rem] md:text-[12rem] font-creepster text-white/[0.04] transform -rotate-12 transition-all group-hover:text-blood-red/[0.1]">1</div>
-              <div className="relative z-10 space-y-6 md:space-y-10">
-                <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blood-red/10 group-hover:border-blood-red/50 transition-all duration-500">
-                  <span role="img" aria-label="activity">💪</span>
-                </div>
-                <h4 className="text-xl md:text-2xl font-black italic uppercase leading-tight md:leading-none">8,000mg L-Citrulline</h4>
-                <p className="text-white text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">Nitric oxide precursor for massive, skin-tightening fullness.</p>
-              </div>
-            </div>
-            <div className="group p-8 md:p-14 bg-zinc-950/90 border border-white/5 hover:border-blood-red transition-all relative overflow-hidden shadow-[10px_10px_0px_rgba(0,0,0,0.6)] md:shadow-[20px_20px_0px_rgba(0,0,0,0.6)]">
-              <div className="absolute -bottom-6 md:-bottom-10 -right-6 md:-right-10 text-[6rem] md:text-[12rem] font-creepster text-white/[0.04] transform -rotate-12 transition-all group-hover:text-blood-red/[0.1]">2</div>
-              <div className="relative z-10 space-y-6 md:space-y-10">
-                <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blood-red/10 group-hover:border-blood-red/50 transition-all duration-500">
-                  <span role="img" aria-label="trophy">🏆</span>
-                </div>
-                <h4 className="text-xl md:text-2xl font-black italic uppercase leading-tight md:leading-none">3,000mg Betaine</h4>
-                <p className="text-white text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">Power + performance support to push harder and stay strong.</p>
-              </div>
-            </div>
-            <div className="group p-8 md:p-14 bg-zinc-950/90 border border-white/5 hover:border-blood-red transition-all relative overflow-hidden shadow-[10px_10px_0px_rgba(0,0,0,0.6)] md:shadow-[20px_20px_0px_rgba(0,0,0,0.6)]">
-              <div className="absolute -bottom-6 md:-bottom-10 -right-6 md:-right-10 text-[6rem] md:text-[12rem] font-creepster text-white/[0.04] transform -rotate-12 transition-all group-hover:text-blood-red/[0.1]">3</div>
-              <div className="relative z-10 space-y-6 md:space-y-10">
-                <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blood-red/10 group-hover:border-blood-red/50 transition-all duration-500">
-                  <span role="img" aria-label="droplets">💧</span>
-                </div>
-                <h4 className="text-xl md:text-2xl font-black italic uppercase leading-tight md:leading-none">3,000mg Glycerol Monostearate</h4>
-                <p className="text-white text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">Pulls water into the muscle for max volume and nasty pumps.</p>
-              </div>
-            </div>
-            <div className="group p-8 md:p-14 bg-zinc-950/90 border border-white/5 hover:border-blood-red transition-all relative overflow-hidden shadow-[10px_10px_0px_rgba(0,0,0,0.6)] md:shadow-[20px_20px_0px_rgba(0,0,0,0.6)]">
-              <div className="absolute -bottom-6 md:-bottom-10 -right-6 md:-right-10 text-[6rem] md:text-[12rem] font-creepster text-white/[0.04] transform -rotate-12 transition-all group-hover:text-blood-red/[0.1]">4</div>
-              <div className="relative z-10 space-y-6 md:space-y-10">
-                <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blood-red/10 group-hover:border-blood-red/50 transition-all duration-500">
-                  <span role="img" aria-label="zap">⚡</span>
-                </div>
-                <h4 className="text-xl md:text-2xl font-black italic uppercase leading-tight md:leading-none">2,000mg Agmatine Sulfate</h4>
-                <p className="text-white text-base md:text-xl font-bold tracking-wide uppercase italic leading-relaxed">Keeps the pump alive and the veins turned on longer.</p>
-              </div>
-            </div>
-          </div> 
+
           <div className="space-y-6 md:space-y-8 mb-24 md:mb-40">
   {[
     {
