@@ -207,7 +207,16 @@ const GetVeinyAndFormulaPage: React.FC = () => {
       </section>
 
       {/* Ingredient Breakdown Section */}
-
+      <section id="formula" className="py-24 md:py-48 bg-black/80 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="flex flex-col items-center mb-16 md:mb-32 text-center space-y-4 md:space-y-8">
+            <span className="text-blood-red font-black text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.7em] uppercase">STIM-FREE POTENCY (2 SCOOPS)</span>
+            <h2 className="relative text-5xl sm:text-7xl md:text-[11rem] font-creepster uppercase italic tracking-tighter leading-[0.9] md:leading-none text-center">
+              <span className="absolute left-1 top-1 md:left-3 md:top-3 text-blood-red z-0 select-none pointer-events-none w-full">THE DOSAGE</span>
+              <span className="relative text-white z-10 w-full">THE DOSAGE</span>
+            </h2>
+          </div>
+          
           <div className="space-y-6 md:space-y-8 mb-24 md:mb-40">
   {[
     {
