@@ -171,7 +171,7 @@ const VeinyAhhDripPage: React.FC = () => {
 // Format: YYYY-MM-DDTHH:MM:SS-05:00
 // -05:00 is Central Time during standard time
 // Use -06:00 during daylight savings if needed, or keep local browser time version below
-const MERCH_DROP_END_DATE = '2026-07-08T11:59:59-05:00';
+const MERCH_DROP_END_DATE = '2026-07-29T11:59:59-05:00';
 
 const itemShopEndTime = useMemo(() => {
   return new Date(MERCH_DROP_END_DATE).getTime();
