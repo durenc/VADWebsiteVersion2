@@ -190,12 +190,13 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   Buy Veiny Ahh Drink
                 </a>
                 <a
+                  id="sample-checkout=button"
                   href="https://vadsupps.square.site/product/veiny-ahh-drink-sample-program/CVWSE54IFNU2OA2WFUC4X4VS?cp=true&sa=true&sbp=false&q=false"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex w-full items-center justify-center rounded-full border-2 border-blood-red bg-blood-red px-8 py-4 text-base md:text-xl font-black uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white md:w-auto"
                 >
-                  Try a Sample
+                  Try a Free Sample
                 </a>
               </div>
               <div className="mt-6 md:mt-8 w-full max-w-xl">
