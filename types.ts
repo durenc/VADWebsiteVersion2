@@ -9,4 +9,5 @@ export interface Product {
   description: string;
   flavors: Flavor[];
   image: string;
+  images?: string[];
 }

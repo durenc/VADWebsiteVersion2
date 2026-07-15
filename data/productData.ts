@@ -7,7 +7,13 @@ export const VAD_PRODUCT: Product = {
   price: 49.99,
   description: 'A veiny ahh drink for veiny ahh dudes. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
   flavors: ['Bulging Berries'],
-  image: '/images/VADBlankProduct.jpg'
+  image: '/images/VADBlankProduct.jpg',
+  images: [
+    '/images/VADBlankProduct.jpg',
+    '/images/VADSupplementFactsImage.png',
+    '/images/VADBenefitsImage.png',
+    '/images/VADIngredientsImage.png'
+  ]
 };
 
 export const FAQ_ITEMS = [

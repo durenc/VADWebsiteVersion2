@@ -1,5 +1,6 @@
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { VAD_PRODUCT } from '../data/productData';
 import PageMeta from '../components/PageMeta';
 
@@ -72,8 +73,47 @@ const SupplementFacts: React.FC = () => (
 
 const GetVeinyAndFormulaPage: React.FC = () => {
   const [selectedFlavor] = useState(VAD_PRODUCT.flavors[0]);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [showPreviewArrows, setShowPreviewArrows] = useState(false);
+  const previewListRef = useRef<HTMLDivElement | null>(null);
   const saleEndTime = useMemo(() => new Date(SALE_END_DATE).getTime(), []);
   const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(saleEndTime));
+
+  const galleryImages = useMemo(() => {
+    return (VAD_PRODUCT.images && VAD_PRODUCT.images.length > 0 ? VAD_PRODUCT.images : [VAD_PRODUCT.image]).filter(Boolean);
+  }, []);
+
+  const updatePreviewArrows = useCallback(() => {
+    const container = previewListRef.current;
+
+    if (!container) {
+      setShowPreviewArrows(false);
+      return;
+    }
+
+    const canScrollUp = container.scrollTop > 0;
+    const canScrollDown = container.scrollTop + container.clientHeight < container.scrollHeight - 1;
+    setShowPreviewArrows(canScrollUp || canScrollDown);
+  }, []);
+
+  const goToPreviousImage = () => {
+    setActiveImageIndex((previousIndex) => (previousIndex === 0 ? galleryImages.length - 1 : previousIndex - 1));
+  };
+
+  const goToNextImage = () => {
+    setActiveImageIndex((previousIndex) => (previousIndex === galleryImages.length - 1 ? 0 : previousIndex + 1));
+  };
+
+  const scrollPreviewList = (direction: 'up' | 'down') => {
+    const container = previewListRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    const scrollAmount = direction === 'down' ? 140 : -140;
+    container.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     if (!SALE_ACTIVE || !SALE_TIMER_ENABLED) {
@@ -108,6 +148,21 @@ const GetVeinyAndFormulaPage: React.FC = () => {
     }
   }, []);
 
+  useEffect(() => {
+    updatePreviewArrows();
+  }, [activeImageIndex, galleryImages.length, updatePreviewArrows]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const handleResize = () => updatePreviewArrows();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [updatePreviewArrows]);
+
   const saleIsActive = SALE_ACTIVE && Date.now() < saleEndTime;
 
   const formattedOriginalPrice = new Intl.NumberFormat('en-US', {
@@ -133,10 +188,73 @@ const GetVeinyAndFormulaPage: React.FC = () => {
       <section id="get-veiny" className="py-16 md:py-32 bg-black/40 relative border-b border-white/10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
-            <div className="relative group">
-              <div className="bg-zinc-900 p-8 md:p-16 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
+            <div className="relative">
+              <div className="bg-zinc-900 p-4 sm:p-6 md:p-8 lg:p-10 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
                 <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/carbon-fibre.png')] opacity-30"></div>
-                <img src={VAD_PRODUCT.image} alt="VAD Product" className="max-h-[300px] md:max-h-[600px] object-contain drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)] transform group-hover:rotate-6 transition-transform duration-700 relative z-10" />
+                <div className="relative z-10 flex items-center gap-3 md:gap-4 w-full">
+                  <div className="hidden sm:flex flex-col items-center gap-2 shrink-0">
+                    {showPreviewArrows && (
+                      <button
+                        type="button"
+                        onClick={() => scrollPreviewList('up')}
+                        className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white transition hover:bg-blood-red/80"
+                        aria-label="Scroll preview images up"
+                      >
+                        <ChevronUp size={16} />
+                      </button>
+                    )}
+                    <div
+                      ref={previewListRef}
+                      className="flex max-h-[240px] flex-col gap-3 overflow-y-auto overflow-x-hidden md:max-h-[420px]"
+                    >
+                      {galleryImages.map((image, index) => (
+                        <button
+                          key={`${image}-${index}`}
+                          type="button"
+                          onClick={() => setActiveImageIndex(index)}
+                          className={`w-16 shrink-0 overflow-hidden rounded border transition-all md:w-20 ${index === activeImageIndex ? 'border-blood-red shadow-[0_0_0_2px_rgba(227,27,35,0.5)]' : 'border-white/10 hover:border-white/40'}`}
+                          aria-label={`View image ${index + 1}`}
+                        >
+                          <img src={image} alt={`Preview image ${index + 1}`} className="h-16 w-full object-cover md:h-20" />
+                        </button>
+                      ))}
+                    </div>
+                    {showPreviewArrows && (
+                      <button
+                        type="button"
+                        onClick={() => scrollPreviewList('down')}
+                        className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white transition hover:bg-blood-red/80"
+                        aria-label="Scroll preview images down"
+                      >
+                        <ChevronDown size={16} />
+                      </button>
+                    )}
+                  </div>
+
+                  <div className="relative flex-1">
+                    <img
+                      src={galleryImages[activeImageIndex]}
+                      alt={selectedFlavor}
+                      className="max-h-[280px] w-full object-contain drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:max-h-[560px] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)] relative z-10"
+                    />
+                    <button
+                      type="button"
+                      onClick={goToPreviousImage}
+                      className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:bg-blood-red/80"
+                      aria-label="View previous image"
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={goToNextImage}
+                      className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:bg-blood-red/80"
+                      aria-label="View next image"
+                    >
+                      <ChevronRight size={20} />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="flex flex-col justify-center space-y-8 md:space-y-12">
