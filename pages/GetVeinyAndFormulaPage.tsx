@@ -231,28 +231,30 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                     )}
                   </div>
 
-                  <div className="relative flex-1">
+                  <div className="relative flex-1 min-h-[280px] overflow-hidden rounded-lg md:min-h-[560px]">
                     <img
                       src={galleryImages[activeImageIndex]}
                       alt={selectedFlavor}
-                      className="max-h-[280px] w-full object-contain drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:max-h-[560px] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)] relative z-10"
+                      className="h-full w-full object-contain drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)]"
                     />
-                    <button
-                      type="button"
-                      onClick={goToPreviousImage}
-                      className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:bg-blood-red/80"
-                      aria-label="View previous image"
-                    >
-                      <ChevronLeft size={20} />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={goToNextImage}
-                      className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:bg-blood-red/80"
-                      aria-label="View next image"
-                    >
-                      <ChevronRight size={20} />
-                    </button>
+                    <div className="absolute inset-0 z-20 flex items-center justify-between px-2 sm:px-4">
+                      <button
+                        type="button"
+                        onClick={goToPreviousImage}
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:bg-blood-red/80"
+                        aria-label="View previous image"
+                      >
+                        <ChevronLeft size={20} />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={goToNextImage}
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:bg-blood-red/80"
+                        aria-label="View next image"
+                      >
+                        <ChevronRight size={20} />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
