@@ -9,7 +9,7 @@ export const VAD_PRODUCT: Product = {
   flavors: ['Bulging Berries'],
   image: '/images/VADSquareProductImage.png',
   images: [
-    '/images/VADBlankProduct.jpg',
+    '/images/VADSquareProductImage.png',
     '/images/VADSupplementFactsImage.png',
     '/images/VADBenefitsImage.png',
     '/images/VADIngredientsImage.png'
