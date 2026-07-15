@@ -187,7 +187,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex w-full items-center justify-center rounded-full border-2 border-blood-red bg-blood-red px-8 py-4 text-base md:text-xl font-black uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white md:w-auto"
                 >
-                  Buy Veiny Ahh Drink
+                  BUY NOW
                 </a>
                 <a
                   id="sample-checkout=button"
@@ -196,7 +196,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex w-full items-center justify-center rounded-full border-2 border-blood-red bg-blood-red px-8 py-4 text-base md:text-xl font-black uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-white hover:text-black hover:border-white md:w-auto"
                 >
-                  Try a Free Sample
+                  TRY A SAMPLE
                 </a>
               </div>
               <div className="mt-6 md:mt-8 w-full max-w-xl">
