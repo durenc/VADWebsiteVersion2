@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Skull, ChevronDown, ChevronUp } from 'lucide-react';
+import { Menu, ChevronDown, ChevronUp } from 'lucide-react';
 
 const PROMO_BANNER = {
   enabled: true, // set to false to disable the top promo banner site-wide
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
         </div>
 
         <button className="lg:hidden p-2 text-white bg-white/5 border border-white/10" onClick={() => setMobileNavOpen((v) => !v)} aria-label="Menu">
-          <Skull size={20} />
+          <Menu size={20} />
         </button>
       </div>
 
