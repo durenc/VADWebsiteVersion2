@@ -189,8 +189,8 @@ const GetVeinyAndFormulaPage: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
             <div className="relative">
-              <div className="bg-zinc-900 p-4 sm:p-6 md:p-8 lg:p-10 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/carbon-fibre.png')] opacity-30"></div>
+              <div className="bg-zinc-900 p-3 sm:p-4 md:p-6 lg:p-8 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
+                <div className="absolute inset-0 bg-[url('/images/carbon-fibre.png')] opacity-30"></div>
                 <div className="relative z-10 flex items-center gap-3 md:gap-4 w-full">
                   <div className="hidden sm:flex flex-col items-center gap-2 shrink-0">
                     {showPreviewArrows && (
@@ -212,10 +212,10 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                           key={`${image}-${index}`}
                           type="button"
                           onClick={() => setActiveImageIndex(index)}
-                          className={`w-16 shrink-0 overflow-hidden rounded border transition-all md:w-20 ${index === activeImageIndex ? 'border-blood-red shadow-[0_0_0_2px_rgba(227,27,35,0.5)]' : 'border-white/10 hover:border-white/40'}`}
+                          className={`aspect-square w-16 shrink-0 overflow-hidden rounded border transition-all md:w-20 ${index === activeImageIndex ? 'border-blood-red shadow-[0_0_0_2px_rgba(227,27,35,0.5)]' : 'border-white/10 hover:border-white/40'}`}
                           aria-label={`View image ${index + 1}`}
                         >
-                          <img src={image} alt={`Preview image ${index + 1}`} className="h-16 w-full object-cover md:h-20" />
+                          <img src={image} alt={`Preview image ${index + 1}`} className="h-full w-full object-cover" />
                         </button>
                       ))}
                     </div>
@@ -231,11 +231,11 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                     )}
                   </div>
 
-                  <div className="relative flex-1 min-h-[280px] overflow-hidden rounded-lg md:min-h-[560px]">
+                  <div className="relative flex-1 aspect-square min-h-[280px] overflow-hidden rounded-lg md:min-h-[560px]">
                     <img
                       src={galleryImages[activeImageIndex]}
                       alt={selectedFlavor}
-                      className="h-full w-full object-contain drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)]"
+                      className="h-full w-full object-cover drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)]"
                     />
                     <div className="absolute inset-0 z-20 flex items-center justify-between px-2 sm:px-4">
                       <button
