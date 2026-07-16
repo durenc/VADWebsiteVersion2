@@ -13,7 +13,7 @@ export const VAD_PRODUCT: Product = {
     '/images/VADSupplementFactsImage.png',
     '/images/VADBenefitsImage.png',
     '/images/VADIngredientsImage.png',
-    '/images/VADDirectionsImage.png'
+    '/images/DirectionsImage.png'
   ]
 };
 
@@ -28,7 +28,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: 'Should I take one scoop or two?', 
-    a: `V.A.D. is formulated for flexible dosing. Start with 1 scoop to assess tolerance—this will deliver a strong pump. For maximum fullness and vascularity, 2 scoops can be used. Adjust based on your body weight, training intensity, and pump preference.`
+    a: `V.A.D. is formulated for flexible dosing. Start with 1 scoop to assess tolerance,this will deliver a strong pump. For maximum fullness and vascularity, 2 scoops can be used. Adjust based on your body weight, training intensity, and pump preference.`
   },
   {
     q: 'Why the name “Veiny Ahh Dih”?',
