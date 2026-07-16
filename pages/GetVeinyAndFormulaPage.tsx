@@ -75,6 +75,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
   const [selectedFlavor] = useState(VAD_PRODUCT.flavors[0]);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [showPreviewArrows, setShowPreviewArrows] = useState(false);
+  const [imageLoadErrors, setImageLoadErrors] = useState<Record<number, boolean>>({});
   const previewListRef = useRef<HTMLDivElement | null>(null);
   const saleEndTime = useMemo(() => new Date(SALE_END_DATE).getTime(), []);
   const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(saleEndTime));
@@ -113,6 +114,10 @@ const GetVeinyAndFormulaPage: React.FC = () => {
 
     const scrollAmount = direction === 'down' ? 140 : -140;
     container.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+  };
+
+  const handleImageError = (index: number) => {
+    setImageLoadErrors((previousErrors) => ({ ...previousErrors, [index]: true }));
   };
 
   useEffect(() => {
@@ -215,7 +220,12 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                           className={`aspect-square w-16 shrink-0 overflow-hidden rounded border transition-all md:w-20 ${index === activeImageIndex ? 'border-blood-red shadow-[0_0_0_2px_rgba(227,27,35,0.5)]' : 'border-white/10 hover:border-white/40'}`}
                           aria-label={`View image ${index + 1}`}
                         >
-                          <img src={image} alt={`Preview image ${index + 1}`} className="h-full w-full object-cover" />
+                          <img
+                            src={imageLoadErrors[index] ? '/images/ComingSoon.jpg' : image}
+                            alt={`Preview image ${index + 1}`}
+                            onError={() => handleImageError(index)}
+                            className="h-full w-full object-contain bg-black/20"
+                          />
                         </button>
                       ))}
                     </div>
@@ -233,9 +243,10 @@ const GetVeinyAndFormulaPage: React.FC = () => {
 
                   <div className="relative flex-1 aspect-square min-h-[280px] overflow-hidden rounded-lg md:min-h-[560px]">
                     <img
-                      src={galleryImages[activeImageIndex]}
+                      src={imageLoadErrors[activeImageIndex] ? '/images/ComingSoon.jpg' : galleryImages[activeImageIndex]}
                       alt={selectedFlavor}
-                      className="h-full w-full object-cover drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)]"
+                      onError={() => handleImageError(activeImageIndex)}
+                      className="h-full w-full object-contain bg-black/20 drop-shadow-[0_0_60px_rgba(227,27,35,0.6)] md:drop-shadow-[0_0_100px_rgba(227,27,35,0.8)]"
                     />
                     <div className="absolute inset-0 z-20 flex items-center justify-between px-2 sm:px-4">
                       <button
