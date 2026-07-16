@@ -314,20 +314,17 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                 {VAD_PRODUCT.description}
               </p>
               <div className="max-w-xl">
-                <div className="mb-3 text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-white/70">
-                  Flavor
-                </div>
-                <div className="flex flex-wrap gap-3">
+                <div className="mb-2 flex flex-wrap items-center gap-2">
                   {VAD_PRODUCT.flavors.map((flavor) => {
                     const isSelected = selectedFlavor === flavor;
-                    const description = flavorDescriptions[flavor] ?? 'A bold blast of juicy berry fruit punch with the perfect balance of sweet, tart, and refreshing. The perfect taste that will get your "berries" and muscles bulging like they should be.';
+                    const description = flavorDescriptions[flavor] ?? 'Flavor description placeholder.';
 
                     return (
                       <div key={flavor} className="group relative">
                         <button
                           type="button"
                           onClick={() => setSelectedFlavor(flavor)}
-                          className={`rounded-full border px-4 py-2 text-sm font-black uppercase tracking-[0.2em] transition-all ${isSelected ? 'border-blood-red bg-blood-red text-white' : 'border-white/20 bg-white/5 text-white hover:border-blood-red hover:bg-blood-red/20'}`}
+                          className={`min-w-[140px] border px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-white transition-all ${isSelected ? 'border-blood-red bg-black text-white' : 'border-blood-red/70 bg-black text-white hover:border-blood-red'}`}
                         >
                           {flavor}
                         </button>
