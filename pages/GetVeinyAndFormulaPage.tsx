@@ -317,15 +317,18 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                     const description = flavorDescriptions[flavor] ?? 'A bold blast of juicy berry fruit punch with the perfect balance of sweet, tart, and refreshing. The perfect flavor to get your "berries" and muscles bulging like they should be.';
 
                     return (
-                      <button
-                        key={flavor}
-                        type="button"
-                        onClick={() => setSelectedFlavor(flavor)}
-                        title={description}
-                        className={`min-w-[140px] border px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-white transition-all ${isSelected ? 'border-blood-red bg-black text-white' : 'border-blood-red/70 bg-black text-white hover:border-blood-red'}`}
-                      >
-                        {flavor}
-                      </button>
+                      <div key={flavor} className="group relative">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedFlavor(flavor)}
+                          className={`min-w-[140px] border px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-white transition-all ${isSelected ? 'border-blood-red bg-black text-white' : 'border-blood-red/70 bg-black text-white hover:border-blood-red'}`}
+                        >
+                          {flavor}
+                        </button>
+                        <div className="pointer-events-none absolute left-0 top-full z-20 mt-2 w-56 rounded border border-white/10 bg-black/90 p-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(0,0,0,0.45)] opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
+                          {description}
+                        </div>
+                      </div>
                     );
                   })}
                 </div>
