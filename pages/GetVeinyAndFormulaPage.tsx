@@ -310,32 +310,29 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   <span className="font-black text-[10px] md:text-sm uppercase tracking-widest bg-transparent border-2 border-blood-red text-white px-4 md:px-6 py-1 md:py-2 block">30 SERVINGS</span>
                 </div>
               </div>
-              <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
-                {VAD_PRODUCT.description}
-              </p>
               <div className="max-w-xl">
                 <div className="mb-2 flex flex-wrap items-center gap-2">
                   {VAD_PRODUCT.flavors.map((flavor) => {
                     const isSelected = selectedFlavor === flavor;
-                    const description = flavorDescriptions[flavor] ?? 'A bold blast of juicy berry fruit punch with the perfect balance of sweet, tart, and refreshing. The flavor that will get your "berries" and muscles bulging like they should be.';
+                    const description = flavorDescriptions[flavor] ?? 'Flavor description placeholder.';
 
                     return (
-                      <div key={flavor} className="group relative">
-                        <button
-                          type="button"
-                          onClick={() => setSelectedFlavor(flavor)}
-                          className={`min-w-[140px] border px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-white transition-all ${isSelected ? 'border-blood-red bg-black text-white' : 'border-blood-red/70 bg-black text-white hover:border-blood-red'}`}
-                        >
-                          {flavor}
-                        </button>
-                        <div className="pointer-events-none absolute left-0 top-full z-20 mt-2 w-56 rounded border border-white/10 bg-black/90 p-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(0,0,0,0.45)] opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
-                          {description}
-                        </div>
-                      </div>
+                      <button
+                        key={flavor}
+                        type="button"
+                        onClick={() => setSelectedFlavor(flavor)}
+                        title={description}
+                        className={`min-w-[140px] border px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-white transition-all ${isSelected ? 'border-blood-red bg-black text-white' : 'border-blood-red/70 bg-black text-white hover:border-blood-red'}`}
+                      >
+                        {flavor}
+                      </button>
                     );
                   })}
                 </div>
               </div>
+              <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
+                {VAD_PRODUCT.description}
+              </p>
               <div className="pt-4 md:pt-8 space-y-6 md:space-y-0 md:flex md:items-center md:gap-6">
                 <a
                   id="square-checkout=button"
