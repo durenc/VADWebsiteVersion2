@@ -72,7 +72,7 @@ const SupplementFacts: React.FC = () => (
 );
 
 const GetVeinyAndFormulaPage: React.FC = () => {
-  const [selectedFlavor] = useState(VAD_PRODUCT.flavors[0]);
+  const [selectedFlavor, setSelectedFlavor] = useState(VAD_PRODUCT.flavors[0]);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [showPreviewArrows, setShowPreviewArrows] = useState(false);
   const [imageLoadErrors, setImageLoadErrors] = useState<Record<number, boolean>>({});
@@ -169,6 +169,9 @@ const GetVeinyAndFormulaPage: React.FC = () => {
   }, [updatePreviewArrows]);
 
   const saleIsActive = SALE_ACTIVE && Date.now() < saleEndTime;
+  const flavorDescriptions: Record<string, string> = {
+    'Bulging Berries': 'Flavor description placeholder for Bulging Berries.'
+  };
 
   const formattedOriginalPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -194,9 +197,9 @@ const GetVeinyAndFormulaPage: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
             <div className="relative">
-              <div className="bg-zinc-900 p-3 sm:p-4 md:p-6 lg:p-8 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
+              <div className="bg-zinc-900 border-2 border-white/5 flex items-center justify-center relative overflow-hidden shadow-[inset_0_0_100px_rgba(227,27,35,0.2)] md:shadow-[inset_0_0_150px_rgba(227,27,35,0.2)]">
                 <div className="absolute inset-0 bg-[url('/images/carbon-fibre.png')] opacity-30"></div>
-                <div className="relative z-10 flex items-center gap-3 md:gap-4 w-full">
+                <div className="relative z-10 flex items-center gap-3 md:gap-4 w-full p-0">
                   <div className="hidden sm:flex flex-col items-center gap-2 shrink-0">
                     {showPreviewArrows && (
                       <button
@@ -241,7 +244,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                     )}
                   </div>
 
-                  <div className="relative flex-1 aspect-square min-h-[280px] overflow-hidden rounded-lg md:min-h-[560px]">
+                  <div className="relative flex-1 aspect-square min-h-[280px] overflow-hidden md:min-h-[560px]">
                     <img
                       src={imageLoadErrors[activeImageIndex] ? '/images/ComingSoon.jpg' : galleryImages[activeImageIndex]}
                       alt={selectedFlavor}
@@ -310,6 +313,32 @@ const GetVeinyAndFormulaPage: React.FC = () => {
               <p className="text-white text-lg md:text-2xl font-medium leading-relaxed italic border-l-4 md:border-l-8 border-blood-red pl-6 md:pl-10 max-w-xl">
                 {VAD_PRODUCT.description}
               </p>
+              <div className="max-w-xl">
+                <div className="mb-3 text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-white/70">
+                  Flavor
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {VAD_PRODUCT.flavors.map((flavor) => {
+                    const isSelected = selectedFlavor === flavor;
+                    const description = flavorDescriptions[flavor] ?? 'A bold blast of juicy berry fruit punch with the perfect balance of sweet, tart, and refreshing. The perfect taste that will get your "berries" and muscles bulging like they should be.';
+
+                    return (
+                      <div key={flavor} className="group relative">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedFlavor(flavor)}
+                          className={`rounded-full border px-4 py-2 text-sm font-black uppercase tracking-[0.2em] transition-all ${isSelected ? 'border-blood-red bg-blood-red text-white' : 'border-white/20 bg-white/5 text-white hover:border-blood-red hover:bg-blood-red/20'}`}
+                        >
+                          {flavor}
+                        </button>
+                        <div className="pointer-events-none absolute left-0 top-full z-20 mt-2 w-56 rounded border border-white/10 bg-black/90 p-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(0,0,0,0.45)] opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
+                          {description}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
               <div className="pt-4 md:pt-8 space-y-6 md:space-y-0 md:flex md:items-center md:gap-6">
                 <a
                   id="square-checkout=button"
