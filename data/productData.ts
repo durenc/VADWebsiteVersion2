@@ -12,7 +12,8 @@ export const VAD_PRODUCT: Product = {
     '/images/VADSquareProductImage.png',
     '/images/VADSupplementFactsImage.png',
     '/images/VADBenefitsImage.png',
-    '/images/VADIngredientsImage.png'
+    '/images/VADIngredientsImage.png',
+    '/images/VADDirectionsImage.png'
   ]
 };
 
