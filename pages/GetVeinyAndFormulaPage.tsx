@@ -170,7 +170,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
 
   const saleIsActive = SALE_ACTIVE && Date.now() < saleEndTime;
   const flavorDescriptions: Record<string, string> = {
-    'Bulging Berries': 'Flavor description placeholder for Bulging Berries.'
+    'Bulging Berries': 'A bold blast of juicy berry fruit punch with the perfect balance of sweet, tart, and refreshing. The perfect flavor to get your muscles bulging like they should be.'
   };
 
   const formattedOriginalPrice = new Intl.NumberFormat('en-US', {
