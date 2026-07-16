@@ -317,7 +317,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                 <div className="mb-2 flex flex-wrap items-center gap-2">
                   {VAD_PRODUCT.flavors.map((flavor) => {
                     const isSelected = selectedFlavor === flavor;
-                    const description = flavorDescriptions[flavor] ?? 'Flavor description placeholder.';
+                    const description = flavorDescriptions[flavor] ?? 'A bold blast of juicy berry fruit punch with the perfect balance of sweet, tart, and refreshing. The flavor that will get your "berries" and muscles bulging like they should be.';
 
                     return (
                       <div key={flavor} className="group relative">
