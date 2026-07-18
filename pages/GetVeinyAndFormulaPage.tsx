@@ -377,7 +377,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
           </div>
           
           <div className="space-y-6 md:space-y-8 mb-10 md:mb-16">
-            <div className="flex flex-col gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {[
                 {
                   dosage: '8,000 mg',
@@ -412,15 +412,15 @@ const GetVeinyAndFormulaPage: React.FC = () => {
 
                     <div className="flex-1">
                       <div className="flex flex-col gap-3 md:gap-4 mb-4">
-                        <div className="flex flex-nowrap items-center gap-3 md:gap-4">
-                          <span className="text-blood-red text-3xl sm:text-3xl md:text-6xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
+                        <div className="flex flex-wrap items-center gap-3 md:gap-4">
+                          <span className="text-blood-red text-4xl sm:text-5xl md:text-7xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
                             {highlight.dosage}
                           </span>
                           <div className="relative min-w-0 flex-1">
-                            <span className="absolute inset-0 z-0 translate-x-[2px] translate-y-[2px] text-blood-red select-none pointer-events-none text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
+                            <span className="absolute inset-0 z-0 translate-x-[2px] translate-y-[2px] text-blood-red select-none pointer-events-none text-2xl md:text-4xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-normal break-words">
                               {highlight.title}
                             </span>
-                            <h4 className="relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-nowrap">
+                            <h4 className="relative z-10 text-2xl md:text-4xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-normal break-words">
                               {highlight.title}
                             </h4>
                           </div>
