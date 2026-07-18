@@ -411,23 +411,25 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                     </div>
 
                     <div className="flex-1">
-                      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-2 md:gap-4 mb-4">
-                        <div className="relative inline-block max-w-full w-full">
-                          <span className="absolute inset-0 z-0 translate-x-[2px] translate-y-[2px] text-blood-red select-none pointer-events-none text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-normal break-words">
-                            {highlight.title}
+                      <div className="flex flex-col gap-3 md:gap-4 mb-4">
+                        <div className="flex flex-wrap items-center gap-3 md:gap-4">
+                          <span className="text-blood-red text-3xl sm:text-3xl md:text-6xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
+                            {highlight.dosage}
                           </span>
-                          <h4 className="relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-normal break-words">
-                            {highlight.title}
-                          </h4>
+                          <div className="relative inline-block max-w-full w-full">
+                            <span className="absolute inset-0 z-0 translate-x-[2px] translate-y-[2px] text-blood-red select-none pointer-events-none text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-normal break-words">
+                              {highlight.title}
+                            </span>
+                            <h4 className="relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-normal break-words">
+                              {highlight.title}
+                            </h4>
+                          </div>
                         </div>
-                        <span className="text-blood-red text-3xl sm:text-3xl md:text-6xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
-                          {highlight.dosage}
-                        </span>
-                      </div>
 
-                      <p className="text-white/75 text-sm md:text-lg font-bold leading-relaxed max-w-5xl">
-                        {highlight.description}
-                      </p>
+                        <p className="text-white/75 text-sm md:text-lg font-bold leading-relaxed max-w-5xl">
+                          {highlight.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
