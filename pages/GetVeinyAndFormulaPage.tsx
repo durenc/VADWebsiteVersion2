@@ -377,7 +377,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
           </div>
           
           <div className="space-y-6 md:space-y-8 mb-10 md:mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="flex flex-col gap-4 md:gap-6">
               {[
                 {
                   dosage: '8,000 mg',
@@ -404,23 +404,31 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   image: '/images/VADIngredientsImage.png'
                 }
               ].map((highlight) => (
-                <div key={highlight.title} className="group flex h-full items-start gap-4 overflow-hidden border border-white/10 bg-zinc-950/90 p-4 md:p-6 shadow-[6px_6px_0px_rgba(0,0,0,0.6)] md:shadow-[10px_10px_0px_rgba(0,0,0,0.6)]">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 md:h-20 md:w-20">
-                    <img src={highlight.image} alt="" className="h-full w-full object-cover" />
-                  </div>
-
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-end gap-3 md:gap-4">
-                      <div className="text-4xl sm:text-5xl md:text-6xl font-creepster uppercase italic leading-none text-blood-red">
-                        {highlight.dosage}
-                      </div>
-                      <h4 className="text-xl sm:text-2xl md:text-3xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white">
-                        <span className="text-blood-red">{highlight.title}</span>
-                      </h4>
+                <div key={highlight.title} className="group relative overflow-hidden border border-white/10 bg-zinc-950/90 p-6 md:p-10 shadow-[8px_8px_0px_rgba(0,0,0,0.6)] md:shadow-[14px_14px_0px_rgba(0,0,0,0.6)]">
+                  <div className="relative z-10 flex flex-col md:flex-row md:items-start gap-6 md:gap-10">
+                    <div className="shrink-0 w-16 h-16 md:w-24 md:h-24 bg-white/5 border border-white/10 flex items-center justify-center text-3xl md:text-5xl">
+                      <img src={highlight.image} alt="" className="h-full w-full object-contain" />
                     </div>
-                    <p className="mt-3 text-sm font-sans leading-relaxed text-white/80 md:text-base">
-                      {highlight.description}
-                    </p>
+
+                    <div className="flex-1">
+                      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-2 md:gap-4 mb-4">
+                        <div className="relative inline-block max-w-full w-full">
+                          <span className="absolute inset-0 z-0 translate-x-[2px] translate-y-[2px] text-blood-red select-none pointer-events-none text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-normal break-words">
+                            {highlight.title}
+                          </span>
+                          <h4 className="relative z-10 text-2xl md:text-5xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white whitespace-normal break-words">
+                            {highlight.title}
+                          </h4>
+                        </div>
+                        <span className="text-blood-red text-3xl sm:text-3xl md:text-6xl font-creepster uppercase italic tracking-[0.03em] leading-none whitespace-nowrap">
+                          {highlight.dosage}
+                        </span>
+                      </div>
+
+                      <p className="text-white/75 text-sm md:text-lg font-bold leading-relaxed max-w-5xl">
+                        {highlight.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
