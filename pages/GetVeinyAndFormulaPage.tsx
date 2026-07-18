@@ -404,25 +404,24 @@ const GetVeinyAndFormulaPage: React.FC = () => {
                   image: '/images/VADIngredientsImage.png'
                 }
               ].map((highlight) => (
-                <div key={highlight.title} className="group flex h-full flex-col overflow-hidden border border-white/10 bg-zinc-950/90 p-4 md:p-6 shadow-[6px_6px_0px_rgba(0,0,0,0.6)] md:shadow-[10px_10px_0px_rgba(0,0,0,0.6)]">
-                  <div className="mb-4 flex items-center justify-between gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 md:h-16 md:w-16">
-                      <img src={highlight.image} alt="" className="h-full w-full object-cover" />
-                    </div>
-                    <div className="text-right">
+                <div key={highlight.title} className="group flex h-full items-start gap-4 overflow-hidden border border-white/10 bg-zinc-950/90 p-4 md:p-6 shadow-[6px_6px_0px_rgba(0,0,0,0.6)] md:shadow-[10px_10px_0px_rgba(0,0,0,0.6)]">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 md:h-20 md:w-20">
+                    <img src={highlight.image} alt="" className="h-full w-full object-cover" />
+                  </div>
+
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-end gap-3 md:gap-4">
                       <div className="text-4xl sm:text-5xl md:text-6xl font-creepster uppercase italic leading-none text-blood-red">
                         {highlight.dosage}
                       </div>
+                      <h4 className="text-xl sm:text-2xl md:text-3xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white">
+                        <span className="text-blood-red">{highlight.title}</span>
+                      </h4>
                     </div>
+                    <p className="mt-3 text-sm font-sans leading-relaxed text-white/80 md:text-base">
+                      {highlight.description}
+                    </p>
                   </div>
-                  <div className="mt-auto rounded-sm bg-blood-red px-3 py-3 md:px-4 md:py-4">
-                    <h4 className="text-lg sm:text-xl md:text-2xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white">
-                      {highlight.title}
-                    </h4>
-                  </div>
-                  <p className="mt-4 text-sm font-sans leading-relaxed text-white/80 md:text-base">
-                    {highlight.description}
-                  </p>
                 </div>
               ))}
             </div>
