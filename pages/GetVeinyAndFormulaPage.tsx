@@ -19,8 +19,8 @@ const formatTime = (value: number) => String(value).padStart(2, '0');
 const FEATURABLE_WIDGET_ID = 'featurable-f8fda964-a81a-4e42-ba42-dd6a84e8493f';
 const FEATURABLE_SCRIPT_URL = 'https://cdn.featurable.com/widget/v2/embed.js';
 
-const SALE_ACTIVE = true;
-const SALE_TIMER_ENABLED = true;
+const SALE_ACTIVE = false;
+const SALE_TIMER_ENABLED = false;
 const SALE_PRICE = 44.99;
 const SALE_END_DATE = '2026-06-11T23:59:59-05:00';
 
@@ -76,6 +76,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [showPreviewArrows, setShowPreviewArrows] = useState(false);
   const [imageLoadErrors, setImageLoadErrors] = useState<Record<number, boolean>>({});
+  const [isFormulaExpanded, setIsFormulaExpanded] = useState(false);
   const previewListRef = useRef<HTMLDivElement | null>(null);
   const saleEndTime = useMemo(() => new Date(SALE_END_DATE).getTime(), []);
   const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(saleEndTime));
@@ -375,7 +376,73 @@ const GetVeinyAndFormulaPage: React.FC = () => {
             </h2>
           </div>
           
-          <div className="space-y-6 md:space-y-8 mb-24 md:mb-40">
+          <div className="space-y-6 md:space-y-8 mb-10 md:mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              {[
+                {
+                  dosage: '8,000 mg',
+                  title: 'Pure L-Citrulline',
+                  description: 'A high-volume pump builder focused on blood flow, vascularity, and performance support.',
+                  image: '/images/VADIngredientsImage.png'
+                },
+                {
+                  dosage: '8,000 mg',
+                  title: 'Cell-Volume Maxxing Ingredients',
+                  description: 'A hydration-focused stack designed to support fullness, muscle volume, and hard-hitting pumps.',
+                  image: '/images/VADIngredientsImage.png'
+                },
+                {
+                  dosage: '2,000 mg',
+                  title: 'Agmatine Sulfate',
+                  description: 'A nitric oxide-supporting ingredient meant to prolong that dense, veiny pump feeling.',
+                  image: '/images/VADIngredientsImage.png'
+                },
+                {
+                  dosage: '0 mg',
+                  title: 'Stimulants',
+                  description: 'Zero stimulants for a flexible, late-night-friendly formula with maximum pump focus.',
+                  image: '/images/VADIngredientsImage.png'
+                }
+              ].map((highlight) => (
+                <div key={highlight.title} className="group flex h-full flex-col overflow-hidden border border-white/10 bg-zinc-950/90 p-4 md:p-6 shadow-[6px_6px_0px_rgba(0,0,0,0.6)] md:shadow-[10px_10px_0px_rgba(0,0,0,0.6)]">
+                  <div className="mb-4 flex items-center justify-between gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 md:h-16 md:w-16">
+                      <img src={highlight.image} alt="" className="h-full w-full object-cover" />
+                    </div>
+                    <div className="text-right">
+                      <div className="text-4xl sm:text-5xl md:text-6xl font-creepster uppercase italic leading-none text-blood-red">
+                        {highlight.dosage}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-auto rounded-sm bg-blood-red px-3 py-3 md:px-4 md:py-4">
+                    <h4 className="text-lg sm:text-xl md:text-2xl font-creepster uppercase italic tracking-[0.03em] leading-none text-white">
+                      {highlight.title}
+                    </h4>
+                  </div>
+                  <p className="mt-4 text-sm font-sans leading-relaxed text-white/80 md:text-base">
+                    {highlight.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex justify-center">
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-none border border-white/20 bg-transparent px-5 py-3 text-lg font-creepster uppercase italic tracking-[0.04em] text-white transition-colors duration-200 hover:text-blood-red focus:outline-none focus-visible:ring-2 focus-visible:ring-blood-red md:px-7 md:text-2xl"
+                aria-expanded={isFormulaExpanded}
+                aria-controls="complete-formula-breakdown"
+                onClick={() => setIsFormulaExpanded((previousValue) => !previousValue)}
+              >
+                <span>BREAK DOWN THE COMPLETE FORMULA</span>
+                <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${isFormulaExpanded ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+          </div>
+
+          <div id="complete-formula-breakdown" className={isFormulaExpanded ? 'block' : 'hidden'} aria-hidden={!isFormulaExpanded}>
+            <div className="space-y-6 md:space-y-8 mb-24 md:mb-40">
   {[
     {
     icon: '💪',
@@ -446,7 +513,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
     name: 'Stimulants',
     dose: '0',
     headline: 'Zero Stimulants Equals Maximum Flexibility, and Maximum Veins',
-    description: 'V.A.D. is stimulant free, making it perfect for those late night gym sessions.  No stimulants also means we can maxmize the dosage of pump ingredients. (still want caffiene, simply mix a scoop of V.A.D. with your favorite stimu pre workout, giving you the best of both worlds).'
+    description: 'V.A.D. is stimulant free, making it perfect for those late night gym sessions.  No stimulants also means we can maximize the dosage of pump ingredients. (still want caffeine, simply mix a scoop of V.A.D. with your favorite stim pre workout, giving you the best of both worlds).'
   },
   {
     icon: '❌',
@@ -498,6 +565,7 @@ const GetVeinyAndFormulaPage: React.FC = () => {
     </div>
   ))}
 </div>
+          </div>
           <div id="dosage-facts" className="flex flex-col items-center pt-16 md:pt-32 border-t border-white/10">
             <div className="mb-12 md:mb-24 text-center space-y-4 md:space-y-8">
               <h3 className="relative text-3xl sm:text-5xl md:text-9xl font-creepster uppercase italic tracking-widest leading-[0.9] md:leading-none text-center">
