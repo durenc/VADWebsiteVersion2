@@ -5,7 +5,7 @@ export const VAD_PRODUCT: Product = {
   name: 'THE VEINY AHH DRINK',
   tagline: 'GET BIG, GET STRONG, GET VEINY',
   price: 49.99,
-  description: 'A veiny ahh drink for veiny ahh dudes. This isnt just a preworkout; its a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
+  description: 'A veiny ahh drink for veiny ahh dudes. This is not just a preworkout; it is a vascular transformation. Formulated with clinical doses of L-Citrulline, Betaine, and Glycerol to force-feed your muscles and create skin-splitting pumps that defy logic.',
   flavors: ['Bulging Berries'],
   image: '/images/VADSquareProductImage.png',
   images: [
